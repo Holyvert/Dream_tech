@@ -36,7 +36,7 @@ h1{
     background-color: #55a630;
     bottom: 100px;
     left: 200px;
-    border-radius: 0px 25px 25px 0px;
+    border-radius: 0px 25px 0px 0px;
 }
 .Footer{
     position: absolute; /* start from top left corner*/
@@ -44,7 +44,7 @@ h1{
     height: 100px;
     background-color: #55a630;
     bottom: 0px;
-    border-radius: 25px;
+    
    
 }
 
