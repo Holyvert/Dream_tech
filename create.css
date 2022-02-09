@@ -2,7 +2,7 @@
     position: absolute;
     border: 1px solid grey;
     width: 100%;
-    height: 1000px;
+    height: 1400px;
     margin: auto;
 }
 .Header{
@@ -33,20 +33,22 @@ h1{
 }
 .MainPage{
     position: absolute;
-    width: 100%;
-    height: 840px;
+    width: 1200px;
+    height: 1240px;/*840*/
     background-color: #55a630;
-    color: white;
     bottom: 100px;
     z-index: -1;
-    border-radius: 0px 25px 0px 0px;
+    border-radius: 25px;
+    left:200px;
+    top:60px;
 }
 .Footer{
     position: absolute; /* start from top left corner*/
     width: 100%;
     height: 100px;
     background-color: #55a630;
-    bottom: 0px;   
+    bottom: 0px;  
+    top:1300px;
 }
 
 .ShopSign{
@@ -55,6 +57,7 @@ h1{
     height: 60px;
     background-color: #55a630;
     z-index: 1;
+    left:225px;
 }
 h3{
    color: black;
@@ -71,30 +74,31 @@ h2{
 }
 .sign{
     position: absolute;
-    /* left:50px; */
-    left: 20%;
+    /* left:50px; */ /*20%*/
+    left: 500px;
     top: 15px;
 }
 .SignUp{
     position: absolute;
     text-align: right;
-    right: 10px;
+    right: 50px;/*10*/
     top: 15px;
 }
 .Search{
     position: absolute;
-    left:280px;
+    left:300px;
     text-align: center;
     top: 0px;
     background-color:#55a630;
     border-radius: 25px;
     color:white;
     width:70px;
+    height:21px;
     
 }
 .SearchBar{
     border-radius: 25px;
-    width: 300px;
+    width: 350px;
     top:0px;
 }
 .Table{
@@ -104,6 +108,8 @@ h2{
     right:40px;
     width:280px;
     text-align: left;
+    background-color: #55a630;
+    color: white;
 }
 .SignUpButton{
     position: absolute;
@@ -129,27 +135,121 @@ h2{
     left:300px;
     
 }
-.Cat{
+.Row1{
     position:absolute;
-    top:140px;
+    top:340px;
     width:1190px;
-    background-color: #55a630;
     z-index: 3;
-    left:250px;
+    left:50px;
     height:740px;
-    bottom:100px;
+    display:flex;
+   
+}
+.Row2{
+    position:absolute;
+    top:740px;
+    width:1190px;
+    z-index: 3;
+    left:50px;
+    height:740px;
+    display:flex;
+   
+}
+.Row3{
+    position:absolute;
+    top:740px;
+    width:1190px;
+    z-index: 3;
+    left:50px;
+    height:740px;
     display:flex;
    
 }
 .img {
-    width:  200px;
-    height: 200px;
+    margin-right:75px;
+    margin-left: 35px;
+    margin-bottom: 25px;
+    width:  270px;
+    height: 270px;
     display: flex;
     
 }
-
+.images{
+     border-radius: 25px;
+}
 /* this is the max width before things collapse on eahc other 
 we will have to change a few tags and make them responsive(or smaller) strating here*/
 @media only screen and (max-width:855px){
 
+}
+
+
+.slideshowDiv{
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.middle{
+    position: absolute;
+    top:40%;
+    left:55%;
+    transform: translate(-50%,-50%);
+}
+.scrolling{
+    position: absolute;
+    bottom:80px;
+    left:40%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.bar{
+    width: 50px;
+    height: 10px;
+    border: 2px solid #fff;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bar:hover{
+    background: #fff;
+}
+
+{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+.slide{
+    width: 20%;
+    transition: 0.6s;
+}
+
+/*.slide img{
+    width: 80%;
+    height: 80%;*/
+}
+#r1:checked ~.s1{
+    margin-left: 0;
+}
+#r2:checked ~ .s1{
+    margin-left: -20%;
+}
+#r2:checked ~ .s1{
+    margin-left: -40%;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.scrollbarDiv{
+    height:50px;
+    background-color: blue;
+    margin-top: 100px;
 }
