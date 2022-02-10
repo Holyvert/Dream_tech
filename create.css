@@ -36,6 +36,7 @@ h1{
     width: 1200px;
     height: 1240px;/*840*/
     background-color: #55a630;
+    color: white;
     bottom: 100px;
     z-index: 1;
     border-radius: 25px;
