@@ -11,7 +11,7 @@
     height: 60px;
     background-color: white;
     border-radius: 25px;
-  z-index: -1;
+    z-index: 1;
 }
 h1{
     color: white;
@@ -37,7 +37,7 @@ h1{
     height: 1240px;/*840*/
     background-color: #55a630;
     bottom: 100px;
-    z-index: -1;
+    z-index: 1;
     border-radius: 25px;
     left:200px;
     top:60px;
@@ -56,7 +56,7 @@ h1{
     width: 150px;
     height: 60px;
     background-color: #55a630;
-    z-index: 1;
+    z-index: 2;
     left:225px;
 }
 h3{
@@ -137,43 +137,55 @@ h2{
 }
 .Row1{
     position:absolute;
-    top:340px;
+    top: 265px;/*340px;*/
     width:1190px;
     z-index: 3;
-    left:50px;
+    left:95px;
     height:740px;
     display:flex;
    
 }
 .Row2{
     position:absolute;
-    top:740px;
+    top:595px;/*740px;*/
     width:1190px;
     z-index: 3;
-    left:50px;
+    left:95px;
     height:740px;
     display:flex;
    
 }
 .Row3{
     position:absolute;
-    top:740px;
+    top:930px;
     width:1190px;
     z-index: 3;
-    left:50px;
+    left:95px;
     height:740px;
     display:flex;
    
 }
+
 .img {
     margin-right:75px;
     margin-left: 35px;
     margin-bottom: 25px;
-    width:  270px;
-    height: 270px;
+    width:  250px;
+    height: 250px;
     display: flex;
     
+    
 }
+.title1{
+  position: absolute;
+    top:0px;
+  background-color: #fefae0;
+  color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+    border-radius: 25px;
+}
+
 .images{
      border-radius: 25px;
 }
@@ -185,21 +197,24 @@ we will have to change a few tags and make them responsive(or smaller) strating 
 
 
 .slideshowDiv{
-    width: 700px;
-    height: 400px;
+    position: absolute;
+    width: 1000px;
+    height: 150px;
     overflow: hidden;
+    bottom: 1500px;
+    z-index: 3;
 }
 
 .middle{
     position: absolute;
-    top:40%;
-    left:55%;
+    top:20%;
+    left:65%;
     transform: translate(-50%,-50%);
 }
 .scrolling{
     position: absolute;
-    bottom:80px;
-    left:40%;
+    bottom:5px;
+    left:30%;
     transform: translateX(-50%);
     display: flex;
 }
@@ -216,15 +231,16 @@ we will have to change a few tags and make them responsive(or smaller) strating 
     background: #fff;
 }
 
-/*{
+input [name="r"]{
     position: absolute;
     visibility: hidden;
-}*/
+}
 
 .slides{
     width: 500%;
     height: 100%;
     display: flex;
+    
 }
 .slide{
     width: 20%;
@@ -233,8 +249,8 @@ we will have to change a few tags and make them responsive(or smaller) strating 
 
 /*.slide img{
     width: 80%;
-    height: 80%;
-}*/
+    height: 80%;*/
+}
 #r1:checked ~.s1{
     margin-left: 0;
 }
@@ -250,6 +266,57 @@ a{
 }
 .scrollbarDiv{
     height:50px;
-    background-color: blue;
     margin-top: 100px;
+    margin-left: 130px;
+}
+.scrollname{
+    color:white;
+    font-size: 20px;
+   
+}
+.pages{
+    position: absolute;
+    width:80px;
+    top:215px;
+    right:125px;
+    text-align: center;
+    color: black; 
+    border: 2px solid white; 
+    background-color: white;
+    height:10px;
+    z-index: 3;
+}
+.one{
+    position:absolute;
+    top: 565px;/*340px;*/
+    width:1190px;
+    z-index: 3;
+    left:95px;
+    height:740px;
+    display:flex;
+}
+.two{
+    position:absolute;
+    top: 895px;/*740px;*/
+    width:1190px;
+    z-index: 3;
+    left:95px;
+    height:740px;
+    display:flex;
+}
+.MainDiv{
+    position: absolute;
+    height: 120px;
+    width: 1200px;
+    border-radius: 25px 25px 0 0;
+    z-index: 3;
+    top:40px;
+    left:40px;
+
+}
+.RTS{
+    position: absolute;
+    top:10px;
+    left:380px;
+    font-size: 60px;
 }
