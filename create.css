@@ -216,10 +216,10 @@ we will have to change a few tags and make them responsive(or smaller) strating 
     background: #fff;
 }
 
-{
+/*{
     position: absolute;
     visibility: hidden;
-}
+}*/
 
 .slides{
     width: 500%;
@@ -233,8 +233,8 @@ we will have to change a few tags and make them responsive(or smaller) strating 
 
 /*.slide img{
     width: 80%;
-    height: 80%;*/
-}
+    height: 80%;
+}*/
 #r1:checked ~.s1{
     margin-left: 0;
 }
