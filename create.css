@@ -36,12 +36,12 @@ h1{
     width: 1200px;
     height: 1240px;/*840*/
     background-color: #55a630;
-    color: white;
     bottom: 100px;
     z-index: 1;
     border-radius: 25px;
     left:200px;
     top:60px;
+    color:white;
 }
 .Footer{
     position: absolute; /* start from top left corner*/
@@ -320,4 +320,41 @@ a{
     top:10px;
     left:380px;
     font-size: 60px;
+    color: white;
+}
+.language{
+    position: absolute;
+    left:20px;
+}
+.icons{
+    position:absolute;
+    background-color: white;
+    color: #55a630;
+    width:50px;
+    left:50px;
+    z-index: 3;
+}
+.Heart{
+    position:absolute;
+    left:900px;
+    background-color: white;
+    height: 30px;
+    top:0px;
+    border-radius: 25px;
+}
+.Cart{
+    position:absolute;
+    width:100px;
+    left:950px;
+    background-color: white;
+    height: 30px;
+    top:0px;
+    border-radius: 15px;
+}
+.popular{
+    position: absolute;
+    top:475px;
+    left:140px;
+    font-size:30px;
+    color:white;
 }
