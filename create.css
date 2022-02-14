@@ -1,1069 +1,1044 @@
-.BorderDiv{
-    position: absolute;
-    border: 1px solid grey;
-    width: 100%;
-    height: 1400px;
-    margin: auto;
+.BorderDiv {
+  position: absolute;
+  border: 1px solid grey;
+  width: 100%;
+  height: 1400px;
+  margin: auto;
 }
-.Header{
-    position: absolute; /* start from top left corner*/
-    width: 100%;
-    height: 60px;
-    background-color: white;
-    border-radius: 25px;
-    z-index: 1;
+.Header {
+  position: absolute; /* start from top left corner*/
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  border-radius: 25px;
+  z-index: 1;
 }
-h1{
-    color: white;
-    text-align: center;
+h1 {
+  color: white;
+  text-align: center;
 }
-.Nav{
-    position: absolute;
-    width: 200px;
-    height: 600px;
-    background-color: white;  
-    top:200px;
-    z-index: 1;
-}
-
-.navigation{
-    text-align: center;
-    font-size: 30px;
-    z-index: inherit;
-}
-.MainPage{
-    position: absolute;
-    width: 1200px;
-    height: 1240px;/*840*/
-    background-color: #55a630;
-    bottom: 100px;
-    z-index: 1;
-    border-radius: 25px;
-    left:200px;
-    top:60px;
-    color:white;
+.Nav {
+  position: absolute;
+  width: 200px;
+  height: 600px;
+  background-color: white;
+  top: 200px;
+  z-index: 1;
 }
 
-.Footer{
-    position: absolute; /* start from top left corner*/
-    width: 100%;
-    height: 100px;
-    background-color: #55a630;
-    bottom: 0px;  
-    top:1300px;
+.navigation {
+  text-align: center;
+  font-size: 30px;
+  z-index: inherit;
+}
+.MainPage {
+  position: absolute;
+  width: 1200px;
+  height: 1240px; /*840*/
+  background-color: #55a630;
+  bottom: 100px;
+  z-index: 1;
+  border-radius: 25px;
+  left: 200px;
+  top: 60px;
+  color: white;
 }
 
-.ShopSign{
-    position: absolute;
-    width: 150px;
-    height: 60px;
-    background-color: #55a630;
-    z-index: 2;
-    left:225px;
+.Footer {
+  position: absolute; /* start from top left corner*/
+  width: 100%;
+  height: 100px;
+  background-color: #55a630;
+  bottom: 0px;
+  top: 1300px;
 }
 
-h3{
-   color: black;
-    text-align: center;
+.ShopSign {
+  position: absolute;
+  width: 150px;
+  height: 60px;
+  background-color: #55a630;
+  z-index: 2;
+  left: 225px;
 }
 
-h2{
-    text-align: center;
-   font-size: 60px;
+h3 {
+  color: black;
+  text-align: center;
 }
 
-.TShop{
-    color: black;
-    text-align:center;
+h2 {
+  text-align: center;
+  font-size: 60px;
 }
 
-.sign{
-    position: absolute;
-    /* left:50px; */ /*20%*/
-    left: 500px;
-    top: 15px;
+.TShop {
+  color: black;
+  text-align: center;
 }
 
-.SignUp{
-    position: absolute;
-    text-align: right;
-    right: 50px;/*10*/
-    top: 15px;
+.sign {
+  position: absolute;
+  /* left:50px; */ /*20%*/
+  left: 500px;
+  top: 15px;
 }
 
-.Search{
-    position: absolute;
-    left:300px;
-    text-align: center;
-    top: 0px;
-    background-color:#55a630;
-    border-radius: 25px;
-    color:white;
-    width:70px;
-    height:21px;
+.SignUp {
+  position: absolute;
+  text-align: right;
+  right: 50px; /*10*/
+  top: 15px;
 }
 
-.SearchBar{
-    border-radius: 25px;
-    width: 350px;
-    top:0px;
+.Search {
+  position: absolute;
+  left: 300px;
+  text-align: center;
+  top: 0px;
+  background-color: #55a630;
+  border-radius: 25px;
+  color: white;
+  width: 70px;
+  height: 21px;
 }
 
-.Table{
-    border: 1px solid green;
-    border-radius: 25px;
-    position: absolute;
-    right:40px;
-    width:280px;
-    text-align: left;
-    background-color: #55a630;
-    color: white;
+.SearchBar {
+  border-radius: 25px;
+  width: 350px;
+  top: 0px;
 }
 
-.SignUpButton{
-    position: absolute;
-    text-align: right;
-    right: 10px;
-    top: 0px;
-    background-color: #007200;
-    border-radius: 25px;
-    color: white;
-    height: 25px;
+.Table {
+  border: 1px solid green;
+  border-radius: 25px;
+  position: absolute;
+  right: 40px;
+  width: 280px;
+  text-align: left;
+  background-color: #55a630;
+  color: white;
 }
 
-.NavBar{
-    position: absolute;
-    height: 200px;
-    text-align: left;
-    width:280px;
+.SignUpButton {
+  position: absolute;
+  text-align: right;
+  right: 10px;
+  top: 0px;
+  background-color: #007200;
+  border-radius: 25px;
+  color: white;
+  height: 25px;
 }
 
-.Categories{
-    position:absolute;
-    width:1050px;
-    height:650px;
-    border: 1px solid black;
-    left:300px;
+.NavBar {
+  position: absolute;
+  height: 200px;
+  text-align: left;
+  width: 280px;
 }
 
-.Row1{
-    position:absolute;
-    top: 265px;/*340px;*/
-    width:1190px;
-    z-index: 3;
-    left:95px;
-    height:740px;
-    display:flex;
+.Categories {
+  position: absolute;
+  width: 1050px;
+  height: 650px;
+  border: 1px solid black;
+  left: 300px;
 }
 
-.Row2{
-    position:absolute;
-    top:595px;/*740px;*/
-    width:1190px;
-    z-index: 3;
-    left:95px;
-    height:740px;
-    display:flex;
+.Row1 {
+  position: absolute;
+  top: 265px; /*340px;*/
+  width: 1190px;
+  z-index: 3;
+  left: 95px;
+  height: 740px;
+  display: flex;
 }
 
-.Row3{
-    position:absolute;
-    top:930px;
-    width:1190px;
-    z-index: 3;
-    left:95px;
-    height:740px;
-    display:flex;
+.Row2 {
+  position: absolute;
+  top: 595px; /*740px;*/
+  width: 1190px;
+  z-index: 3;
+  left: 95px;
+  height: 740px;
+  display: flex;
+}
+
+.Row3 {
+  position: absolute;
+  top: 930px;
+  width: 1190px;
+  z-index: 3;
+  left: 95px;
+  height: 740px;
+  display: flex;
 }
 
 .img {
-    margin-right:75px;
-    margin-left: 35px;
-    margin-bottom: 25px;
-    width:  250px;
-    height: 250px;
-    display: flex;
+  margin-right: 75px;
+  margin-left: 35px;
+  margin-bottom: 25px;
+  width: 250px;
+  height: 250px;
+  display: flex;
 }
 
-.title1{
+.title1 {
   position: absolute;
-    top:0px;
+  top: 0px;
   background-color: #fefae0;
   color: black;
   padding-left: 10px;
   padding-right: 10px;
-    border-radius: 25px;
+  border-radius: 25px;
 }
 
-.images{
-     border-radius: 25px;
+.images {
+  border-radius: 25px;
 }
 
 /* this is the max width before things collapse on eahc other 
 we will have to change a few tags and make them responsive(or smaller) strating here*/
-@media only screen and (max-width:855px){
-
+@media only screen and (max-width: 855px) {
 }
 
-
-a{
-    text-decoration: none;
-    color: black;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-.scrollbarDiv{
-    height:50px;
-    margin-top: 100px;
-    margin-left: 130px;
+.scrollbarDiv {
+  height: 50px;
+  margin-top: 100px;
+  margin-left: 130px;
 }
 
-.scrollname{
-    color:white;
-    font-size: 20px;
+.scrollname {
+  color: white;
+  font-size: 20px;
 }
 
-.pages{
+.pages {
+  position: absolute;
+  width: 80px;
+  top: 215px;
+  right: 125px;
+  text-align: center;
+  color: black;
+  border: 2px solid white;
+  background-color: white;
+  height: 10px;
+  z-index: 3;
+}
+
+.one {
+  position: absolute;
+  top: 565px; /*340px;*/
+  width: 1190px;
+  z-index: 3;
+  left: 95px;
+  height: 740px;
+  display: flex;
+}
+
+.two {
+  position: absolute;
+  top: 895px; /*740px;*/
+  width: 1190px;
+  z-index: 3;
+  left: 95px;
+  height: 740px;
+  display: flex;
+}
+
+.MainDiv {
+  position: absolute;
+  height: 120px;
+  width: 1200px;
+  border-radius: 25px 25px 0 0;
+  z-index: 3;
+  top: 40px;
+  left: 40px;
+}
+
+.RTS {
+  position: absolute;
+  top: 10px;
+  left: 380px;
+  font-size: 60px;
+  color: white;
+}
+
+.language {
+  position: absolute;
+  left: 20px;
+}
+
+.icons {
+  position: absolute;
+  background-color: white;
+  color: #55a630;
+  width: 50px;
+  left: 50px;
+  z-index: 3;
+}
+
+.Heart {
+  position: absolute;
+  left: 900px;
+  background-color: white;
+  height: 30px;
+  top: 0px;
+  border-radius: 25px;
+}
+
+.Cart {
+  position: absolute;
+  width: 100px;
+  left: 950px;
+  background-color: white;
+  height: 30px;
+  top: 0px;
+  border-radius: 15px;
+}
+
+.popular {
+  position: absolute;
+  top: 475px;
+  left: 140px;
+  font-size: 30px;
+  color: white;
+}
+
+.banner {
+  vertical-align: middle;
+  height: 300px;
+  width: 900px;
+}
+
+.mySlides {
+  display: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 900px;
+  height: 300px;
+  position: absolute;
+  margin: 10px;
+  top: 160px;
+  left: 140px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: orange;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (min-width: 320px) and (max-width: 480px) {
+  .BorderDiv {
     position: absolute;
-    width:80px;
-    top:215px;
-    right:125px;
+    border: 1px solid grey;
+    width: 320px;
+    height: 280px;
+    margin: auto;
+  }
+  .title1 {
+    font-size: 3.6px;
+  }
+  h4 {
+    font-size: 3.6px;
+  }
+
+  h2 {
+    font-size: 10px;
+  }
+  .scrollname {
+    font-size: 3.2px;
+  }
+
+  .Header {
+    width: 20%;
+    height: 12px;
+    font-size: 3.6px;
+  }
+  .ShopSign {
+    position: absolute;
+    width: 30px;
+    height: 12px;
+    z-index: 2;
+    background-color: #55a630;
+  }
+  .Logo {
+    position: absolute;
+    width: 29px;
+    height: 19px;
+    top: 0;
+    left: 1px;
+  }
+
+  .Search {
+    font-size: 3.6px;
+  }
+
+  .MainPage {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    left: 40px;
+    top: 12px;
+  }
+  .MainDiv {
+    top: 12px;
+  }
+
+  .scrollbarDiv {
+    height: 10px;
+    margin-top: 20px;
+    margin-left: 26px;
+  }
+
+  .pages {
+    position: absolute;
+    width: 16px;
+    font-size: 3.2px;
+    top: 38px;
+    right: 25px;
     text-align: center;
-    color: black; 
-    border: 2px solid white; 
+    color: black;
+    border: 0.4px solid white;
     background-color: white;
-    height:10px;
+    height: 2px;
     z-index: 3;
-}
+  }
 
-.one{
-    position:absolute;
-    top: 565px;/*340px;*/
-    width:1190px;
-    z-index: 3;
-    left:95px;
-    height:740px;
-    display:flex;
-}
-
-.two{
-    position:absolute;
-    top: 895px;/*740px;*/
-    width:1190px;
-    z-index: 3;
-    left:95px;
-    height:740px;
-    display:flex;
-}
-
-.MainDiv{
+  .Row1 {
     position: absolute;
+    top: 53px; /*340px;*/
+    width: 238px;
+    z-index: 3;
+    left: 19px;
+    height: 148px;
+    display: flex;
+  }
+
+  .Row2 {
+    position: absolute;
+    top: 119px; /*740px;*/
+    width: 238px;
+    z-index: 3;
+    left: 19px;
+    height: 148px;
+    display: flex;
+  }
+  .Row3 {
+    position: absolute;
+    top: 186px;
+    width: 238px;
+    z-index: 3;
+    left: 19px;
+    height: 148px;
+    display: flex;
+  }
+
+  .Footer {
+    position: absolute; /* start from top left corner*/
+    width: 100%;
+    height: 20px;
+    background-color: #55a630;
+    bottom: 2.5px;
+    top: 260px;
+    font-size: 3.6px;
+  }
+
+  .FooterImages1 {
+    position: absolute;
+    height: 10px;
+    background-color: #55a630;
+    bottom: 5px;
+    width: 17.5px;
+    left: 5px;
+    z-index: 2;
+    padding-left: 0.4%;
+  }
+  .FooterImages2 {
+    position: absolute;
+    height: 7px;
+    background-color: #55a630;
+    bottom: 6px;
+    width: 7px;
+    left: 20px;
+    padding-left: 0.4%;
+  }
+  .FooterImages3 {
+    position: absolute;
+    height: 7px;
+    background-color: #55a630;
+    bottom: 6px;
+    width: 7px;
+    left: 35px;
+    padding-left: 0.4%;
+  }
+  .FooterImages4 {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #55a630;
+    bottom: 7px;
+    left: 45px;
+    padding-left: 0.4%;
+  }
+  .FooterImages5 {
+    position: absolute;
+    height: 7px;
+    background-color: #55a630;
+    bottom: 6px;
+    width: 7px;
+    left: 60px;
+    padding-left: 0.4%;
+  }
+  .FooterImages6 {
+    position: absolute;
+    height: 7px;
+    background-color: #55a630;
+    bottom: 6px;
+    width: 7px;
+    left: 80px;
+    padding-left: 0%;
+  }
+
+  .ShopSign {
+    position: absolute;
+    width: 30px;
+    height: 12px;
+    top: 0px;
+    background-color: #55a630;
+    z-index: 2;
+    left: 45px;
+  }
+  .navigation {
+    text-align: center;
+    font-size: 6px;
+    z-index: inherit;
+  }
+  .Nav {
+    position: absolute;
+    width: 40px;
     height: 120px;
-    width: 1200px;
-    border-radius: 25px 25px 0 0;
-    z-index: 3;
-    top:40px;
-    left:40px;
-}
-
-.RTS{
-    position: absolute;
-    top:10px;
-    left:380px;
-    font-size: 60px;
-    color: white;
-}
-
-.language{
-    position: absolute;
-    left:20px;
-}
-
-.icons{
-    position:absolute;
     background-color: white;
-    color: #55a630;
-    width:50px;
-    left:50px;
-    z-index: 3;
-}
-
-.Heart{
-    position:absolute;
-    left:900px;
-    background-color: white;
-    height: 30px;
-    top:0px;
-    border-radius: 25px;
-}
-
-.Cart{
-    position:absolute;
-    width:100px;
-    left:950px;
-    background-color: white;
-    height: 30px;
-    top:0px;
-    border-radius: 15px;
-}
-
-.popular{
+    top: 40px;
+    z-index: 1;
+  }
+  .NavBar {
+    font-size: 3.5px;
+  }
+  .img {
+    margin-right: 15px;
+    margin-left: 7px;
+    margin-bottom: 5px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+  }
+  .one {
     position: absolute;
-    top:475px;
-    left:140px;
-    font-size:30px;
-    color:white;
-}
-
-.banner {vertical-align: middle;  height:300px; width:900px;}
-
-.mySlides {display: none;}
-
-    
-      /* Slideshow container */
-      .slideshow-container {
-        max-width: 900px;
-        height: 300px;
-        position: absolute;
-        margin: 10px;
-        top:160px;
-        left:140px;
-      }
-     
-      
-      /* Number text (1/3 etc) */
-      .numbertext {
-        color: orange;
-        font-size: 20px;
-        padding: 8px 12px;
-        position: absolute;
-      }
-      
-      /* Fading animation */
-      .fade {
-        animation-name: fade;
-        animation-duration: 1.5s;
-      }
-      
-      
-      @keyframes fade {
-        from {opacity: .4} 
-        to {opacity: 1}
-      }
-
-      /* Media Query for Mobile Devices */
-      @media (min-width: 320px) and (max-width: 480px) {
-        .BorderDiv{
-            position: absolute;
-            border: 1px solid grey;
-            width:320px;
-            height: 280px;
-            margin:auto;
-        }
-        .title1{
-            font-size: 3.6px;
-        }
-        h4{
-            font-size: 3.6px;;
-        }
-
-        h2{
-            font-size: 10px;
-        }
-        .scrollname{
-            font-size: 3.2px;
-            
-        }
-       
-        .Header{
-            width:20%;
-            height:12px;
-            font-size: 3.6px ;
-            
-        }
-       .ShopSign{
-           position: absolute;
-           width:30px;
-           height: 12px;
-           z-index: 2;
-           background-color: #55a630;
-       }
-       .Logo{
-        position: absolute;
-        width:29px;
-        height: 19px;
-        top:0;
-        left:1px;
-       }
-       
-
-        .Search{
-            font-size: 3.6px;
-        }
-        
-        .MainPage{
-            position:absolute;
-            width:240px;
-            height: 240px;
-            left:40px;
-            top:12px;
-        }
-        .MainDiv{
-            top:12px;
-        }
-
-        .scrollbarDiv{
-            height:10px;
-            margin-top: 20px;
-            margin-left: 26px;
-        }
-
-        .pages{
-            position: absolute;
-            width:16px;
-            font-size: 3.2px;
-            top:38px;
-            right:25px;
-            text-align: center;
-            color: black; 
-            border: 0.4px solid white; 
-            background-color: white;
-            height:2px;
-            z-index: 3;
-        }
-
-        .Row1{
-
-            position:absolute;
-            top: 53px;/*340px;*/
-            width:238px;
-            z-index: 3;
-            left:19px;
-            height:148px;
-            display:flex;
-        }
-
-        .Row2{
-            position:absolute;
-            top:119px;/*740px;*/
-            width:238px;
-            z-index: 3;
-            left:19px;
-            height:148px;
-            display:flex;
-           
-        }
-        .Row3{
-            position:absolute;
-            top:186px;
-            width:238px;
-            z-index: 3;
-            left:19px;
-            height:148px;
-            display:flex;
-           
-        }
-
-        
-        .Footer{
-            position: absolute; /* start from top left corner*/
-            width: 100%;
-            height: 20px;
-            background-color: #55a630;
-            bottom: 2.5px;  
-            top:260px;
-            font-size:3.6px;
-            
-            }
-
-        .FooterImages1{
-            position: absolute;
-            height:10px;
-            background-color: #55a630;
-            bottom:5px;
-            width:17.5px;
-            left:5px;
-            z-index: 2;
-            padding-left: 0.4%;
-        }
-        .FooterImages2{
-            position: absolute;
-            height:7px;
-            background-color: #55a630;
-            bottom:6px;
-            width:7px;
-            left:20px;
-            padding-left: 0.4%;
-        }
-        .FooterImages3{
-            position: absolute;
-            height:7px;
-            background-color: #55a630;
-            bottom:6px;
-            width:7px;
-            left:35px;
-            padding-left: 0.4%;
-        }
-        .FooterImages4{
-            position: absolute;
-            width:5px;
-            height:5px;
-            background-color: #55a630;
-            bottom:7px;
-            left:45px;
-            padding-left: 0.4%;
-        }
-        .FooterImages5{
-            position: absolute;
-            height:7px;
-            background-color: #55a630;
-            bottom:6px;
-            width:7px;
-            left:60px; 
-            padding-left: 0.4%; 
-        }
-        .FooterImages6{
-            position: absolute;
-            height:7px;
-            background-color: #55a630;
-            bottom:6px;
-            width:7px;
-            left:80px;
-            padding-left: 0%;
-        }
-
-        .ShopSign{
-            position: absolute;
-            width: 30px;
-            height: 12px;
-            top:0px;
-            background-color: #55a630;
-            z-index: 2;
-            left:45px;
-                }
-        .navigation{
-            text-align: center;
-            font-size: 6px;
-            z-index: inherit;
-            
-        }
-        .Nav{
-            position:absolute;
-            width: 40px;
-            height: 120px;
-            background-color: white;
-            top:40px;
-            z-index:1;
-        }
-        .NavBar{
-            font-size:3.5px;
-        }
-        .img {
-        margin-right:15px;
-        margin-left: 7px;
-        margin-bottom: 5px;
-        width:  50px;
-        height: 50px;
-        display: flex;
-        }
-        .one{
-    position:absolute;
-    top: 113px;/*340px;*/
-    width:238px;
+    top: 113px; /*340px;*/
+    width: 238px;
     z-index: 3;
-    left:19px;
-    height:148px;
-    display:flex;
+    left: 19px;
+    height: 148px;
+    display: flex;
     font-size: 3.6px;
-        }
-        .two{
-    position:absolute;
-    top: 179px;/*740px;*/
-    width:238px;
-    z-index: 3;
-    left:19px;
-    height:148px;
-    display:flex;
-    font-size: 3.6px;
-        }
-        .RTS{
+  }
+  .two {
     position: absolute;
-    top:0px;
-    left:67.5px;
+    top: 179px; /*740px;*/
+    width: 238px;
+    z-index: 3;
+    left: 19px;
+    height: 148px;
+    display: flex;
+    font-size: 3.6px;
+  }
+  .RTS {
+    position: absolute;
+    top: 0px;
+    left: 67.5px;
     font-size: 12px;
     color: white;
-        }
-        .popular{
+  }
+  .popular {
     position: absolute;
-    top:95px;
-    left:28px;
-    font-size:6px;
-    color:white;
-        }
-        .sign{
+    top: 95px;
+    left: 28px;
+    font-size: 6px;
+    color: white;
+  }
+  .sign {
     position: absolute;
     /* left:50px; */ /*20%*/
     left: 100px;
     top: 3px;
     font-size: 3.6px;
-        }
-        .SignUp{
+  }
+  .SignUp {
     position: absolute;
     text-align: right;
-    left: 10px;/*10*/
+    left: 10px; /*10*/
     top: 3px;
     font-size: 3.6px;
-}
-        .Search{
-position: absolute;
-left:60px;
-text-align: center;
-top: 0px;
-background-color:#55a630;
-border-radius: 5px;
-color:white;
-width:25px;
-height:7.5px;
-
-}
-        .SearchBar{
-border-radius: 12.5px;
-width: 70px;
-top:2px;
-font-size: 3.6px;
-}
-        .Table{
-border: 0.2px solid green;
-border-radius: 4px;
-position: absolute;
-right:8px;
-width:56px;
-text-align: left;
-background-color: #55a630;
-color: white;
-left:210px;
-height:4px;
-}
-        .SignUpButton{
-position: absolute;
-text-align: right;
-left: 260px;
-top: 0px;
-background-color: #007200;
-border-radius: 12.5px;
-color: white;
-height: 8.5px;
-font-size: 3.6px;
-width:20px;
-}
-
-        .slideshow-container {
-            max-width: 180px;
-             height: 60px;
-            position: absolute;
-             margin: 2px;
-            top:32px;
-            left:28px;
-         }
-        .banner {
-            vertical-align: middle;  
-            height:60px; 
-            width:180px;
-        }
-    
-        .language{
-            left:0px;
-            font-size: 3.6px;
-        }
-
-        .icons{
-            position: absolute;
-            background-color: white;
-            color:#55a630;
-            width:10px;
-            left:10px;
-            z-index: 3;
-        }
-        .Heart{
-            position:absolute;
-            left:115px;
-            background-color: white;
-            height:6px;
-            bottom:0px;
-            border-radius: 5px;
-            font-size: 3.6px;
-            
-        }
-        .Cart{
-            position: absolute;
-            width:20px;
-            left: 175px;
-            background-color: white;
-            height:6px;
-            bottom:0px;
-            border-radius: 7.5px;   
-            font-size: 3.6px;
-        
-        }
-    }
-      
-
-    /* Media Query for low resolution  Tablets, Ipads */
-    @media (min-width: 481px) and (max-width: 767px) {
-
-        .BorderDiv{
-            position: absolute;
-            border: 1px solid grey;
-            width:640px;
-            height: 560px;
-            margin:auto;
-        }
-        .title1{
-            font-size: 7.2px;
-        }
-        h4{
-            font-size: 7.2px;;
-        }
-
-        h2{
-            font-size: 20px;
-        }
-        .scrollname{
-            font-size: 6.4px;
-            
-        }
-       
-        .Header{
-            width:40%;
-            height:24px;
-            font-size: 7.2px ;
-            
-        }
-       .ShopSign{
-           position: absolute;
-           width:60px;
-           height: 24px;
-           z-index: 2;
-           background-color: #55a630;
-       }
-       .Logo{
-        position: absolute;
-        width:58px;
-        height: 28px;
-        top:0;
-        left:2px;
-       }
-       
-
-        .Search{
-            font-size: 7.2px;
-        }
-        
-        .MainPage{
-            position:absolute;
-            width:480px;
-            height: 480px;
-            left:80px;
-            top:24px;
-        }
-        .MainDiv{
-            top:24px;
-        }
-
-        .scrollbarDiv{
-            height:20px;
-            margin-top: 40px;
-            margin-left: 52px;
-        }
-
-        .pages{
-            position: absolute;
-            width:32px;
-            font-size: 6.4px;
-            top:76px;
-            right:50px;
-            text-align: center;
-            color: black; 
-            border: 0.8px solid white; 
-            background-color: white;
-            height:4px;
-            z-index: 3;
-        }
-
-        .Row1{
-
-            position:absolute;
-            top: 106px;/*340px;*/
-            width:4760px;
-            z-index: 3;
-            left:38px;
-            height:296px;
-            display:flex;
-        }
-
-        .Row2{
-            position:absolute;
-            top:238px;/*740px;*/
-            width:476px;
-            z-index: 3;
-            left:38px;
-            height:296px;
-            display:flex;
-           
-        }
-        .Row3{
-            position:absolute;
-            top:372px;
-            width:476px;
-            z-index: 3;
-            left:38px;
-            height:296px;
-            display:flex;
-           
-        }
-
-        
-        .Footer{
-            position: absolute; /* start from top left corner*/
-            width: 100%;
-            height: 40px;
-            background-color: #55a630;
-            bottom: 5px;  
-            top:520px;
-            font-size:7.2px;
-            
-            }
-
-        .FooterImages1{
-            position: absolute;
-            height:20px;
-            background-color: #55a630;
-            bottom:10px;
-            width:35px;
-            left:10px;
-            z-index: 2;
-            padding-left: 0.8%;
-        }
-        .FooterImages2{
-            position: absolute;
-            height:14px;
-            background-color: #55a630;
-            bottom:12px;
-            width:14px;
-            left:40px;
-            padding-left: 0.8%;
-        }
-        .FooterImages3{
-            position: absolute;
-            height:14px;
-            background-color: #55a630;
-            bottom:12px;
-            width:14px;
-            left:70px;
-            padding-left: 0.8%;
-        }
-        .FooterImages4{
-            position: absolute;
-            width:10px;
-            height:10px;
-            background-color: #55a630;
-            bottom:14px;
-            left:90px;
-            padding-left: 0.8%;
-        }
-        .FooterImages5{
-            position: absolute;
-            height:14px;
-            background-color: #55a630;
-            bottom:12px;
-            width:14px;
-            left:120px; 
-            padding-left: 0.8%; 
-        }
-        .FooterImages6{
-            position: absolute;
-            height:14px;
-            background-color: #55a630;
-            bottom:12px;
-            width:14px;
-            left:160px;
-            padding-left: 0%;
-        }
-
-        .ShopSign{
-            position: absolute;
-            width: 60px;
-            height: 24px;
-            top:0px;
-            background-color: #55a630;
-            z-index: 2;
-            left:90px;
-                }
-        .navigation{
-            text-align: center;
-            font-size: 12px;
-            z-index: inherit;
-            
-        }
-        .Nav{
-            position:absolute;
-            width: 80px;
-            height: 240px;
-            background-color: white;
-            top:80px;
-            z-index:1;
-        }
-        .NavBar{
-            font-size:7px;
-        }
-        .img {
-        margin-right:30px;
-        margin-left: 14px;
-        margin-bottom: 10px;
-        width:  100px;
-        height: 100px;
-        display: flex;
-        }
-        .one{
-    position:absolute;
-    top: 226px;/*340px;*/
-    width:476px;
-    z-index: 3;
-    left:38px;
-    height:296px;
-    display:flex;
-    font-size: 7.2px;
-        }
-        .two{
-    position:absolute;
-    top: 358px;/*740px;*/
-    width:476px;
-    z-index: 3;
-    left:38px;
-    height:296px;
-    display:flex;
-    font-size: 7.2px;
-        }
-        .RTS{
+  }
+  .Search {
     position: absolute;
-    top:0px;
-    left:135px;
+    left: 60px;
+    text-align: center;
+    top: 0px;
+    background-color: #55a630;
+    border-radius: 5px;
+    color: white;
+    width: 25px;
+    height: 7.5px;
+  }
+  .SearchBar {
+    border-radius: 12.5px;
+    width: 70px;
+    top: 2px;
+    font-size: 3.6px;
+  }
+  .Table {
+    border: 0.2px solid green;
+    border-radius: 4px;
+    position: absolute;
+    right: 8px;
+    width: 56px;
+    text-align: left;
+    background-color: #55a630;
+    color: white;
+    left: 210px;
+    height: 4px;
+  }
+  .SignUpButton {
+    position: absolute;
+    text-align: right;
+    left: 260px;
+    top: 0px;
+    background-color: #007200;
+    border-radius: 12.5px;
+    color: white;
+    height: 8.5px;
+    font-size: 3.6px;
+    width: 20px;
+  }
+
+  .slideshow-container {
+    max-width: 180px;
+    height: 60px;
+    position: absolute;
+    margin: 2px;
+    top: 32px;
+    left: 28px;
+  }
+  .banner {
+    vertical-align: middle;
+    height: 60px;
+    width: 180px;
+  }
+
+  .language {
+    left: 0px;
+    font-size: 3.6px;
+  }
+
+  .icons {
+    position: absolute;
+    background-color: white;
+    color: #55a630;
+    width: 10px;
+    left: 10px;
+    z-index: 3;
+  }
+  .Heart {
+    position: absolute;
+    left: 115px;
+    background-color: white;
+    height: 6px;
+    bottom: 0px;
+    border-radius: 5px;
+    font-size: 3.6px;
+  }
+  .Cart {
+    position: absolute;
+    width: 20px;
+    left: 175px;
+    background-color: white;
+    height: 6px;
+    bottom: 0px;
+    border-radius: 7.5px;
+    font-size: 3.6px;
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .BorderDiv {
+    position: absolute;
+    border: 1px solid grey;
+    width: 640px;
+    height: 560px;
+    margin: auto;
+  }
+  .title1 {
+    font-size: 7.2px;
+  }
+  h4 {
+    font-size: 7.2px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+  .scrollname {
+    font-size: 6.4px;
+  }
+
+  .Header {
+    width: 40%;
+    height: 24px;
+    font-size: 7.2px;
+  }
+  .ShopSign {
+    position: absolute;
+    width: 60px;
+    height: 24px;
+    z-index: 2;
+    background-color: #55a630;
+  }
+  .Logo {
+    position: absolute;
+    width: 58px;
+    height: 28px;
+    top: 0;
+    left: 2px;
+  }
+
+  .Search {
+    font-size: 7.2px;
+  }
+
+  .MainPage {
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    left: 80px;
+    top: 24px;
+  }
+  .MainDiv {
+    top: 24px;
+  }
+
+  .scrollbarDiv {
+    height: 20px;
+    margin-top: 40px;
+    margin-left: 52px;
+  }
+
+  .pages {
+    position: absolute;
+    width: 32px;
+    font-size: 6.4px;
+    top: 76px;
+    right: 50px;
+    text-align: center;
+    color: black;
+    border: 0.8px solid white;
+    background-color: white;
+    height: 4px;
+    z-index: 3;
+  }
+
+  .Row1 {
+    position: absolute;
+    top: 106px; /*340px;*/
+    width: 4760px;
+    z-index: 3;
+    left: 38px;
+    height: 296px;
+    display: flex;
+  }
+
+  .Row2 {
+    position: absolute;
+    top: 238px; /*740px;*/
+    width: 476px;
+    z-index: 3;
+    left: 38px;
+    height: 296px;
+    display: flex;
+  }
+  .Row3 {
+    position: absolute;
+    top: 372px;
+    width: 476px;
+    z-index: 3;
+    left: 38px;
+    height: 296px;
+    display: flex;
+  }
+
+  .Footer {
+    position: absolute; /* start from top left corner*/
+    width: 100%;
+    height: 40px;
+    background-color: #55a630;
+    bottom: 5px;
+    top: 520px;
+    font-size: 7.2px;
+  }
+
+  .FooterImages1 {
+    position: absolute;
+    height: 20px;
+    background-color: #55a630;
+    bottom: 10px;
+    width: 35px;
+    left: 10px;
+    z-index: 2;
+    padding-left: 0.8%;
+  }
+  .FooterImages2 {
+    position: absolute;
+    height: 14px;
+    background-color: #55a630;
+    bottom: 12px;
+    width: 14px;
+    left: 40px;
+    padding-left: 0.8%;
+  }
+  .FooterImages3 {
+    position: absolute;
+    height: 14px;
+    background-color: #55a630;
+    bottom: 12px;
+    width: 14px;
+    left: 70px;
+    padding-left: 0.8%;
+  }
+  .FooterImages4 {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #55a630;
+    bottom: 14px;
+    left: 90px;
+    padding-left: 0.8%;
+  }
+  .FooterImages5 {
+    position: absolute;
+    height: 14px;
+    background-color: #55a630;
+    bottom: 12px;
+    width: 14px;
+    left: 120px;
+    padding-left: 0.8%;
+  }
+  .FooterImages6 {
+    position: absolute;
+    height: 14px;
+    background-color: #55a630;
+    bottom: 12px;
+    width: 14px;
+    left: 160px;
+    padding-left: 0%;
+  }
+
+  .ShopSign {
+    position: absolute;
+    width: 60px;
+    height: 24px;
+    top: 0px;
+    background-color: #55a630;
+    z-index: 2;
+    left: 90px;
+  }
+  .navigation {
+    text-align: center;
+    font-size: 12px;
+    z-index: inherit;
+  }
+  .Nav {
+    position: absolute;
+    width: 80px;
+    height: 240px;
+    background-color: white;
+    top: 80px;
+    z-index: 1;
+  }
+  .NavBar {
+    font-size: 7px;
+  }
+  .img {
+    margin-right: 30px;
+    margin-left: 14px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+  }
+  .one {
+    position: absolute;
+    top: 226px; /*340px;*/
+    width: 476px;
+    z-index: 3;
+    left: 38px;
+    height: 296px;
+    display: flex;
+    font-size: 7.2px;
+  }
+  .two {
+    position: absolute;
+    top: 358px; /*740px;*/
+    width: 476px;
+    z-index: 3;
+    left: 38px;
+    height: 296px;
+    display: flex;
+    font-size: 7.2px;
+  }
+  .RTS {
+    position: absolute;
+    top: 0px;
+    left: 135px;
     font-size: 24px;
     color: white;
-        }
-        .popular{
+  }
+  .popular {
     position: absolute;
-    top:190px;
-    left:56px;
-    font-size:12px;
-    color:white;
-        }
-        .sign{
+    top: 190px;
+    left: 56px;
+    font-size: 12px;
+    color: white;
+  }
+  .sign {
     position: absolute;
     /* left:50px; */ /*20%*/
     left: 200px;
     top: 6px;
     font-size: 7.2px;
-        }
-        .SignUp{
+  }
+  .SignUp {
     position: absolute;
     text-align: right;
-    left: 20px;/*10*/
+    left: 20px; /*10*/
     top: 6px;
     font-size: 7.2px;
-}
-        .Search{
-position: absolute;
-left:120px;
-text-align: center;
-top: 0px;
-background-color:#55a630;
-border-radius: 10px;
-color:white;
-width:50px;
-height:15px;
+  }
+  .Search {
+    position: absolute;
+    left: 120px;
+    text-align: center;
+    top: 0px;
+    background-color: #55a630;
+    border-radius: 10px;
+    color: white;
+    width: 50px;
+    height: 15px;
+  }
+  .SearchBar {
+    border-radius: 25px;
+    width: 140px;
+    top: 4px;
+    font-size: 7.2px;
+  }
+  .Table {
+    border: 0.4px solid green;
+    border-radius: 8px;
+    position: absolute;
+    right: 16px;
+    width: 112px;
+    text-align: left;
+    background-color: #55a630;
+    color: white;
+    left: 420px;
+    height: 8px;
+  }
+  .SignUpButton {
+    position: absolute;
+    text-align: right;
+    left: 520px;
+    top: 0px;
+    background-color: #007200;
+    border-radius: 25px;
+    color: white;
+    height: 17px;
+    font-size: 7.2px;
+    width: 40px;
+  }
 
-}
-        .SearchBar{
-border-radius: 25px;
-width: 140px;
-top:4px;
-font-size: 7.2px;
-}
-        .Table{
-border: 0.4px solid green;
-border-radius: 8px;
-position: absolute;
-right:16px;
-width:112px;
-text-align: left;
-background-color: #55a630;
-color: white;
-left:420px;
-height:8px;
-}
-        .SignUpButton{
-position: absolute;
-text-align: right;
-left: 520px;
-top: 0px;
-background-color: #007200;
-border-radius: 25px;
-color: white;
-height: 17px;
-font-size: 7.2px;
-width:40px;
-}
+  .slideshow-container {
+    max-width: 360px;
+    height: 120px;
+    position: absolute;
+    margin: 4px;
+    top: 64px;
+    left: 56px;
+  }
+  .banner {
+    vertical-align: middle;
+    height: 120px;
+    width: 360px;
+  }
 
-        .slideshow-container {
-            max-width: 360px;
-             height: 120px;
-            position: absolute;
-             margin: 4px;
-            top:64px;
-            left:56px;
-         }
-        .banner {
-            vertical-align: middle;  
-            height:120px; 
-            width:360px;
-        }
-    
-        .language{
-            left:0px;
-            font-size: 7.2px;
-        }
+  .language {
+    left: 0px;
+    font-size: 7.2px;
+  }
 
-        .icons{
-            position: absolute;
-            background-color: white;
-            color:#55a630;
-            width:20px;
-            left:20px;
-            z-index: 3;
-        }
-        .Heart{
-            position:absolute;
-            left:330px;
-            background-color: white;
-            height:12px;
-            bottom:0px;
-            border-radius: 10px;
-            font-size: 7.2px;
-            
-        }
-        .Cart{
-            position: absolute;
-            width:40px;
-            left: 350px;
-            background-color: white;
-            height:12px;
-            bottom:0px;
-            border-radius: 15px;   
-            font-size: 7.2px;
-        
-        }
-    }
-
-        
-        
-    
+  .icons {
+    position: absolute;
+    background-color: white;
+    color: #55a630;
+    width: 20px;
+    left: 20px;
+    z-index: 3;
+  }
+  .Heart {
+    position: absolute;
+    left: 330px;
+    background-color: white;
+    height: 12px;
+    bottom: 0px;
+    border-radius: 10px;
+    font-size: 7.2px;
+  }
+  .Cart {
+    position: absolute;
+    width: 40px;
+    left: 350px;
+    background-color: white;
+    height: 12px;
+    bottom: 0px;
+    border-radius: 15px;
+    font-size: 7.2px;
+  }
+}
