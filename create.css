@@ -206,11 +206,18 @@ h2 {
   border-image-width: 30%;
   text-align: center;
   background-color: #007200;
+  
   border-radius: 25px;
-  color: white;
+  
 
 }
+/* makes the add button biggerand change color */
+input:hover.AddCartButton {
+background-color:currentColor;
 
+
+width: inherit;
+}
 .NavBar {
   position: absolute;
   height: 200px;
