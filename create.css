@@ -1307,3 +1307,39 @@ color: #fefae0;
     color:yellow ;
     text-decoration: underline;
   }
+
+  .addproductbutton{
+    position: absolute;
+    
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    
+    text-align: center;
+    text-decoration: none;
+    
+    
+    top: 50px;
+    margin-left: 5%;
+     
+    
+    
+    display: flex;
+  }
+
+  .addproductbutton:hover{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+  }
+
+  .productsList{
+    position: absolute;
+    top: 226px; /*340px;*/
+    width: 476px;
+    z-index: 3;
+    left: 38px;
+    height: 296px;
+    display: flex;
+    font-size: 7.2px;
+  }
