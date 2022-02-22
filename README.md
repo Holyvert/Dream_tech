@@ -1,5 +1,5 @@
 
-FoodBox
+<h1 style=bold >FoodBox</h1> 
 
 FoodBox is an online responsive and interactive grocery website. 
 The website was built to accomodate our clientele for easy and fast 
@@ -23,7 +23,7 @@ through time or clientele suggestion.
 
 [Guillaume Lachapelle]
 
-[Ahmed Sabsood]
+[Ahmed Sabsood]( https://github.com/AhmedSabsoob )
 
 [Aly Hussein]
 
