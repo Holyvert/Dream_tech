@@ -19,7 +19,7 @@ through time or clientele suggestion.
 
 [Isabelle Czuboka](https://github.com/IsabelleCzuboka)
 
-[Oliver Vilney]
+[Oliver Vilney](https://github.com/Holyvert)
 
 [Guillaume Lachapelle](https://github.com/Guillaume-Lachapelle)
 
