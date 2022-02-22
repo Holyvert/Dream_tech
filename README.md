@@ -19,7 +19,7 @@ through time or clientele suggestion.
 
 [Isabelle Czuboka](https://github.com/IsabelleCzuboka)
 
-[Oliver Vilney]
+[Oliver Vilney](https://github.com/Holyvert)
 
 [Guillaume Lachapelle](https://github.com/Guillaume-Lachapelle)
 
@@ -42,7 +42,7 @@ FoodBox was created with HTML and CSS.
 
 #### Will there be other languages used for the website?
 
-Yes, the website will also become more interactive with the use of Javascript later on in its development.
+Yes, the website will also become more interactive with the use of Javascript and PHP later on in its development.
 
 
 ## Acknowledgements
