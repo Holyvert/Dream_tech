@@ -1333,13 +1333,66 @@ color: #fefae0;
     color: #000;
   }
 
-  .productsList{
+  .addProductBox{
+    width: 50%;
+    height: 70%;
+    background: #007200;
+    color: #007200;
+    top: 50%;
+    left: 50%;
     position: absolute;
-    top: 226px; /*340px;*/
-    width: 476px;
-    z-index: 3;
-    left: 38px;
-    height: 296px;
-    display: flex;
-    font-size: 7.2px;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
   }
+
+  .addProductBox p{
+    margin: 0;
+    padding:0 ;
+    font-weight: bold;
+    color: #fefae0;
+    }
+
+    .addProductBox input{
+      width:100%;
+      margin-bottom: 20px;
+      
+      }
+    
+      .addProductBox input[type="text"]{
+        border: none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        outline: none;
+        height: 40px;
+        color: #fff;
+        font-size: 16px;
+      }
+      .addProductBox input[type="submit"]{
+        border: none;
+        outline: none;
+        height: 40px;
+        background:#fb2525 ;
+        color: #fff;
+        font-size: 18px;
+        border-radius:  20px;
+      }
+    
+      .addProductBox input[type="submit"]:hover{
+        cursor: pointer;
+        background: #ffc107;
+        color: #000;
+    
+      }
+
+      .addProductBox textarea{
+        border: none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        outline: none;
+        
+        color: #fff;
+        font-size: 16px;
+        
+        
+        }
