@@ -1,3 +1,6 @@
+*{
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
 .BorderDiv {
   position: absolute;
   border: 1px solid grey;
