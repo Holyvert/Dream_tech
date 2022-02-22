@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple juice</title>
+    <title>ShoppingCart</title>
     <link rel="stylesheet" href="../create.css" />
 </head>
 <body>
@@ -87,77 +87,94 @@
   
    
       
-        <div class="iconsDescription"> 
-       
-            <table class="Heart">
-            <tr>
-              <!-- rows of the tables -->
-              <th>&#10084</th>
-            </tr>
-          </table>
-          <table class="Cart">
-            <tr>
-              <!-- column -->
-              <th><a href="\ShoppingCart.html">&#128722$0.00</a></th>
-            </tr>
-          </table>
-              </div>
+      
           </div>
 
       <div class="RowDescrpition" >
         
-          <div class="imgDescription" > 
-              <table>
-                <th>
-                  <h2>ShoppingCart</h2>
-                </th>
-              </table>
+          <div class="imgDescription" style="max-height: none;"> 
+            <table  style="border-bottom: 3px;"cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr style="vertical-align: text-top;">
+                  <td ><p style="height: 20px;">Shopping cart</p></td>
+                  
+                </tr>
+                <tr>
+                  <td><img class="images" src="https://images.unsplash.com/photo-1617102738820-bee2545405fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"></a>
+                  </td>
+                  <td>Unsalted Chips</td>
+                  <td><div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);">
+                    <input type="button" value="-" class="minus" ><input type="number" step="1"
+                     min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
+                     type="button" value="+" class="plus">
+                    </div></td>
+                    <td><div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
+                      <input type="button" value="delete" class="minus" style="border-radius: 10px;" >
+                      </div></td>
+                  <td><p style="text-align: right;">4.99$</p></td>
+                
+                </tr>
+                <tr>
+                  <td><img class="images" src="https://images.unsplash.com/photo-1573555657105-47a0bb37c3ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80" ></a>
+                  </td>
+                  <td>Cashews</td>
+                  <td><div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);">
+                    <input type="button" value="-" class="minus" ><input type="number" step="1"
+                     min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
+                     type="button" value="+" class="plus">
+                    </div></td>
+                    <td><div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
+                      <input type="button" value="delete" class="minus" style="border-radius: 10px;" >
+                      </div></td>
+                  <td><p style="text-align: right;">12.99$</p></td>
+                
+                </tr>
+                <tr>
+                  <td><img class="images" src="https://images.unsplash.com/photo-1628791392322-de3fc6348d1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" ></a>
+                  </td>
+                  <td>Salsa Chips</td>
+                  <td><div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);">
+                    <input type="button" value="-" class="minus" ><input type="number" step="1"
+                     min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
+                     type="button" value="+" class="plus">
+                    </div></td>
+                    <td><div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
+                      <input type="button" value="delete" class="minus" style="border-radius: 10px;" >
+                      </div></td>
+                  <td><p style="text-align: right;">5.99$</p></td>
+                
+                </tr>
+              </tbody>
+            </table>
           </div>
 
-          <div class="ProductDescription">
+          <div class="ProductDescription" style="text-align: right;">
 
-            <p style="font-size:23px; font-weight: 100 ;">Martinellis</p>
-         
-            <p style="font-size:50px; font-weight: 1000;">Sparkling </br> Apple Juice</p>
-            296 ml
+            <p style="font-size:23px; font-weight: 100 ;">Sub-total</p>
+           
             </br>
-            </br>
-            <p style="font-size:23px; font-weight: 100 ;font-weight: 1000;">6.99$</p>
-            <p style="font-size:23px; font-weight: 100 ;">2.36$ / 100ml</p> 
-
-            
-                <form style="text-align: center;">
-                
-                <input 
-                  class="AddCartButton"
-                  type="image"
-                  
-                  src="../Images/Food_box_button_white.png"
-                  name="Add"
-                style="color: rgb(212, 126, 83);"
-                   width="100px"
-
-                />
-              </form>
+            <div style="font-size:23px;">
+              <p><span style="float: left; font-weight: 100 ;font-weight: 1000; display: inline-block;">Unsalted Chips</span><span> 4.99$</span></p>
+              <p><span style="float: left;font-weight: 100 ;font-weight: 1000; display: inline-block;">Cashews</span><span>12.99$</span></p>
+              <p><span style="float: left;font-weight: 100 ;font-weight: 1000; display: inline-block;">Salsa Chips</span><span> 5.99$</span></p></div>
+            <hr>
+            <div>
+              <p><span style="float: left;">Befroe taxes</span><span> 23.97$</span></p>
+              <p><span style="float: left;">TPS</span><span> 1.20$</span></p>
+              <p><span style="float: left;">TVQ</span><span>2.39$</span></p>
+              
+          </div>
+            <hr>
+            <p style="display: flex inline-block; color: red; background-color: white; border-radius: 10px;"> (This price dosent include the transport) 27.56 $ </p> 
 
               <div class="dropdown">
-                <button class="dropbutton">Product description</button>
-                <div class="dropdown-content" style="background-color: rgb(212, 126, 83);">
-                <a href="#"> Pure Canadian filtered, pasterized, and carbonated apple juice.
-                    Natural with no added chemicals and an excelent refreshment Beverages.
-                </a>
-                </div>
+                <button class="dropbutton">Proced to checkout</button>
+               
               </div>
               </br>
               </br>
 
-              <div class="Productquantity buttons_added" style="background-color: rgb(212, 126, 83);">
-                <input type="button" value="-" class="minus" ><input type="number" step="1"
-                 min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
-                 type="button" value="+" class="plus">
-                </div>
-      
-  </div>
+            
 </div>
 
 

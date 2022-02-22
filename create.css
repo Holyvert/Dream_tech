@@ -362,6 +362,29 @@ width: inherit;
  
 
 }
+.imgDescription table{
+  border-collapse: collapse;
+margin-right: none;
+width: 700px;
+max-height: none;
+border-spacing: 0;
+
+}
+.imgDescription tr{
+  border: solid;
+  border-width: 1px 0;
+  color: white;
+ 
+ 
+}
+  .imgDescription tr td{
+    height: 100px;
+  
+  }
+  .imgDescription tr td img{
+    height: 150px;
+    width: 150px;
+  }
 .img {
   margin-right: 75px;
   margin-left: 35px;
