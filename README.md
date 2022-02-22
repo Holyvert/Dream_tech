@@ -17,7 +17,7 @@ through time or clientele suggestion.
 
 [Ann-Marie Czuboka](https://github.com/amczuboka)
 
-[Isabelle Czuboka]
+[Isabelle Czuboka](https://github.com/IsabelleCzuboka)
 
 [Oliver Vilney]
 
