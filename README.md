@@ -21,7 +21,7 @@ through time or clientele suggestion.
 
 [Oliver Vilney]
 
-[Guillaume Lachapelle]
+[Guillaume Lachapelle](https://github.com/Guillaume-Lachapelle)
 
 [Ahmed Sabsood]( https://github.com/AhmedSabsoob )
 
