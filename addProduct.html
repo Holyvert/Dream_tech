@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Box Grocery Store</title>
+    <link rel="stylesheet" href="create.css" />
+  </head>
+
+  <body>
+    <!-- outer division-->
+    <div class="BorderDiv">
+      <!-- header division-->
+      <div class="ShopSign">
+          <p class="TShop"><a href="Website.html"><img class="Logo" src="Images\Food_box_logo_white.png" alt="SIUU" height="50" /> </a></p>
+      </div>
+      <div class="Header">
+        <form class="sign">
+          <input
+            class="SearchBar"
+            type="text"
+            placeholder="Search for Products"
+          />
+          <input class="Search" type="button" value="Search" />
+        </form>
+        <form class="SignUp">
+          <table class="Table">
+            <tr>
+              <!-- rows of the tables -->
+              <th><a href="Website.html">Home </a></th>
+              <!-- column -->
+              <th>Services</th>
+              <th>Shop</th>
+            </tr>
+          </table>
+          <input
+            class="SignUpButton"
+            type="submit"
+            name="signup"
+            value="SignIn"
+          />
+        </form>
+      </div>
+      
+      <div class="MainPage">
+              <!-- division for sign up box-->
+            <div class="addProductBox">
+              
+              <h1>New Product</h1>
+              <form>
+                <p>Product name</p>
+                <input type="text" name="" placeholder="Enter Product Name">
+                <p>Product Description</p>
+                <textarea  style="width:200px; height:60px;" placeholder="Enter Description">
+                </textarea><br>
+                <p>Product Category</p>
+                <select>
+                  <option >Fruits and Vegetables</option>
+                  <option>Beverages</option>
+                  <option >MeatAndFish</option>
+                  <option >Snacks</option>
+                  <option >Dairy</option>
+                  <option >Frozen and Canned</option>
+                </select>
+                <p>Product Price</p>
+                <input type="text" name="" placeholder="Enter Product Price">
+                <p>Quantity in Stock</p>
+                <input type="text" name="" placeholder="Enter Quantity">
+                <p>Product Image</p>
+                <input type="file" accept="image/*" />
+                <input type="submit" name="" value="Save">
+                
+
+              </form>
+          </div>          
+      </div>
+ 
+      
+      <div class="Footer">
+        <table style="width: 100%; height:100%; vertical-align: middle;" >
+          <td style="width: 50%; padding-left:1%;">
+            <img class="FooterImages1" src="https://raw.githubusercontent.com/Holyvert/Dream_tech/main/Images/Food_box_logo_white.png" alt="SIUU" height="50"/>
+            <img class="FooterImages2"style="padding-left: 2%" src="https://raw.githubusercontent.com/Holyvert/Dream_tech/main/Images/Dots_footer.png" alt="SIUU" height="35" />
+            <img class="FooterImages3"src="https://raw.githubusercontent.com/Holyvert/Dream_tech/main/Images/Twitter_logo.png" alt="SIUU" height="35" />
+            <img class="FooterImages4"style="padding-left: 2%" src="https://raw.githubusercontent.com/Holyvert/Dream_tech/main/Images/Facebook_logo.png" alt="SIUU" height="35" />
+            <img class="FooterImages5"style="padding-left: 2%" src="https://raw.githubusercontent.com/Holyvert/Dream_tech/main/Images/Youtube_logo.png" alt="SIUU" height="35" />
+            <a style="padding-left: 2%;" href="https://github.com/Holyvert/Dream_tech">
+              <img class="FooterImages6"alt="GitHub" src="https://raw.githubusercontent.com/Holyvert/Dream_tech/main/Images/github-icon.jpg" height="35" />
+            </a>
+          </td>
+          <td style="width: 50%; text-align: right; color: #fff; padding-right: 1%;"><b>&copy; 2022 FoodBox, All rights reserved</b></td>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
