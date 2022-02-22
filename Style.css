@@ -1,0 +1,198 @@
+/* Google Font Link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Coloring the background */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #488f32;
+  padding: 30px;
+}
+
+/*  */
+.container {
+  position: relative;
+  max-width: 850px;
+  width: 100%;
+  background: #fff;
+  padding: 40px 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  perspective: 2700px;
+}
+
+/* Positioning */
+.container .cover {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 50%;
+  z-index: 98;
+}
+
+/* Adding Green shade above the image + Opacity */
+.container .cover::before,
+.container .cover::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #1b8147;
+  opacity: 0.3;
+  z-index: 12;
+}
+
+/* Putting the image inside the cover (block) */
+.container .cover img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 10;
+}
+
+/* Positioning Information next to "Login" header */
+.container .cover .text {
+  position: absolute;
+  z-index: 130;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling the Supertext (text1) and Babyscript (text2) */
+.cover .text .text-1,
+.cover .text .text-2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+/* Styling the subscript */
+.cover .text .text-2 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Lines */
+.form-content .login-form,
+.form-content .signup-form {
+  /* Animation type calc();*/
+  width: calc(100% / 2 - 25px);
+}
+
+/* Styling header "Login" */
+.forms .form-content .title {
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Spacing between the header "Login" and text, password widgets. */
+.forms .form-content .input-boxes {
+  margin-top: 30px;
+}
+
+/* Adding some Spacing */
+.forms .form-content .input-box {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+
+/* Styling the Button */
+.form-content .input-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Coloring the Icons */
+.form-content .input-box i {
+  position: absolute;
+  color: #3d955b;
+  font-size: 17px;
+}
+
+/* Submit Button Color */
+.forms .form-content .button input {
+  color: #fff;
+  background: #389427;
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+
+.form-container {
+  display: flex;
+  height: 98vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: rgb(18, 38, 11);
+}
+
+.form-container .form-wrap {
+  background: rgb(29, 128, 34);
+  width: 40%;
+  padding: 15px 20px;
+}
+
+.form-container .form-wrap h2 {
+  text-align: center;
+  margin: 0px 0px 20px;
+  font-size: 19px;
+}
+
+.form-container .form-wrap .form-box {
+  margin: 0px 0px 15px;
+}
+
+.form-container .form-wrap .form-box input[type="text"]{
+  padding: 5px 8px;
+  border-radius: 3px;
+  border: 1px solid #353535;
+  width: 100%;
+}
+
+.form-container .form-wrap .form-submit {
+  display: flex;
+  justify-content: center;
+}
+
+
+.form-container .form-wrap .form-submit input[type="submit"] {
+  padding: 4px 10px;
+  border: none;
+  border-radius: 2px;
+  background: #229422;
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 16px;
+}
+
