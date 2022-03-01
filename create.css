@@ -1,17 +1,21 @@
-.BorderDiv {
+/* .BorderDiv {
   position: absolute;
   border: 1px solid grey;
   width: 100%;
   height: 1400px;
   margin: auto;
-}
+} */
 .Header {
-  position: absolute; /* start from top left corner*/
+  /* position: absolute;  */
+  top:0;
   width: 100%;
-  height: 60px;
+  height: 1%;
   background-color: white;
   border-radius: 25px;
   z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
 h1 {
   color: white;
@@ -144,9 +148,10 @@ border-bottom-left-radius: 10px;}
   width: 100%;
   height: 100px;
   background-color: #55a630;
-  bottom: 0px;
+  bottom: 0;
   z-index: 3;
-  top: 1300px;
+  vertical-align: text-bottom;
+  /* top: 1300px; */
 }
 
 .FooterDescription{
@@ -160,12 +165,12 @@ border-bottom-left-radius: 10px;}
   top: 1000px;
 }
 .ShopSign {
-  position: absolute;
-  width: 150px;
-  height: 60px;
+  /* position: absolute; */
+  /* width: 10%; */
+  border-radius: 25%;
   background-color: #55a630;
   z-index: 2;
-  left: 225px;
+  left: 14%;
 }
 
 h3 {
@@ -184,53 +189,60 @@ h2 {
 }
 
 .sign {
-  position: absolute;
+  /* position: absolute; */
   /* left:50px; */ /*20%*/
-  left: 500px;
-  top: 15px;
+  /* left: 40%; */
+
+ 
+  /* width: 20%; */
 }
 
 .SignUp {
-  position: absolute;
+  /* position: absolute; */
   text-align: right;
-  right: 50px; /*10*/
-  top: 15px;
+  /* right: 10%; */
+  display: inline-flex;
+  top: 25%;
 }
 
 .Search {
-  position: absolute;
-  left: 300px;
+  /* position: absolute; */
+  /* left: 300px; */
   text-align: center;
-  top: 0px;
+  /* top: 0px; */
+  /* margin-left: 0%; */
   background-color: #55a630;
   border-radius: 25px;
   color: white;
-  width: 70px;
-  height: 21px;
+  /* width: 70px;
+  height: 21px; */
 }
 
 .SearchBar {
   border-radius: 25px;
-  width: 350px;
-  top: 0px;
+  /* width: 100%; */
+ 
+  /* top: 0px; */
+text-align: left;
 }
 
 .Table {
   border: 1px solid green;
-  border-radius: 25px;
-  position: absolute;
-  right: 40px;
-  width: 280px;
+  border-radius: 10px;
+  /* position: absolute; */
+  /* right: 40px; */
+  width: 20%;
+  height: 50%;
   text-align: left;
   background-color: #55a630;
   color: white;
 }
 
 .SignUpButton {
-  position: absolute;
+  /* position: absolute; */
   text-align: right;
-  right: 10px;
-  top: 0px;
+  /* right: 10px; */
+  /* top: 0px; */
   background-color: #007200;
   border-radius: 25px;
   color: white;
@@ -594,14 +606,15 @@ a {
   }
 
   .Header {
-    width: 20%;
-    height: 12px;
+    width: 100%;
+    /* height: 100%; */
+    align-items: baseline;
     font-size: 3.6px;
   }
   .ShopSign {
     position: absolute;
-    width: 30px;
-    height: 12px;
+    /* width: 30%;
+    height: 12%; */
     z-index: 2;
     background-color: #55a630;
   }
@@ -1155,11 +1168,12 @@ a {
     color: white;
   }
   .sign {
-    position: absolute;
+    /* position: absolute; */
     /* left:50px; */ /*20%*/
-    left: 200px;
-    top: 6px;
+    /* left: 20%; */
+    /* top: 0; */
     font-size: 7.2px;
+    display:inline-block;
   }
   .SignUp {
     position: absolute;
