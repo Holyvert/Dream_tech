@@ -1,10 +1,9 @@
-/* .BorderDiv {
-  position: absolute;
-  border: 1px solid grey;
-  width: 100%;
-  height: 1400px;
-  margin: auto;
-} */
+.BorderDiv {
+  position: relative;
+display: flex;
+min-height: 100%;
+
+}
 .Header {
   /* position: absolute;  */
   top:100%;
@@ -23,7 +22,7 @@ h1 {
 }
 .Nav {
   position: absolute;
-  width: 200px;
+  width: 15%;
   border-radius: 30px;
   height: fit-content;
   background-color: white;
@@ -32,11 +31,13 @@ h1 {
 }
 
 .navigation {
+  background-color: white;
   text-align: center;
   font-size: 30px;
   z-index: inherit;
 }
 .MainPage {
+  justify-content: flex-end;
   position: absolute;
    display: flex;
    flex-direction: column;
@@ -51,6 +52,7 @@ h1 {
   /* left: 200px; */
   top: 60px;
   color: white;
+  padding-bottom: 10%;
 }
 .MainPageDescription{
   position: absolute;
@@ -149,14 +151,25 @@ border-bottom-left-radius: 10px;}
 
 
 .Footer {
-  position: fixed; /* start from top left corner*/
+  position: fixed;
+  
+  /* margin-bottom: 0%; */
+  /* scroll-margin-bottom: 0%; */
+  /* align-self: flex-end; */
   width: 100%;
   height: 10%;
   background-color: #55a630;
+ align-self: flex-end;
   bottom: 0;
-  z-index: 3;
-  vertical-align: text-bottom;
+z-index: 10;
+
   /* top: 1300px; */
+  /* bottom: -55%; */
+}
+#footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .FooterDescription{
@@ -167,7 +180,7 @@ border-bottom-left-radius: 10px;}
   background-color: #55a630;
   bottom: 0px;
   z-index: 3;
-  top: 1000px;
+  bottom: -50%;
 }
 .ShopSign {
   /* position: absolute; */
@@ -323,10 +336,10 @@ background-color:currentColor;
 width: inherit;
 }
 .NavBar {
-  position: absolute;
+  /* position: absolute; */
   height: 200px;
   text-align: left;
-  width: 280px;
+  /* width: 100%; */
 }
 
 .Categories {
@@ -411,23 +424,44 @@ border-spacing: 0;
   margin-right: 75px;
   margin-left: 35px;
   margin-bottom: 25px;
+  border-radius: 25px;
   width: 250px;
   height: 250px;
+
   display: flex;
+  justify-content: flex-start;
+  background-size: cover;
+/* align-items: flex-end; */
+  
+  
 }
 
+
 .title1 {
-  position: absolute;
-  top: 0px;
+  /* float: left; */
+  /* position: relative; */
+  
+
+  width: fit-content;
+ 
+  /* position:relative; */
+  margin-top:0%;
+  /* align-self: flex-start; */
   background-color: #fefae0;
   color: black;
+  
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 25px;
+  height: 50%;
 }
 
 .images {
-  border-radius: 25px;
+  /* align-self: flex-end; */
+  
+
+  width:100%;
+ 
 }
 
 /* this is the max width before things collapse on eahc other 
@@ -465,13 +499,18 @@ a {
 }
 
 .one {
+  display: flex;
   position: relative;
+ flex-wrap: wrap;
+ justify-content: center;
+
   /* top: 565px; */
-  width: inherit;
+  width: 100%;
+  
   z-index: 3;
   /* left: 95px; */
   /* height: 740px; */
-  display: flex;
+ 
 }
 
 /* .two {
@@ -565,11 +604,12 @@ a {
 .banner {
   vertical-align: middle;
   height: 300px;
-  width: 900px;
+  width:800px;
+  border-radius: 25px;
 }
 
 .mySlides {
-  display: none;
+  /* display: none; */
 }
 
 /* Slideshow container */
@@ -797,7 +837,7 @@ a {
     z-index: inherit;
   }
   .Nav {
-    position: absolute;
+    position: relative;
     width: 20%;
     /* height: 120px; */
     background-color: white;
@@ -825,16 +865,16 @@ a {
     display: flex;
     font-size: 3.6px;
   }
-  .two {
+  /* .two {
     position: absolute;
-    top: 179px; /*740px;*/
+    top: 179px; /*740px;
     width: 238px;
     z-index: 3;
     left: 19px;
     height: 148px;
     display: flex;
     font-size: 3.6px;
-  }
+  } */
   .RTS {
     position: absolute;
     top: 0px;
@@ -954,7 +994,7 @@ a {
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 481px) and (max-width: 826px) {
   .BorderDiv {
     position: absolute;
     border: 1px solid grey;
@@ -1158,6 +1198,7 @@ a {
     width: 100px;
     height: 100px;
     display: flex;
+  
   }
   .one {
     position: absolute;
