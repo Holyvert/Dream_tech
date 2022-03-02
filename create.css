@@ -7,7 +7,7 @@
 } */
 .Header {
   /* position: absolute;  */
-  top:0;
+  top:100%;
   width: 100%;
   height: 1%;
   background-color: white;
@@ -24,10 +24,11 @@ h1 {
 .Nav {
   position: absolute;
   width: 200px;
-  height: 600px;
+  border-radius: 30px;
+  height: fit-content;
   background-color: white;
   top: 200px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .navigation {
@@ -37,13 +38,17 @@ h1 {
 }
 .MainPage {
   position: absolute;
-  width: 1200px;
-  height: 1240px; /*840*/
+   display: flex;
+   flex-direction: column;
+   align-content: space-between;
+  width: 100%;
+  /* height: fit-content; */
+  /* height: 1240px; */
   background-color: #55a630;
-  bottom: 100px;
+  /* bottom: 100px; */
   z-index: 1;
   border-radius: 25px;
-  left: 200px;
+  /* left: 200px; */
   top: 60px;
   color: white;
 }
@@ -212,23 +217,30 @@ h2 {
   /* top: 0px; */
   /* margin-left: 0%; */
   background-color: #55a630;
-  border-radius: 25px;
+  /* border-radius: 25%; */
+  border-bottom-right-radius:25px  ;
+  border-top-right-radius:25px  ;
   color: white;
+  z-index: 1;
   /* width: 70px;
   height: 21px; */
 }
 
 .SearchBar {
-  border-radius: 25px;
+  flex-grow: 4;
+  /* border-radius: 25px; */
   /* width: 100%; */
- 
+  border-bottom-left-radius:25px ;
+  border-top-left-radius:25px ;
   /* top: 0px; */
+  z-index: -1;
 text-align: left;
 }
 
 .Table {
   border: 1px solid green;
-  border-radius: 10px;
+  border-bottom-left-radius:25px ;
+  border-top-left-radius:25px ;
   /* position: absolute; */
   /* right: 40px; */
   width: 20%;
@@ -244,9 +256,10 @@ text-align: left;
   /* right: 10px; */
   /* top: 0px; */
   background-color: #007200;
-  border-radius: 25px;
+  border-bottom-right-radius:25px ;
+  border-top-right-radius:25px ;
   color: white;
-  height: 25px;
+  /* height: 200%; */
 }
 .dropbutton {
   background-color: #326e16;
@@ -452,57 +465,63 @@ a {
 }
 
 .one {
-  position: absolute;
-  top: 565px; /*340px;*/
-  width: 1190px;
+  position: relative;
+  /* top: 565px; */
+  width: inherit;
   z-index: 3;
-  left: 95px;
-  height: 740px;
+  /* left: 95px; */
+  /* height: 740px; */
   display: flex;
 }
 
-.two {
+/* .two {
   position: absolute;
-  top: 895px; /*740px;*/
+  top: 895px; 
   width: 1190px;
   z-index: 3;
   left: 95px;
   height: 740px;
   display: flex;
-}
+} */
 
 .MainDiv {
-  position: absolute;
-  height: 120px;
-  width: 1200px;
-  border-radius: 25px 25px 0 0;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  display: flex;
+  height: 12%;
+  width: 100%;
+  
   z-index: 3;
-  top: 40px;
-  left: 40px;
+  /* top: 40px; */
+  
 }
 
 .RTS {
-  position: absolute;
+  /* position: absolute; */
   top: 10px;
-  left: 380px;
+  /* left: 380px; */
   font-size: 60px;
   color: white;
 }
 
 .language {
-  position: absolute;
-  left: 20px;
+  /* position: absolute; */
+  border-radius: 25px;
+  
 }
 
 .icons {
-  position: absolute;
-  background-color: white;
+  /* position: absolute; */
+  display: flex;
+  justify-content: space-between;
+  /* background-color: white; */
   color: #55a630;
-  width: 50px;
-  left: 50px;
-  z-index: 3;
+  /* width: 50px;
+  left: 50px; */
+  /* z-index: 3; */
 }
-.iconsDescription{
+/* .iconsDescription{
   top:70px;
   position: absolute;
   background-color: white;
@@ -510,32 +529,36 @@ a {
   
   left: 50px;
   z-index: 3;
-}
+} */
 
 .Heart {
-  position: absolute;
-  left: 900px;
+  /* position: absolute;
+  left: 900px; */
+
   background-color: white;
   height: 30px;
-  top: 0px;
+ 
   border-radius: 25px;
 }
 
 .Cart {
-  position: absolute;
+
   width: 100px;
-  left: 950px;
-  background-color: white;
-  height: 30px;
-  top: 0px;
+  
+  background-color:white;
+  /* height: 30px; */
+  
   border-radius: 15px;
 }
 
 .popular {
-  position: absolute;
-  top: 475px;
-  left: 140px;
+  position: relative;
+  /* top: 475px; */
+  /* 
+   */
+   align-self: center;
   font-size: 30px;
+
   color: white;
 }
 
@@ -551,12 +574,15 @@ a {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 900px;
-  height: 300px;
-  position: absolute;
+  /* width: 50px; */
+  border-radius: 30%;
+  /* height: 300px; */
+  position: relative;
   margin: 10px;
-  top: 160px;
-  left: 140px;
+  align-self: center;
+  /* top: 160px; */
+  /* left: 140px; */
+  z-index: 3;
 }
 
 /* Number text (1/3 etc) */
@@ -631,14 +657,14 @@ a {
   }
 
   .MainPage {
-    position: absolute;
+    position: relative;
     width: 240px;
     height: 240px;
     left: 40px;
     top: 12px;
   }
   .MainDiv {
-    top: 12px;
+    /* top: 12px; */
   }
 
   .scrollbarDiv {
@@ -772,8 +798,8 @@ a {
   }
   .Nav {
     position: absolute;
-    width: 40px;
-    height: 120px;
+    width: 20%;
+    /* height: 120px; */
     background-color: white;
     top: 40px;
     z-index: 1;
@@ -790,7 +816,7 @@ a {
     display: flex;
   }
   .one {
-    position: absolute;
+    position: relative;
     top: 113px; /*340px;*/
     width: 238px;
     z-index: 3;
