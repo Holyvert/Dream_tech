@@ -31,7 +31,8 @@ through time or clientele suggestion.
 
 ## Demo
 [FoodBoxWebsite](https://holyvert.github.io/Dream_tech/Website)
-https://github.com/Holyvert/Dream_tech
+
+[GitHub repository](https://github.com/Holyvert/Dream_tech)
 
 
 ## FAQ
