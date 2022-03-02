@@ -149,9 +149,9 @@ border-bottom-left-radius: 10px;}
 
 
 .Footer {
-  position: absolute; /* start from top left corner*/
+  position: fixed; /* start from top left corner*/
   width: 100%;
-  height: 100px;
+  height: 10%;
   background-color: #55a630;
   bottom: 0;
   z-index: 3;
@@ -717,9 +717,9 @@ a {
   }
 
   .Footer {
-    position: absolute; /* start from top left corner*/
+    position: fixed; /* start from top left corner*/
     width: 100%;
-    height: 20px;
+    height: 10%;
     background-color: #55a630;
     bottom: 2.5px;
     top: 260px;
@@ -1061,9 +1061,9 @@ a {
   }
 
   .Footer {
-    position: absolute; /* start from top left corner*/
+    position: fixed; /* start from top left corner*/
     width: 100%;
-    height: 40px;
+    height: 10%;
     background-color: #55a630;
     bottom: 5px;
     top: 520px;
