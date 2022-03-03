@@ -136,7 +136,7 @@ border-bottom-left-radius: 10px;}
   div.Productquantity.buttons_added .minus:hover,
   div.Productquantity.buttons_added .plus:hover {
   
-
+background-color: inherit;
 
   width: 50px; }
  
