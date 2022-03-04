@@ -51,7 +51,7 @@ h1 {
   z-index: 1;
   border-radius: 25px;
   /* left: 200px; */
-  top: 60px;
+  top: 80%;
   color: white;
   padding-bottom: 10%;
 }
@@ -398,7 +398,7 @@ width:inherit;
 .imgDescription table{
   border-collapse: collapse;
 margin-right: none;
-width: 700px;
+width:100% ;
 max-height: none;
 border-spacing: 0;
 
@@ -462,10 +462,7 @@ border-spacing: 0;
  
 }
 
-/* this is the max width before things collapse on eahc other 
-we will have to change a few tags and make them responsive(or smaller) strating here*/
-@media only screen and (max-width: 855px) {
-}
+
 
 a {
   text-decoration: none;
@@ -971,13 +968,10 @@ a {
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 826px) {
   .BorderDiv {
-    position: absolute;
-    border: 1px solid grey;
-    width: 640px;
-    height: 560px;
-    margin: auto;
+    flex-flow: column wrap;
   }
   .title1 {
+    
     font-size: 7.2px;
   }
   h4 {
@@ -992,19 +986,21 @@ a {
   }
 
   .Header {
-    width: 40%;
-    height: 24px;
+    /* width: 40%;
+    height: 24px; */
+    align-items: center;
+    flex-flow: column wrap;
     font-size: 7.2px;
   }
   .ShopSign {
-    position: absolute;
-    width: 60px;
+    /* position: absolute; */
+    /* width: 60px;
     height: 24px;
     z-index: 2;
-    background-color: #55a630;
+    background-color: #55a630; */
   }
   .Logo {
-    position: absolute;
+    /* position: absolute; */
     width: 58px;
     height: 28px;
     top: 0;
@@ -1016,14 +1012,17 @@ a {
   }
 
   .MainPage {
-    position: absolute;
-    width: 480px;
+    /* position: absolute; */
+    /* width: 480px;
     min-height: 480px;
     left: 80px;
-    top: 24px;
+    top: 24px; */
+    top:100%;
+    flex-flow: column wrap;
   }
   .MainDiv {
-    top: 24px;
+    /* top: 24px; */
+    flex-flow: column wrap;
   }
 
   .scrollbarDiv {
@@ -1076,12 +1075,13 @@ a {
   }
 
   .Footer {
-    position: fixed; /* start from top left corner*/
-    width: 100%;
-    height: 10%;
-    background-color: #55a630;
-    bottom: 5px;
-    top: 520px;
+    /* position: fixed; 
+    width: 100%;*/
+    height: 5%;
+    /*
+    background-color: #55a630; */
+    /* bottom: 0; */
+    /* top: 520px; */
     font-size: 7.2px;
   }
 
@@ -1141,27 +1141,19 @@ a {
     padding-left: 0%;
   }
 
-  .ShopSign {
-    position: absolute;
-    width: 60px;
-    height: 24px;
-    top: 0px;
-    background-color: #55a630;
-    z-index: 2;
-    left: 90px;
-  }
+  
   .navigation {
     text-align: center;
     font-size: 12px;
     z-index: inherit;
   }
   .Nav {
-    position: absolute;
+    /* position: absolute;
     width: 80px;
     height: 240px;
     background-color: white;
     top: 80px;
-    z-index: 1;
+    z-index: 1; */
   }
   .NavBar {
     font-size: 7px;
@@ -1176,36 +1168,29 @@ a {
   
   }
   .one {
-    position: absolute;
-    top: 226px; /*340px;*/
+    /* position: absolute;
+    top: 226px; 
     width: 476px;
     z-index: 3;
     left: 38px;
-    height: 296px;
+    height: 296px; */
+    flex-flow: column wrap;
+    align-items: center;
     display: flex;
     font-size: 7.2px;
   }
-  .two {
-    position: absolute;
-    top: 358px; /*740px;*/
-    width: 476px;
-    z-index: 3;
-    left: 38px;
-    height: 296px;
-    display: flex;
-    font-size: 7.2px;
-  }
+ 
   .RTS {
-    position: absolute;
+    /* position: absolute;
     top: 0px;
-    left: 135px;
+    left: 135px; */
     font-size: 24px;
     color: white;
   }
   .popular {
-    position: absolute;
+    /* position: absolute;
     top: 190px;
-    left: 56px;
+    left: 56px; */
     font-size: 12px;
     color: white;
   }
@@ -1218,31 +1203,33 @@ a {
     display:inline-block;
   }
   .SignUp {
-    position: absolute;
+    /* position: absolute;
     text-align: right;
-    left: 20px; /*10*/
-    top: 6px;
+    left: 20px;
+    top: 6px; */
     font-size: 7.2px;
   }
   .Search {
-    position: absolute;
+    /* position: absolute;
     left: 120px;
     text-align: center;
     top: 0px;
-    background-color: #55a630;
+    background-color: #55a630; */
     border-radius: 10px;
-    color: white;
+    /* color: white;
     width: 50px;
-    height: 15px;
+    height: 15px; */
   }
   .SearchBar {
     border-radius: 25px;
-    width: 140px;
-    top: 4px;
+    /* width: 140px;
+    top: 4px; */
     font-size: 7.2px;
   }
   .Table {
-    border: 0.4px solid green;
+    border-bottom-left-radius:10px ;
+  border-top-left-radius:10px ;
+    /* border: 0.4px solid green;
     border-radius: 8px;
     position: absolute;
     right: 16px;
@@ -1251,28 +1238,28 @@ a {
     background-color: #55a630;
     color: white;
     left: 420px;
-    height: 8px;
+    height: 8px; */
   }
   .SignUpButton {
-    position: absolute;
+    /* position: absolute;
     text-align: right;
     left: 520px;
     top: 0px;
     background-color: #007200;
     border-radius: 25px;
     color: white;
-    height: 17px;
+    height: 17px; */
     font-size: 7.2px;
-    width: 40px;
+    /* width: 40px; */
   }
 
   .slideshow-container {
-    max-width: 360px;
-    height: 120px;
-    position: absolute;
+    /* max-width: 360px;
+    height: 120px; */
+    /* position: absolute; */
     margin: 4px;
-    top: 64px;
-    left: 56px;
+    /* top: 64px;
+    left: 56px; */
   }
   .banner {
     vertical-align: middle;
@@ -1286,29 +1273,29 @@ a {
   }
 
   .icons {
-    position: absolute;
+    /* position: absolute;
     background-color: white;
     color: #55a630;
     width: 20px;
     left: 20px;
-    z-index: 3;
+    z-index: 3; */
   }
   .Heart {
-    position: absolute;
+    /* position: absolute;
     left: 330px;
-    background-color: white;
+    background-color: white; */
     height: 12px;
-    bottom: 0px;
+    /* bottom: 0px; */
     border-radius: 10px;
     font-size: 7.2px;
   }
   .Cart {
-    position: absolute;
+    /* position: absolute; */
     width: 40px;
-    left: 350px;
+    /* left: 350px;
     background-color: white;
     height: 12px;
-    bottom: 0px;
+    bottom: 0px; */
     border-radius: 15px;
     font-size: 7.2px;
   }

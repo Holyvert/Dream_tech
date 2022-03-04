@@ -1,156 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShoppingCart</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Box Grocery Store</title>
     <link rel="stylesheet" href="create.css" />
-</head>
-<body>
+  </head>
+
+  <body>
     <!-- outer division-->
     <div class="BorderDiv">
-        <!-- header division-->
+      <!-- header division-->
+     
+      <div class="Header">
         <div class="ShopSign">
-          <p class="TShop"><a href="Website.html"><img class="Logo"src="Images\Food_box_logo_white.png" alt="SIUU" height="50" /> </a></p>
-        </div>
-        <div class="Header">
-          <form class="sign">
-            <input
-              class="SearchBar"
-              type="text"
-              placeholder="Search for Products"
-            />
-            <input class="Search" type="button" value="Search" />
-          </form>
-          <form class="SignUp">
-            <table class="Table">
-              <tr>
-                <!-- rows of the tables -->
-                <th><a href="Website.html">Home </a></th>
-                <!-- column -->
-                <th>Services</th>
-                <th>Shop</th>
-              </tr>
-            </table>
-            <input
-              class="SignUpButton"
-              type="submit"
-              name="signup"
-               value="SignIn"
-            />
-          </form>
-        </div>
-        <!-- Navigation division to left-->
-         <div class="Nav">
-          <p class="navigation">
-             <b> Categories</b> <br />
-            &#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;
-          </p>
-             <table class="NavBar">
-              <tr>
-                  <th>
-                <a href="FruitsAndVegetables.html">> Fruits and Vegetables </a>
-                  </th>
-              </tr>
-                 <tr>
-                     <th>
-                     <a href="Beverages.html">>  Beverages </a>
-                      </th>
-                 </tr>
-                 <tr>
-                     <th>
-                    <a href="MeatAndFish.html">>  Meat and Fish </a>
-                      </th>
-                 </tr>
-                 <tr>
-                     <th>
-                    <a href="Snacks.html">>  Snacks </a>
-                      </th>
-                 </tr>
-                 <tr>
-                     <th>
-                     <a href="Dairy.html">>  Dairy </a>
-                      </th>
-                 </tr>
-                 <tr>
-                     <th>
-                    <a href="FrozenAndCanned.html">>  Frozen and Canned </a>
-                      </th>
-                 </tr>
-            </table>
-        </div>
-
-
-<!-- division for main page-->
-<div class="MainPageDescription">
-  
-   
-      
-</div>
-          
-
-      <div class="RowDescrpition" >
-        
-          <div class="imgDescription" style="max-height: none;"> 
-            <table  style="border-bottom: 3px;"cellpadding="0" cellspacing="0">
-              <tbody>
-                <tr style="vertical-align: text-top;">
-                  <td ><p style="height: 20px; font-size: 30px;">Shopping cart</p></td>
-                  
-                </tr>
-                <tr>
-                  <td><img class="images" src="https://images.unsplash.com/photo-1617102738820-bee2545405fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"></a>
-                  </td>
-                  <td>Unsalted Chips</td>
-                  <td><div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);">
-                    <input type="button" value="-" class="minus" ><input type="number" step="1"
-                     min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
-                     type="button" value="+" class="plus">
-                    </div></td>
-                    <td><div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
-                      <input type="button" value="delete" class="minus" style="border-radius: 10px;" >
-                      </div></td>
-                  <td><p style="text-align: right;">4.99$</p></td>
-                
-                </tr>
-                <tr>
-                  <td><img class="images" src="https://images.unsplash.com/photo-1573555657105-47a0bb37c3ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80" ></a>
-                  </td>
-                  <td>Cashews</td>
-                  <td><div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);">
-                    <input type="button" value="-" class="minus" ><input type="number" step="1"
-                     min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
-                     type="button" value="+" class="plus">
-                    </div></td>
-                    <td><div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
-                      <input type="button" value="delete" class="minus" style="border-radius: 10px;" >
-                      </div></td>
-                  <td><p style="text-align: right;">12.99$</p></td>
-                
-                </tr>
-                <tr>
-                  <td><img class="images" src="https://images.unsplash.com/photo-1628791392322-de3fc6348d1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" ></a>
-                  </td>
-                  <td>Salsa Chips</td>
-                  <td><div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);">
-                    <input type="button" value="-" class="minus" ><input type="number" step="1"
-                     min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
-                     type="button" value="+" class="plus">
-                    </div></td>
-                    <td><div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
-                      <input type="button" value="delete" class="minus" style="border-radius: 10px;" >
-                      </div></td>
-                  <td><p style="text-align: right;">5.99$</p></td>
-                
-                </tr>
-              </tbody>
-            </table>
+          <p class="TShop"><a href="Website.html"><img class="Logo" src="Images\Food_box_logo_white.png" alt="SIUU" height="50" /> </a></p>
+      </div>
+        <form class="sign">
+          <input
+            class="SearchBar"
+            type="text"
+            placeholder="Search for Products"
+          /><input class="Search" type="button" value="Search" />
+        </form>
+        <form class="SignUp">
+          <table class="Table">
+            <tr>
+              <!-- rows of the tables -->
+              <th><a href="Website.html">Home </a></th>
+              <!-- column -->
+              <th>Services</th>
+              <th>Shop</th>
+            </tr>
+          </table>
+          <input
+            class="SignUpButton"
+            type="submit"
+            name="signup"
+            value="SignIn"
+          />
+        </form>
+      </div>
+      <!-- Navigation division to left-->
+      <div class="Nav">
+        <p class="navigation">
+          <b> Categories</b> <br />
+          &#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;
+        </p>
+           <table class="NavBar">
+            <tr>
+                <th>
+              <a href="FruitsAndVegetables.html">> Fruits and Vegetables </a>
+                </th>
+            </tr>
+               <tr>
+                   <th>
+                   <a href="Beverages.html" >>  Beverages </a>
+                    </th>
+               </tr>
+               <tr>
+                   <th>
+                  <a href="MeatAndFish.html">>  Meat and Fish </a>
+                    </th>
+               </tr>
+               <tr>
+                   <th>
+                  <a href="Snacks.html">>  Snacks </a>
+                    </th>
+               </tr>
+               <tr>
+                   <th>
+                   <a href="Dairy.html">>  Dairy </a>
+                    </th>
+               </tr>
+               <tr>
+                   <th>
+                  <a href="FrozenAndCanned.html">>  Frozen and Canned </a>
+                    </th>
+               </tr>
+          </table>
+      </div>
+      <!-- division for main page-->
+      <div class="MainPage">
+       
+          <div class="MainDiv">
+                <select class="language" name="language">
+                    <option value="EN"> English</option>
+                    <option value="FR"> French</option>
+                </select>
+             
+              <div class="icons"> 
+            <table class="Heart">
+            <tr>
+              <!-- rows of the tables -->
+              <th>&#10084</th>
+            </tr>
+          </table>
+              <table class="Cart">
+            <tr>
+              <!-- column -->
+              <th><a href="ShoppingCart.html">&#128722$0.00</a></th>
+            </tr>
+          </table>
+              </div>
           </div>
+         
+       
+       
+       
+      
 
-          <div class="ProductDescription" style="text-align: right;">
+          <div class="RowDescrpition" style="left:20%; right: 0%; width:80%;  justify-content: center; " >
+        
+            
 
-            <p style="font-size:23px; font-weight: 100 ;">Sub-total</p>
+              <div class="imgDescription" style="max-height: none; align-self: center;"> 
+                <table  style="border-bottom: 3px;"cellpadding="0" cellspacing="0">
+                  <tbody>
+                    <tr style="vertical-align: text-top; text-align: center;">
+                      <td ><p style="height: 20px; font-size: 30px;">Shopping cart</p></td>
+                      
+                    </tr>
+                    <tr>
+                      <td><img class="images" src="https://images.unsplash.com/photo-1617102738820-bee2545405fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"></a>
+                      </td>
+                      <td>Unsalted Chips</td>
+                      <td>Quantity<div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);">
+                        <input type="button" value="-" class="minus" ><input type="number" step="1"
+                         min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
+                         type="button" value="+" class="plus">
+                        </div></td>
+                        <td><div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
+                          <input type="button" value="delete" class="minus" style="border-radius: 10px;" >
+                          </div></td>
+                      <td><p style="text-align: right;">4.99$</p></td>
+                    
+                    </tr>
+                    <tr>
+                      <td><img class="images" src="https://images.unsplash.com/photo-1573555657105-47a0bb37c3ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80" ></a>
+                      </td>
+                      <td>Cashews</td>
+                      <td>Quantity<div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);">
+                        <input type="button" value="-" class="minus" ><input type="number" step="1"
+                         min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
+                         type="button" value="+" class="plus">
+                        </div></td>
+                        <td><div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
+                          <input type="button" value="delete" class="minus" style="border-radius: 10px;" >
+                          </div></td>
+                      <td><p style="text-align: right;">12.99$</p></td>
+                    
+                    </tr>
+                    <tr>
+                      <td><img class="images" src="https://images.unsplash.com/photo-1628791392322-de3fc6348d1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" ></a>
+                      </td>
+                      <td>Salsa Chips</td>
+                      <td>Quantity<div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);">
+                        <input type="button" value="-" class="minus" ><input type="number" step="1"
+                         min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
+                         type="button" value="+" class="plus">
+                        </div></td>
+                        <td><div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
+                          <input type="button" value="delete" class="minus" style="border-radius: 10px;" >
+                          </div></td>
+                      <td><p style="text-align: right;">5.99$</p></td>
+                    
+                    </tr>
+                  </tbody>
+                </table>
+               </div>
+              
+  
+            <div class="ProductDescription" style="text-align: right; align-self: center; width: 45%; " > 
+              <p style="font-size:23px; font-weight: 100 ;">Sub-total</p>
            
             </br>
             <div style="font-size:23px;">
@@ -165,7 +187,7 @@
               
           </div>
             <hr>
-            <p style="display: flex inline-block; color: red; background-color: white; border-radius: 10px; height: 25px;"> (This price doesn't include the transport) 27.56 $ </p> 
+            <p style="display: flex inline-block; color: red; background-color: white; border-radius: 10px; height: 25px;"><span style="float: left;">Sub-total(3 items):</span>  27.56 $ </p> 
 
               <div class="dropdown">
                 <button class="dropbutton">Proceed to checkout</button>
@@ -173,27 +195,28 @@
               </div>
               </br>
               </br>
-
-                 
-</div>
-
-
-
-        <div class="FooterDescription">
-            <table style="width: 100%; height:100%; vertical-align: middle;" >
-              <td style="width: 50%; padding-left:1%;">
-                <img class="FooterImages1"src="https://raw.githubusercontent.com/Holyvert/Dream_tech/main/Images/Food_box_logo_white.png" alt="SIUU" height="50"/>
-                <img class="FooterImages2"style="padding-left: 2%" src="https://raw.githubusercontent.com/Holyvert/Dream_tech/main/Images/Dots_footer.png" alt="SIUU" height="35" />
-                <img class="FooterImages3"src="https://raw.githubusercontent.com/Holyvert/Dream_tech/main/Images/Twitter_logo.png" alt="SIUU" height="35" />
-                <img class="FooterImages4"style="padding-left: 2%" src="https://raw.githubusercontent.com/Holyvert/Dream_tech/main/Images/Facebook_logo.png" alt="SIUU" height="35" />
-                <img class="FooterImages5"style="padding-left: 2%" src="https://raw.githubusercontent.com/Holyvert/Dream_tech/main/Images/Youtube_logo.png" alt="SIUU" height="35" />
-                <a style="padding-left: 2%;" href="https://github.com/Holyvert/Dream_tech">
-                  <img class="FooterImages6"alt="GitHub" src="https://raw.githubusercontent.com/Holyvert/Dream_tech/main/Images/github-icon.jpg" height="35" />
-                </a>
-              </td>
-              <td style="width: 50%; text-align: right; color: #fff; padding-right: 1%;"><b>&copy; 2022 FoodBox, All rights reserved</b></td>
-            </table>
-          </div>
-        </div>
-</body>
+        
+                </div>
+    </div>
+    
+  </div>
+    <div class="Footer">
+      <table style="width: 100%; height:100%; vertical-align: middle;" >
+        <td style="width: 50%; padding-left:1%;">
+          <img class="FooterImages1" src="https://raw.githubusercontent.com/Holyvert/Dream_tech/main/Images/Food_box_logo_white.png" alt="SIUU" height="50"/>
+          <img class="FooterImages2"style="padding-left: 2%" src="https://raw.githubusercontent.com/Holyvert/Dream_tech/main/Images/Dots_footer.png" alt="SIUU" height="35" />
+          <img class="FooterImages3"src="https://raw.githubusercontent.com/Holyvert/Dream_tech/main/Images/Twitter_logo.png" alt="SIUU" height="35" />
+          <img class="FooterImages4"style="padding-left: 2%" src="https://raw.githubusercontent.com/Holyvert/Dream_tech/main/Images/Facebook_logo.png" alt="SIUU" height="35" />
+          <img class="FooterImages5"style="padding-left: 2%" src="https://raw.githubusercontent.com/Holyvert/Dream_tech/main/Images/Youtube_logo.png" alt="SIUU" height="35" />
+          <a style="padding-left: 2%;" href="https://github.com/Holyvert/Dream_tech">
+            <img class="FooterImages6"alt="GitHub" src="https://raw.githubusercontent.com/Holyvert/Dream_tech/main/Images/github-icon.jpg" height="35" />
+          </a>
+        </td>
+        <td style="width: 50%; text-align: right; color: #fff; padding-right: 1%;"><b>&copy; 2022 FoodBox, All rights reserved</b></td>
+      </table>
+    </div>
+  </div>
+  
+  
+  </body>
 </html>
