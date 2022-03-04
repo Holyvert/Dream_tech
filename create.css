@@ -422,9 +422,9 @@ border-spacing: 0;
   margin-right: 75px;
   margin-left: 35px;
   margin-bottom: 25px;
-  border-radius: 25px;
-  width: 250px;
-  height: 250px;
+  border-radius: 1vw;
+  width: 18vw;
+  height: 18vw;
 
   display: flex;
   justify-content: flex-start;
@@ -445,12 +445,12 @@ border-spacing: 0;
   /* position:relative; */
   margin-top:0%;
   /* align-self: flex-start; */
-  background-color: #fefae0;
+  background-color: rgb(255,255, 255);
   color: black;
   
   padding-left: 10px;
   padding-right: 10px;
-  border-radius: 25px;
+  border-radius: 1vw;
   height: 50%;
 }
 
