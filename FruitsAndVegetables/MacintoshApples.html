@@ -154,9 +154,9 @@
                 </br>
                   <p>Quantity</p>
                 <div class="Productquantity buttons_added"  >
-                  <input type="button"  value="-" class="minus" onclick="setQuantity('down');"><input id="amount" type="number" step="1"
+                  <input id="down" type="button"  value="-" class="minus" onclick="setQuantity('down');"><input id="amount" type="number" step="1"
                    min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
-                   type="button"  value="+" class="plus" onclick="setQuantity('up');">
+                   type="button" id="up" value="+" class="plus" onclick="setQuantity('up');">
                     
                     <script>
                         function setQuantity(upordown) 
