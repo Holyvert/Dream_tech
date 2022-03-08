@@ -1,24 +1,25 @@
 
-    function setQuantity(upordown) 
-{
-    var amount = document.getElementsById('amount');
-
+    function setQuantity(upordown){
+    var amount = document.getElementById("amount");
     if (amount.value > 1) 
         {
         if (upordown == 'up')
         {
-            ++document.getElementsById('amount').value;
+            ++document.getElementById("amount").value;
+            console.log(document.getElementById("amount").value);
         }
         else if (upordown == 'down')
-        {--document.getElementsById('amount').value;}
+        {--document.getElementById("amount").value;
+        console.log(document.getElementById("amount").value);}
     }
     else if (amount.value == 1) 
     {
         if (upordown == 'up')
-        {++document.getElementsById('amount').value;}
+        {++document.getElementById("amount").value;
+        console.log(document.getElementById("amount").value);}
     }
     else
-        {document.getElementsById('amount').value=1;}
+        {document.getElementById("amount").value=1;;
+        console.log(document.getElementById("amount").value);}
 }
-
 
