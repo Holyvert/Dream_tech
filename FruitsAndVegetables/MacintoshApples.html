@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Box Grocery Store</title>
-    <link rel="stylesheet" href="..\create.css" />
-      <script src="../Functions.js" async></script>
+    <link rel="stylesheet" href="../create.css" />
+      <script src="Functions.js"></script>
   </head>
 
   <body>
@@ -154,9 +154,34 @@
                 </br>
                   <p>Quantity</p>
                 <div class="Productquantity buttons_added"  >
-                  <input type="button" onclick="setQuantity('down')" value="-" class="minus" ><input id="amount" type="number" step="1"
+                  <input type="button"  value="-" class="minus" onclick="setQuantity('down');"><input id="amount" type="number" step="1"
                    min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
-                   type="button" onclick="setQuantity('up')" value="+" class="plus">
+                   type="button"  value="+" class="plus" onclick="setQuantity('up');">
+                    
+                    <script>
+                        function setQuantity(upordown) 
+{
+    var amount = document.getElementsById('amount');
+
+    if (amount.value > 1) 
+        {
+        if (upordown == 'up')
+        {
+            ++document.getElementsById('amount').value;
+        }
+        else if (upordown == 'down')
+        {--document.getElementsById('amount').value;}
+    }
+    else if (amount.value == 1) 
+    {
+        if (upordown == 'up')
+        {++document.getElementsById('amount').value;}
+    }
+    else
+        {document.getElementsById('amount').value=1;}
+}
+
+                    </script>
                 </div>
         
                 </div>
