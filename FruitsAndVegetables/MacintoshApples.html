@@ -124,8 +124,12 @@
               
               </br>
               </br>
-              <p style="font-size:23px; font-weight: 100 ;font-weight: 1000;">1.02$ avg. ea.</p><p style="display: inline-block;">(170 g avg.)</p>
-              <p style="font-size:23px; font-weight: 100 ;">5.99$/kg 2.72$/lb</p> 
+              <div style="font-size:23px; font-weight: 100 ;font-weight: 1000;" id="price">
+                1.02$
+              </div>
+              <p style="display: inline-block;">Sold in Singles</p>
+              <p style="display: inline-block;">0.13 - 0.18 kg</p>
+              <p style="font-size:23px; font-weight: 100 ;">5.99$/kg</p> 
   
               
                   <form style="text-align: center;">
@@ -152,14 +156,21 @@
                 </div>
                 </br>
                 </br>
-                  <p>Quantity</p>
+                  <p>Quantity / apples</p>
                 <div class="Productquantity buttons_added"  >
                   <input id="down" type="button"  value="-" class="minus" onclick="setQuantity('down');"><input id="amount" type="number" step="1"
                    min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
                    type="button" onclick="setQuantity('up');" id="up" value="+" class="plus" >
                     
                 </div>
-        
+
+                <br><br>
+
+               <div>
+                    Total Price:&nbsp;
+                    <div id="price1"> </div>
+               </div>
+
                 </div>
     </div>
 
