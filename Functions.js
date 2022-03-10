@@ -112,15 +112,16 @@ function updateCartTotal()
 {
    cartQuantitiy = document.getElementsByName('quantity')
    cartPrice = document.getElementsByName('cartPrice')
-   
+    
+    var totalitems = parseInt(0) 
     var total = 0
    for(var i = 0;i<cartQuantitiy.length;i++)
    {
     
       total = total + cartQuantitiy[i].value * parseFloat(cartPrice[i].innerText.replace('$',''))
+        totalitems = Number(totalitems) + Number(cartQuantitiy[i].value)
     
    }
-
    var totall = Math.round( total* 100)/100
    var tps = Math.round( total * .05 * 100)/100
    var tvq = Math.round(total * .09975 * 100)/100
@@ -129,6 +130,7 @@ function updateCartTotal()
    document.getElementById('tps').innerText =  tps + " $"
    document.getElementById('tvq').innerText =  tvq + '$'
    document.getElementById('subTotal').innerText = subTotal + '$'
+    document.getElementById('itemstotal').innerText= totalitems
 }
 
 let cart=[];
