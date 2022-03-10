@@ -22,19 +22,20 @@ h1 {
 }
 .Nav {
   position: absolute;
-  width: 15%;
+  width: fit-content;
   border-radius: 30px;
   height: fit-content;
   background-color: white;
-  top: 200px;
+  top: 15vw;
   z-index: 2;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  font-size: 1.5vw;
 }
 
 .navigation {
-  background-color: white;
+  /* background-color: white; */
   text-align: center;
-  font-size: 30px;
+  font-size: 3vw;
   z-index: inherit;
 }
 .MainPage {
@@ -73,14 +74,28 @@ h1 {
   flex-direction: column;
   justify-content: center;
   color: #fff;
-
+font-size: 1.5vw;
    width: 50%; 
    font-family: Verdana, Geneva, Tahoma, sans-serif; 
    text-align: middle;
  
 }
- 
+.compagny{
+  font-size:2vw; font-weight: 100 ;
+}
+.porduct_name{
+  font-weight: 1000;
+  font-size: 3vw;
+}
+.price_each{
+  font-weight: 1000;
+  font-size: 2vw;
+}
 
+.price_perQ{
+  font-weight: 100;
+  font-size: 2vw;
+}
 /* -- quantity box -- */
 
 .Productquantity  {
@@ -418,9 +433,9 @@ border-spacing: 0;
     width: 150px;
   }
 .img {
-  margin-right: 75px;
-  margin-left: 35px;
-  margin-bottom: 25px;
+  margin-right: 1vw;
+  margin-left: 1vw;
+  margin-bottom: 1vw;
   border-radius: 1vw;
   width: 18vw;
   height: 18vw;
@@ -438,7 +453,7 @@ border-spacing: 0;
   /* float: left; */
   /* position: relative; */
   
-
+  font-size: 1.5vw;
   width: fit-content;
  
   /* position:relative; */
@@ -447,8 +462,8 @@ border-spacing: 0;
   background-color: rgb(255,255, 255);
   color: black;
   
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1vw;
+  padding-right: 1vw;
   border-radius: 1vw;
   height: 50%;
 }
@@ -601,9 +616,9 @@ a {
 
 .banner {
   vertical-align: middle;
-  height: 300px;
-  width:800px;
-  border-radius: 25px;
+  height: 24vw;
+  width:64vw;
+  border-radius: 1vw;
 }
 
 .mySlides {
@@ -616,7 +631,7 @@ a {
   border-radius: 30%;
   /* height: 300px; */
   position: relative;
-  margin: 10px;
+  margin: 1vw;
   align-self: center;
   /* top: 160px; */
   /* left: 140px; */
