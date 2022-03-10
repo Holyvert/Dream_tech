@@ -262,8 +262,7 @@ text-align: left;
 
 .Table {
   border: 1px solid green;
-  border-bottom-left-radius:25px ;
-  border-top-left-radius:25px ;
+ border-radius: 1vw;
   /* position: absolute; */
   /* right: 40px; */
   width: 20%;
