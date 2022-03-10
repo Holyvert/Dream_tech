@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Box Grocery Store</title>
     <link rel="stylesheet" href="create.css" />
+    <script src="Functions.js"></script>
   </head>
 
   <body>
@@ -122,48 +123,66 @@
                       
                     </tr>
                     <tr>
-                      <td><img class="images" src="https://images.unsplash.com/photo-1617102738820-bee2545405fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"></a>
+                      <td>
+                        <img class="images" src="https://images.unsplash.com/photo-1617102738820-bee2545405fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"></a>
                       </td>
                       <td>Unsalted Chips</td>
-                      <td>Quantity<div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);">
-                        <input type="button" value="-" class="minus" ><input type="number" step="1"
-                         min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
-                         type="button" value="+" class="plus">
-                        </div></td>
-                        <td><div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
-                          <input type="button" value="delete" class="minus" style="border-radius: 10px;" >
-                          </div></td>
-                      <td><p style="text-align: right;">4.99$</p></td>
-                    
+                      <td>Quantity
+                          <div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);" >
+                            <input id="down" type="button"  value="-" class="minus" onclick="setCartQuantity(this,'down');">
+                            <input id="amount" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+                            <input type="button" onclick="setCartQuantity(this,'up');" id="up" value="+" class="plus" >
+                              
+                          </div>
+                      </td>
+                        <td>
+                          <div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
+                            <input name="delete" type="button" value="delete" class="minus" style="border-radius: 10px;" >
+                          </div>
+                        </td>
+                      <td><div name ="cartPrice" style="text-align: right;">4.99$</div></td>
+                      
                     </tr>
                     <tr>
-                      <td><img class="images" src="https://images.unsplash.com/photo-1573555657105-47a0bb37c3ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80" ></a>
+                      <td>
+                        <img class="images" src="https://images.unsplash.com/photo-1573555657105-47a0bb37c3ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80" ></a>
                       </td>
                       <td>Cashews</td>
-                      <td>Quantity<div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);">
-                        <input type="button" value="-" class="minus" ><input type="number" step="1"
-                         min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
-                         type="button" value="+" class="plus">
-                        </div></td>
-                        <td><div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
-                          <input type="button" value="delete" class="minus" style="border-radius: 10px;" >
-                          </div></td>
-                      <td><p style="text-align: right;">12.99$</p></td>
+                      <td>Quantity
+                        <div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);" >
+                          <input id="down" type="button"  value="-" class="minus" onclick="setCartQuantity(this,'down');">
+                          <input id="amount" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+                          <input type="button" onclick="setCartQuantity(this,'up');" id="up" value="+" class="plus" >
+                            
+                        </div>
+                      </td>
+                      <td>
+                          <div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
+                            <input type="button" name="delete" value="delete" class="minus" style="border-radius: 10px;" >
+                          </div>
+                      </td>
+                      <td><div name ="cartPrice" style="text-align: right;">12.99$</div></td>
                     
                     </tr>
                     <tr>
-                      <td><img class="images" src="https://images.unsplash.com/photo-1628791392322-de3fc6348d1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" ></a>
+                      <td>
+                        <img class="images" src="https://images.unsplash.com/photo-1628791392322-de3fc6348d1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" ></a>
                       </td>
                       <td>Salsa Chips</td>
-                      <td>Quantity<div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);">
-                        <input type="button" value="-" class="minus" ><input type="number" step="1"
-                         min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
-                         type="button" value="+" class="plus">
-                        </div></td>
-                        <td><div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
-                          <input type="button" value="delete" class="minus" style="border-radius: 10px;" >
-                          </div></td>
-                      <td><p style="text-align: right;">5.99$</p></td>
+                      <td>Quantity
+                        <div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);" >
+                          <input id="down" type="button"  value="-" class="minus" onclick="setCartQuantity(this,'down');" onclick="">
+                          <input id="amount" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+                          <input type="button" onclick="setCartQuantity(this,'up');" id="up" value="+" class="plus" >
+                            
+                        </div>
+                      </td>
+                        <td>
+                          <div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
+                            <input type="button" name="delete" value="delete" class="minus" style="border-radius: 10px;" >
+                          </div>
+                        </td>
+                        <td><div name ="cartPrice" style="text-align: right;">5.99$</div></td>
                     
                     </tr>
                   </tbody>
@@ -177,14 +196,14 @@
             </br>
             <div style="font-size:23px;">
               <p><span style="float: left; font-weight: 100 ;font-weight: 1000; display: inline-block;">Unsalted Chips <input amount="amount" type="number" step="1"
-                   min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""></span><span> 4.99$</span></p>
+                   min="1" max="" name="" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""></span><span> 4.99$</span></p>
               <p><span style="float: left;font-weight: 100 ;font-weight: 1000; display: inline-block;">Cashews <input amount="amount" type="number" step="1"
-                   min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""></span><span>12.99$</span></p>
+                   min="1" max="" name="" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""></span><span>12.99$</span></p>
               <p><span style="float: left;font-weight: 100 ;font-weight: 1000; display: inline-block;">Salsa Chips <input amount="amount" type="number" step="1"
-                   min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""></span><span> 5.99$</span></p></div>
+                   min="1" max="" name="" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""></span><span> 5.99$</span></p></div>
             <hr>
             <div>
-              <p><span style="float: left;">Before taxes</span><span> 23.97$</span></p>
+              <p><span style="float: left;">Before taxes</span><span name="priceB4Taxes"> 23.97$</span></p>
               <p><span style="float: left;">TPS</span><span> 1.20$</span></p>
               <p><span style="float: left;">TVQ</span><span>2.39$</span></p>
               
