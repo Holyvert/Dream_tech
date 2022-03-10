@@ -10,9 +10,12 @@ else{
 function ready()
 {
     document.getElementById("amount").value = localStorage.getItem("savedQuantity")
+    if(document.getElementById('price')!=null)
+    {
     var productPagePrice = parseFloat(document.getElementById('price').innerText.replace('$',''))
     var productPageQuantity = document.getElementById("amount").value
     document.getElementById('price1').innerText = Math.round(productPageQuantity * productPagePrice * 100)/100 + " $"
+    }
     deleteButton()
 }   
 
