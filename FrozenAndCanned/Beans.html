@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Box Grocery Store</title>
     <link rel="stylesheet" href="..\create.css" />
-       <script src="../items.js"></script>
+    <script src="../items.js"></script>
     <script src="../Functions.js"></script>
   </head>
 
@@ -124,7 +124,7 @@
               400mL
               </br>
               </br>
-              <p style="font-size:23px; font-weight: 100 ;font-weight: 1000;">1.59$</p>
+              <p style="font-size:23px; font-weight: 100 ;font-weight: 1000;" id=price>1.59$</p>
               <p style="font-size:23px; font-weight: 100 ;">0.40$ / 100mL</p> 
   
               
@@ -158,6 +158,10 @@
                      type="button" onclick="setQuantity('up');" id="up" value="+" class="plus" >
                       
                   </div>
+                <div>
+                    Total Price:&nbsp;
+                    <div id="price1"> </div>
+               </div>
         
                 </div>
     </div>
