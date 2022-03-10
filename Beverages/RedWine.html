@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Box Grocery Store</title>
     <link rel="stylesheet" href="..\create.css" />
+    <script src="../items.js"></script>
+    <script src="../Functions.js"></script>
   </head>
 
   <body>
@@ -124,7 +126,7 @@
             800 ml
             </br>
             </br>
-            <p style="font-size:23px; font-weight: 100 ;font-weight: 1000;">15.99$</p>
+            <p style="font-size:23px; font-weight: 100 ;font-weight: 1000;" id=price>15.99$</p>
             <p style="font-size:23px; font-weight: 100 ;">2.00$ / 100ml</p> 
 
             
@@ -154,10 +156,18 @@
               </br>
                 <p>Quantity</p>
               <div class="Productquantity buttons_added"  >
-                <input type="button" value="-" class="minus" ><input type="number" step="1"
-                 min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
-                 type="button" value="+" class="plus">
+                  <input id="down" type="button"  value="-" class="minus" onclick="setQuantity('down');"><input id="amount" type="number" step="1"
+                   min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
+                   type="button" onclick="setQuantity('up');" id="up" value="+" class="plus" >
+                    
                 </div>
+
+                <br><br>
+
+               <div>
+                    Total Price:&nbsp;
+                    <div id="price1"> </div>
+               </div>
       
               </div>
         </div>
