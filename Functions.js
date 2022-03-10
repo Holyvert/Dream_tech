@@ -81,12 +81,14 @@ function setCartQuantity(element,upordown)
         {
             ++element.parentElement.children[1].value
             updateCartTotal()
+            updateQuantitiy()
             
         }
         else if (upordown == 'down')
         {
             --element.parentElement.children[1].value
             updateCartTotal()
+            updateQuantitiy()
         }
     }
     else if (amount == 1) 
@@ -95,12 +97,14 @@ function setCartQuantity(element,upordown)
         {
             ++element.parentElement.children[1].value
             updateCartTotal()
+            updateQuantitiy()
         }
     }
     else
         {
             element.parentElement.children[1].value=1
             updateCartTotal()
+            updateQuantitiy()
         }
     
 }
