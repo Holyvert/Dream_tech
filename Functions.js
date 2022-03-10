@@ -1,4 +1,6 @@
 
+const cartItems = document.querySelector(".shop-items");
+
 
 if(document.readyState=='loading')
 {
@@ -124,11 +126,38 @@ function updateCartTotal()
    document.getElementById('tvq').innerText =  tvq + '$'
    document.getElementById('subTotal').innerText = subTotal + '$'
 }
-let cart=[];
 
+let cart=[];
 function addToCart(id){
-    if(cart.some((found)=>)
+     if (cart.some((found) => found.id === id)) 
+         alert("Already in cart");
+    else{
 const found = products.find((obj) => obj.id === id);
 cart.push(found);
-console.log(cart);
+console.log(cart);}
+updateCart();
+}
+
+
+function updateCart(){
+    renderCartItems();
+}
+function renderCartItems(){
+    cart.forEach((found) => {
+        cartItems.innerHTML += `
+        <div class="shop-item">
+                    <span class="shop-item-title">${found.name}</span>
+                    <img class="shop-item-image" src="${found.imgSrc}" alt="${found.name}" width=50px; height=50px;>
+                    <div class="Productquantity buttons_added"  >
+                  <input id="down" type="button"  value="-" class="minus" onclick="setQuantity('down');"><input id="amount" type="number" step="1"
+                   min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
+                   type="button" onclick="setQuantity('up');" id="up" value="+" class="plus" >
+                </div>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${found.price}</span>
+                       <input type="button" value="delete" class="minus" style="border-radius: 10px;" >
+                    </div>
+                </div>
+        `;
+    });
 }
