@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Box Grocery Store</title>
     <link rel="stylesheet" href="..\create.css" />
+      <script src="../items.js"></script>
     <script src="../Functions.js"></script>
   </head>
 
@@ -120,7 +121,7 @@
   
             <div class="ProductDescription">
            
-              <p class = "itemname" style="font-size:50px; font-weight: 1000;">Organic </br>Bananas</p>
+              <p style="font-size:50px; font-weight: 1000;">Organic </br>Bananas</p>
               
               </br>
               </br>
@@ -140,8 +141,9 @@
                     
                     src="../Images/Food_box_button_white.png"
                     name="Add"
-                  style="color: rgb(237,183, 53);"
-                     width="100px"
+                    style="color: rgb(237,183, 53);"
+                    width="100px"
+                    onclick="AddToCart(item);"
   
                   />
                 </form>
