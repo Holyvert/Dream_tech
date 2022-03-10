@@ -124,3 +124,11 @@ function updateCartTotal()
    document.getElementById('tvq').innerText =  tvq + '$'
    document.getElementById('subTotal').innerText = subTotal + '$'
 }
+let cart=[];
+
+function addToCart(id){
+    if(cart.some((found)=>)
+const found = products.find((obj) => obj.id === id);
+cart.push(found);
+console.log(cart);
+}
