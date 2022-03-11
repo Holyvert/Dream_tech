@@ -120,6 +120,7 @@ function updateCartTotal()
     
       total = total + cartQuantitiy[i].value * parseFloat(cartPrice[i].innerText.replace('$',''))
         totalitems = Number(totalitems) + Number(cartQuantitiy[i].value)
+       totalitems2 = totalitems
     
    }
    var totall = Math.round( total* 100)/100
@@ -130,7 +131,8 @@ function updateCartTotal()
    document.getElementById('tps').innerText =  tps + " $"
    document.getElementById('tvq').innerText =  tvq + '$'
    document.getElementById('subTotal').innerText = subTotal + '$'
-    document.getElementById('itemstotal').innerText= totalitems
+   document.getElementById('itemstotal').innerText= totalitems
+    document.getElementById('itemstotal2').innerText= totalitems2
 }
 
 let cart=[];
