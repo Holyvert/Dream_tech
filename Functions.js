@@ -119,7 +119,7 @@ function updateCartTotal()
    {
     
       total = total + cartQuantitiy[i].value * parseFloat(cartPrice[i].innerText.replace('$',''))
-        totalitems = Number(totalitems) + Number(cartQuantitiy[i].value)
+      totalitems = Number(totalitems) + Number(cartQuantitiy[i].value)
        totalitems2 = totalitems
     
    }
@@ -127,12 +127,14 @@ function updateCartTotal()
    var tps = Math.round( total * .05 * 100)/100
    var tvq = Math.round(total * .09975 * 100)/100
    var subTotal = Math.round((total + tps + tvq) * 100)/100
+   var subTotal2=subTotal
    document.getElementsByName('priceB4Taxes')[0].innerText = totall + " $"
    document.getElementById('tps').innerText =  tps + " $"
    document.getElementById('tvq').innerText =  tvq + '$'
    document.getElementById('subTotal').innerText = subTotal + '$'
    document.getElementById('itemstotal').innerText= totalitems
-    document.getElementById('itemstotal2').innerText= totalitems2
+   document.getElementById('itemstotal2').innerText= totalitems2
+   document.getElementById('subTotal2').innerText = subTotal2 + '$'
 }
 
 let cart=[];
