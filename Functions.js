@@ -146,6 +146,16 @@ function updateCartTotal()
    
 }
 
+/*
+function updateItemPrice(){
+    CartItems = document.getElementsByName("cartPrice")
+    for(var i = 0; i<CartItems.length;i++){
+        var y = parseFloat(cartPrice[i].innerText.replace('$','')); 
+        var x =  document.getElementsByName("quantity")[i].value;
+         document.getElementsByClassName('price1')[i].innerText = x*y + " $"
+        
+    }
+}*/
 
 
 /*
