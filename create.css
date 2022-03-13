@@ -585,6 +585,7 @@ a {
 .language {
   /* position: absolute; */
   border-radius: 25px;
+    visibility: hidden;
   
 }
 
