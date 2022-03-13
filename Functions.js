@@ -8,6 +8,7 @@ if(document.readyState=='loading')
 }
 else{
     ready()
+   
 }
 function ready()
 {
@@ -19,7 +20,10 @@ function ready()
     document.getElementById('price1').innerText = Math.round(productPageQuantity * productPagePrice * 100)/100 + " $"
     }
     deleteButton()
+    updateCartTotal()//change
+    setQuantity(upordown)
 }   
+
 
 function updateQuantitiy()
 {
@@ -40,20 +44,24 @@ function setQuantity(upordown){
         {
             ++document.getElementById("amount").value;
             updateQuantitiy();
+            updateCartTotal();
         }
         else if (upordown == 'down')
         {--document.getElementById("amount").value;
-        updateQuantitiy();}
+        updateQuantitiy();
+        updateCartTotal();}
     }
     else if (amount.value == 1) 
     {
         if (upordown == 'up')
         {++document.getElementById("amount").value;
-        updateQuantitiy();}
+        updateQuantitiy();
+        updateCartTotal();}
     }
     else
         {document.getElementById("amount").value=1;;
-        updateQuantitiy();}
+        updateQuantitiy();
+        updateCartTotal();}
 }
 
 function deleteButton()
@@ -117,11 +125,10 @@ function updateCartTotal()
     var total = 0
    for(var i = 0;i<cartQuantitiy.length;i++)
    {
-    
+        
       total = total + cartQuantitiy[i].value * parseFloat(cartPrice[i].innerText.replace('$',''))
       totalitems = Number(totalitems) + Number(cartQuantitiy[i].value)
        totalitems2 = totalitems
-    
    }
    var totall = Math.round( total* 100)/100
    var tps = Math.round( total * .05 * 100)/100
@@ -133,10 +140,15 @@ function updateCartTotal()
    document.getElementById('tvq').innerText =  tvq + '$'
    document.getElementById('subTotal').innerText = subTotal + '$'
    document.getElementById('itemstotal').innerText= totalitems
-   document.getElementById('itemstotal2').innerText= totalitems2
-   document.getElementById('subTotal2').innerText = subTotal2 + '$'
+   document.getElementById('itemstotal2').innerText= totalitems
+   const div = document.querySelector('.subTotal2');
+   div.innerHTML =subTotal + '$';
+   
 }
 
+
+
+/*
 let cart=[];
 function addToCart(id){
      if (cart.some((found) => found.id === id)) 
@@ -170,4 +182,4 @@ function renderCartItems(){
                 </div>
         `;
     });
-}
+}*/ //for adding product to page, tryout
