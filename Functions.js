@@ -140,7 +140,7 @@ function updateCartTotal()
    document.getElementById('tvq').innerText =  tvq + '$'
    document.getElementById('subTotal').innerText = subTotal + '$'
    document.getElementById('itemstotal').innerText= totalitems
-   document.getElementById('itemstotal2').innerText= totalitems
+   document.getElementById('itemstotal2').innerText= totalitems 
    const div = document.querySelector('.subTotal2');
    div.innerHTML =subTotal + '$';
    
