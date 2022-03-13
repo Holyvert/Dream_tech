@@ -25,7 +25,7 @@ through time or clientele suggestion.
 
 [Ahmed Sabsood](https://github.com/AhmedSabsoob)
 
-[Aly Hussein]
+[Aly Hussein](https://github.com/Aly-Hussein)
 
 
 
@@ -39,11 +39,11 @@ through time or clientele suggestion.
 
 #### What was our website made with?
 
-FoodBox was created with HTML and CSS.
+FoodBox was created with HTML, JavaScript, and CSS.
 
 #### Will there be other languages used for the website?
 
-Yes, the website will also become more interactive with the use of Javascript and PHP later on in its development.
+Yes, the website will also become more interactive with the use of  PHP later on in its development.
 
 
 ## Acknowledgements
