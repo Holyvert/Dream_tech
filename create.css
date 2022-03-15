@@ -692,8 +692,8 @@ a {
   .BorderDiv {
     position: absolute;
     border: 1px solid grey;
-    width: 320px;
-    height: 280px;
+    /* width: 320px;
+    height: 280px; */
     margin: auto;
   }
   .title1 {
@@ -737,8 +737,8 @@ a {
 
   .MainPage {
     position: relative;
-    width: 240px;
-    height: 240px;
+    /* width: 240px;
+    height: 240px; */
     left: 40px;
     top: 12px;
   }
@@ -754,10 +754,10 @@ a {
 
   .pages {
     position: absolute;
-    width: 16px;
+    /* width: 16px; */
     font-size: 3.2px;
-    top: 38px;
-    right: 25px;
+    /* top: 38px;
+    right: 25px; */
     text-align: center;
     color: black;
     border: 0.4px solid white;
@@ -774,7 +774,7 @@ a {
     height: 10%;
     background-color: #55a630;
     bottom: 2.5px;
-    top: 260px;
+    /* top: 260px; */
     font-size: 3.6px;
   }
 
@@ -853,7 +853,7 @@ a {
     width: 20%;
     /* height: 120px; */
     background-color: white;
-    top: 40px;
+    /* top: 40px; */
     z-index: 1;
   }
   .NavBar {
@@ -869,7 +869,7 @@ a {
   }
   .one {
     position: relative;
-    top: 113px; /*340px;*/
+    /* top: 113px; 340px; */
     width: 238px;
     z-index: 3;
     left: 19px;
