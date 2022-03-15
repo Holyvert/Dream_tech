@@ -201,6 +201,7 @@ background-color: inherit;
  align-self: flex-end;
   bottom: 0;
 z-index: 10;
+font-size: 1vw;
 
   /* top: 1300px; */
   /* bottom: -55%; */
