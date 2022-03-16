@@ -706,7 +706,7 @@ a {
 }
 #touch {position: absolute; opacity: 0; height: 0px;}    
 /* Media Query for Mobile Devices */
-@media  (max-width: 480px) {
+@media  (max-width: 520px) {
   .BorderDiv {
     flex-flow: column wrap;
   }
@@ -1145,7 +1145,7 @@ border-bottom-right-radius: 4vw;
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 826px) {
+@media (min-width: 521px) and (max-width: 826px) {
   
 
 .loginbox{
