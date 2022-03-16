@@ -114,27 +114,27 @@
        
       
 
-          <div class="RowDescrpition" style="left:20%; right: 0%; width:80%;  justify-content: center; " >
+          <div class="RowDescrpitionS"  >
         
             
 
               <div class="imgDescription" style="max-height: none; align-self: center;"> 
                 <table  style="border-bottom: 3px;"cellpadding="0" cellspacing="0">
                   <tbody>
-                    <tr style="vertical-align: text-top; text-align: center;">
-                      <td ><p style="height: 20px; font-size: 30px;">Shopping cart</p></td>
+                    <tr class="SC" id="Scs">
+                      <td >Shopping cart</td>
                       
                     </tr>
                     <tr>
                       <td>
                         <img class="images" src="https://images.unsplash.com/photo-1617102738820-bee2545405fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"></a>
                       </td>
-                      <td>Unsalted Chips</td>
-                      <td>Quantity
+                      <td class="CartProd">Unsalted Chips</td>
+                      <td >Quantity
                           <div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);" >
-                            <input id="down" type="button"  value="-" class="minus" onclick="setCartQuantity(this,'down');">
-                            <input id="amount" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
-                            <input type="button" onclick="setCartQuantity(this,'up');" id="up" value="+" class="plus" >
+                            <input id="down" type="button"  value="-" class="minus" onclick="setCartQuantity(this,'down');"><input 
+                            id="amount" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
+                             type="button" onclick="setCartQuantity(this,'up');" id="up" value="+" class="plus" >
                               
                           </div>
                       </td>
@@ -143,20 +143,20 @@
                             <input name="delete" type="button" value="delete" class="minus" style="border-radius: 10px;" >
                           </div>
                         </td>
-                      <td><div name ="cartPrice" style="text-align: right;" id="price">4.99$</div></td>
-                  <td><p>Price before tax:</p><div style="text-align: right;" id="price1"></div></td>
+                      <td><div name ="cartPrice" id="price">4.99$</div></td>
+                
                       
                     </tr>
                     <tr>
                       <td>
                         <img class="images" src="https://images.unsplash.com/photo-1573555657105-47a0bb37c3ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80" ></a>
                       </td>
-                      <td>Cashews</td>
-                      <td>Quantity
+                      <td class="CartProd">Cashews</td>
+                      <td >Quantity
                         <div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);" >
-                          <input id="down" type="button"  value="-" class="minus" onclick="setCartQuantity(this,'down');"  > 
-                          <input id="amount" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
-                          <input type="button" onclick="setCartQuantity(this,'up');"  id="up" value="+" class="plus" >
+                          <input id="down" type="button"  value="-" class="minus" onclick="setCartQuantity(this,'down');"  ><input
+                           id="amount" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input
+                            type="button" onclick="setCartQuantity(this,'up');"  id="up" value="+" class="plus" >
                             
                         </div>
                       </td>
@@ -165,20 +165,20 @@
                             <input type="button" name="delete" value="delete" class="minus" style="border-radius: 10px;" >
                           </div>
                       </td>
-                      <td><div name ="cartPrice" style="text-align: right;" id="price">12.99$</div></td>
-                    <td><p>Price before tax:</p><div style="text-align: right;" id="price1"></div></td>
+                      <td><div name ="cartPrice" id="price">12.99$</div></td>
+                   
                     
                     </tr>
                     <tr>
                       <td>
                         <img class="images" src="https://images.unsplash.com/photo-1628791392322-de3fc6348d1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" ></a>
                       </td>
-                      <td>Salsa Chips</td>
+                      <td class="CartProd">Salsa Chips</td>
                       <td>Quantity
                         <div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);" >
-                          <input id="down" type="button"  value="-" class="minus" onclick="setCartQuantity(this,'down');" onclick="">
-                          <input id="amount" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
-                          <input type="button" onclick="setCartQuantity(this,'up');" id="up" value="+" class="plus" >
+                          <input id="down" type="button"  value="-" class="minus" onclick="setCartQuantity(this,'down');" onclick=""><input 
+                          id="amount" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input
+                           type="button" onclick="setCartQuantity(this,'up');" id="up" value="+" class="plus" >
                             
                         </div>
                       </td>
@@ -187,8 +187,8 @@
                             <input type="button" name="delete" value="delete" class="minus" style="border-radius: 10px;" >
                           </div>
                         </td>
-                        <td><div name ="cartPrice" style="text-align: right;" id="price">5.99$</div></td>
-                        <td><p>Price before tax:</p><div style="text-align: right;" id="price1"></div></td>
+                        <td><div name ="cartPrice"  id="price">5.99$</div></td>
+                       
                     
                     </tr>
                   </tbody>
@@ -196,29 +196,22 @@
                </div>
               
   
-            <div class="ProductDescription" style="text-align: right; align-self: center; width: 45%; " > 
-              <p style="font-size:23px; font-weight: 100 ;">Sub-total</p>
-           
-            </br>
-            <!-- <div style="font-size:23px;">
-              <p><span style="float: left; font-weight: 100 ;font-weight: 1000; display: inline-block;">Unsalted Chips <input amount="amount" type="number" step="1"
-                   min="1" max="" name="" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""></span><span> 4.99$</span></p>
-              <p><span style="float: left;font-weight: 100 ;font-weight: 1000; display: inline-block;">Cashews <input amount="amount" type="number" step="1"
-                   min="1" max="" name="" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""></span><span>12.99$</span></p>
-              <p><span style="float: left;font-weight: 100 ;font-weight: 1000; display: inline-block;">Salsa Chips <input amount="amount" type="number" step="1"
-                   min="1" max="" name="" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""></span><span> 5.99$</span></p></div> -->
-            <hr>
-            <div>
+            <div class="ProductDescription" style="text-align: right; align-self: center; top: 0%;" > 
+             
+            <div class="listing_P">
               <p><span style="float: left;">Before taxes</span><span name="priceB4Taxes"> 23.97$</span></p>
               <p><span style="float: left;">TPS</span><span id="tps"> 1.20$</span></p>
               <p><span style="float: left;">TVQ</span><span id="tvq">2.39$</span></p>
                 <p><span style="float: left;">Total Items: </span><span id="itemstotal2"> </span></p>
               
           </div>
-            <hr>
-            <p style="display: flex inline-block; color: red; background-color: white; border-radius: 10px; height: 25px;"><span style="float: left;">Sub-total: </span> <span id="subTotal">27.56$</span></p> 
-
-              <div class="dropdown">
+     
+            <hr style="height: 3px; width: 90%; background-color: #fff;" class="listing_P">
+       
+          <div class="listing_P">
+            <p style="display: flex inline-block; color: red; background-color: white; border-radius: 1vw; padding: 1vw;"><span style="float: left;">Sub-total: </span> <span id="subTotal">27.56$</span></p> 
+          </div>
+              <div class="dropdown" style="width: 80%; align-self: center; padding: 0vw;">
                 <button class="dropbutton">Proceed to checkout</button>
                
               </div>
