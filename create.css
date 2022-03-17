@@ -133,7 +133,7 @@ font-size: 1.5vw;
 
   position: relative;
   white-space: nowrap;
-  border-radius: 10px;
+  border-radius: 1vw;
   }
  
  .Productquantity.buttons_added input {
@@ -706,7 +706,7 @@ a {
 }
 #touch {position: absolute; opacity: 0; height: 0px;}    
 /* Media Query for Mobile Devices */
-@media  (max-width: 520px) {
+@media  (max-width: 826px) {
   .BorderDiv {
     flex-flow: column wrap;
   }
@@ -860,6 +860,11 @@ border-bottom-left-radius: 4vw;}
     border-top-right-radius: 4vw;
 border-bottom-right-radius: 4vw;
   }
+  .Productquantity.buttons_added {
+
+   
+    border-radius: 4vw;
+    }
 
   .scrollbarDiv {
     height: 20px;
@@ -1145,7 +1150,7 @@ border-bottom-right-radius: 4vw;
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 521px) and (max-width: 826px) {
+/*@media (min-width: 521px) and (max-width: 826px) {
   
 
 .loginbox{
@@ -1224,7 +1229,7 @@ color: #fefae0;
   .addproductbutton{
     position: absolute;
     
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     border: none;
     color: white;
     
@@ -1308,4 +1313,4 @@ color: #fefae0;
         font-size: 16px;
       }
         
-        }
+        }*/
