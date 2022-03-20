@@ -12,16 +12,34 @@ else{
 }
 function ready()
 {
-    document.getElementById("amount").value = localStorage.getItem("savedQuantity")
-    if(document.getElementById('price')!=null)
+    
+    myCounter = localStorage.getItem(document.URL);
+
+    
+    if (myCounter == null) myCounter = 0;
+
+    myCounter = parseInt(myCounter) + 1 
+    
+    localStorage.setItem(document.URL, myCounter); 
+
+
+    if (parseInt(myCounter) > 1)  
+    {
+        if(localStorage.getItem(document.URL+"savedQuantity")!=null)
+        document.getElementById("amount").value = localStorage.getItem(document.URL+"savedQuantity")  ;
+    }
+    deleteButton()
+ 
+      
+     
+    if(document.getElementById('price').innerText!=null)
     {
     var productPagePrice = parseFloat(document.getElementById('price').innerText.replace('$',''))
     var productPageQuantity = document.getElementById("amount").value
     document.getElementById('price1').innerText = Math.round(productPageQuantity * productPagePrice * 100)/100 + " $"
     }
-    deleteButton()
-    updateCartTotal()//change
-    setQuantity(upordown)
+    
+    
 }   
 
 
@@ -30,10 +48,21 @@ function updateQuantitiy()
     
     var productPagePrice = parseFloat(document.getElementById('price').innerText.replace('$',''))
     var productPageQuantity = document.getElementById("amount").value
-    localStorage.setItem("savedQuantity",productPageQuantity)
-    console.log(localStorage.getItem("savedQuantity"))
+    localStorage.setItem(document.URL+"savedQuantity",productPageQuantity)
+    console.log(localStorage.getItem(document.URL+"savedQuantity"))
+   
     document.getElementById('price1').innerText = Math.round(productPageQuantity * productPagePrice * 100)/100 + " $"
     
+}
+function updateCartQuantitiy()
+{
+    
+    var cartHolderArray = getElementsByName('quantity')
+    for (var i = 0; i < cartHolderArray.length; i++)
+    {
+        if(localStorage.getItem(i)!=null)
+        cartHolderArray[i].value = localStorage.getItem(i+1)
+    }
 }
 
 function setQuantity(upordown){
@@ -44,29 +73,30 @@ function setQuantity(upordown){
         {
             ++document.getElementById("amount").value;
             updateQuantitiy();
-            updateCartTotal();
+            
         }
         else if (upordown == 'down')
         {--document.getElementById("amount").value;
         updateQuantitiy();
-        updateCartTotal();}
+        }
     }
     else if (amount.value == 1) 
     {
         if (upordown == 'up')
         {++document.getElementById("amount").value;
         updateQuantitiy();
-        updateCartTotal();}
+        }
     }
     else
         {document.getElementById("amount").value=1;;
         updateQuantitiy();
-        updateCartTotal();}
+        }
 }
 
 function deleteButton()
 {
     var removeCartItemButtons = document.getElementsByName("delete")
+    
     console.log(removeCartItemButtons)
     for(var i = 0;i<removeCartItemButtons.length;i++)
     {
@@ -83,20 +113,24 @@ function deleteButton()
 function setCartQuantity(element,upordown)
 {
     var amount = element.parentElement.children[1].value
+    
+    
     if (amount > 1) 
         {
         if (upordown == 'up')
         {
             ++element.parentElement.children[1].value
+            ++amount
             updateCartTotal()
-            updateQuantitiy()
+            
             
         }
         else if (upordown == 'down')
         {
             --element.parentElement.children[1].value
+            --amount
             updateCartTotal()
-            updateQuantitiy()
+            
         }
     }
     else if (amount == 1) 
@@ -104,16 +138,31 @@ function setCartQuantity(element,upordown)
         if (upordown == 'up')
         {
             ++element.parentElement.children[1].value
+            ++amount
             updateCartTotal()
-            updateQuantitiy()
+            
         }
     }
     else
         {
+            amount = 1
             element.parentElement.children[1].value=1
             updateCartTotal()
-            updateQuantitiy()
+            
         }
+
+    var cartHolderArray = element.parentElement.parentElement.parentElement.parentElement.children;
+    for (var i = 0; i < cartHolderArray.length; i++)
+    {
+        if(element.parentElement.parentElement.parentElement == cartHolderArray[i])
+        {
+            
+             
+            localStorage.setItem(i,amount)
+            console.log(localStorage.getItem(i))
+        }
+    }
+    
     
 }
 function updateCartTotal()
