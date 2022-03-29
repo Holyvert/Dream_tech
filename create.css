@@ -1,6 +1,4 @@
-*{
- 
-}
+
 .BorderDiv {
   position: relative;
 display: flex;
@@ -135,7 +133,15 @@ font-size: 1.5vw;
   background:rgb(50,110,22) ;
   border: 1px solid rgb(33, 73, 14);
   cursor:pointer;}
- 
+  .Productquantity.buttons_added .Backs {
+    padding: 0.8vw 1.1vw 0.9vw  ;
+    height: 3.6vw;
+    color: #fff;
+    background-color: #9b9b9b;
+    background:#9b9b9b ;
+    border: 1px solid #3a3939;
+    cursor:pointer;
+  }
   .Productquantity.buttons_added .minus {
   border-right: 0; 
 border-top-left-radius: 1vw;
@@ -147,7 +153,8 @@ border-bottom-left-radius: 1vw;}
   border-bottom-right-radius: 1vw;}
  
   div.Productquantity.buttons_added .minus:hover,
-  div.Productquantity.buttons_added .plus:hover {
+  div.Productquantity.buttons_added .plus:hover,
+  div.Productquantity.buttons_added .Backs:hover{
   
 background-color: inherit;
 
@@ -160,7 +167,8 @@ background-color: inherit;
   margin: 0; }
   
   .Productquantity.buttons_added .minus:focus,
-  .Productquantity.buttons_added .plus:focus {
+  .Productquantity.buttons_added .plus:focus,
+  .Productquantity.buttons_added .Backs:focus {
   outline: none; }
 
 
@@ -195,6 +203,7 @@ font-size: 1vw;
   z-index: 2;
   left: 14%;
 }
+
 
 h3 {
   color: black;
@@ -383,6 +392,11 @@ width:inherit;
   height: fit-content;
   border-radius: 25px;
 }
+.imgDescription img.imagesp{
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+  height: 50%;
+}
 .imgDescription table{
   border-collapse: collapse;
 margin-right: none;
@@ -401,6 +415,11 @@ border-spacing: 0;
   .imgDescription tr td{
     height: 10vw;
   
+  }
+
+  .SCs{
+    font-weight: 900;
+    font-size:2vw;
   }
 
 .img {
@@ -436,6 +455,7 @@ border-spacing: 0;
 .images {
   width:100%;
 }
+
 
 a {
   text-decoration: none;
@@ -566,7 +586,9 @@ a {
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
+.PhonePB{
+  visibility: hidden;
+}
 @keyframes fade {
   from {
     opacity: 0.4;
@@ -578,6 +600,9 @@ a {
 #touch {position: absolute; opacity: 0; height: 0px;}    
 /* Media Query for Mobile Devices */
 @media  (max-width: 826px) {
+  .PhonePB{
+    visibility: visible;
+  }
   .BorderDiv {
     flex-flow: column wrap;
   }
@@ -633,13 +658,21 @@ right: auto;
   width: 60vw;
  
 }
+.imgDescription img.imagesp{
+  height: 60vw;
+  width: 60vw;
+}
 .imgDescription table tr{
+ 
   display: flex;
   flex-flow: wrap column;
   justify-content: space-between;
-height: 150vw;
-}
 
+}
+.imgDescription tr td{
+  height: initial;
+
+}
 .imgDescription table td{
   text-align: center;
 
@@ -648,21 +681,34 @@ height: 150vw;
  font-size: 7vw;
 }
 
+
 .CartProd{
+  overflow-wrap: break-word;
+  max-width: 50vw;
   border-radius: 10vw;
   align-self: center;
   border: #fff solid;
   background-color: #326e16;
-  width: 90%;
+  width: inherit;
+  padding: 5vw;
   font-weight: bold;
+}
+
+.CartProd.Backs {
+
+  align-self: center;
+  text-align: center;
+  background-color: #9b9b9b;
 }
 .ProductDescription{
   font-size: 5vw;
 width: 95%;
 }
-.SC{
+tr.SCs {
 
+visibility: hidden;
 }
+
 
 #Scs{
   height: 19vw;
@@ -695,7 +741,8 @@ width: 95%;
   width: 11vw;
 }
 .Productquantity.buttons_added .minus,
-.Productquantity.buttons_added .plus {
+.Productquantity.buttons_added .plus,
+.Productquantity.buttons_added .Backs{
   height: 10.5vw;
   width: 13vw;
 
@@ -744,7 +791,7 @@ border-bottom-right-radius: 4vw;
   .FooterImages1 {
     position: absolute;
     height: 20px;
-    background-color: #55a630;
+    background-color: inherit;
     bottom: 10px;
     width: 35px;
     left: 10px;
@@ -754,7 +801,7 @@ border-bottom-right-radius: 4vw;
   .FooterImages2 {
     position: absolute;
     height: 14px;
-    background-color: #55a630;
+    background-color: inherit;
     bottom: 12px;
     width: 14px;
     left: 40px;
@@ -763,7 +810,7 @@ border-bottom-right-radius: 4vw;
   .FooterImages3 {
     position: absolute;
     height: 14px;
-    background-color: #55a630;
+    background-color: inherit;
     bottom: 12px;
     width: 14px;
     left: 70px;
@@ -773,7 +820,7 @@ border-bottom-right-radius: 4vw;
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: #55a630;
+    background-color: inherit;
     bottom: 14px;
     left: 90px;
     padding-left: 0.8%;
@@ -781,7 +828,7 @@ border-bottom-right-radius: 4vw;
   .FooterImages5 {
     position: absolute;
     height: 14px;
-    background-color: #55a630;
+    background-color: inherit;;
     bottom: 12px;
     width: 14px;
     left: 120px;
@@ -790,7 +837,7 @@ border-bottom-right-radius: 4vw;
   .FooterImages6 {
     position: absolute;
     height: 14px;
-    background-color: #55a630;
+    background-color: inherit;
     bottom: 12px;
     width: 14px;
     left: 160px;
