@@ -64,6 +64,20 @@ font-size: 1.5vw;
    text-align: middle;
  
 }
+
+form.ProductDescription {
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+font-size: 1.5vw;
+ max-width: 30vw;
+ width: auto;
+   font-family: Verdana, Geneva, Tahoma, sans-serif; 
+   text-align: middle;
+ 
+}
 .compagny{
   font-size:2vw; font-weight: 100 ;
 }
@@ -349,7 +363,7 @@ width:inherit;
  right: 5%;
   position: relative;
   flex-wrap: wrap;
- justify-content: flex-end;
+ justify-content: center; 
  width: 90%;
  flex-direction: row;
   
@@ -370,6 +384,7 @@ width:inherit;
  display: flex;
  text-align: center;
  left:17%; right: 0%; width:83%;  justify-content: center;
+ 
 }
 
 
@@ -701,6 +716,10 @@ right: auto;
   background-color: #9b9b9b;
 }
 .ProductDescription{
+  font-size: 5vw;
+width: 95%;
+}
+form.ProductDescription{
   font-size: 5vw;
 width: 95%;
 }
