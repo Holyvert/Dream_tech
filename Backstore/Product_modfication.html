@@ -51,21 +51,21 @@
             <div class="RowDescrpition">
               
             
-              <form class="ProductDescription">
+              <form class="ProductDescription"  method="post" action="products.php">
                 <p>Company name</p>
-                <input type="text" name="" placeholder="Enter Company Name">
+                <input type="text" name="company"placeholder="Enter Company Name">
                 <p>Product name</p>
-                <input type="text" name="" placeholder="Enter Product Name">
+                <input type="text" name="porduct_name" placeholder="Enter Product Name">
                 <p>Product size</p>
-                <input type="text" name="" placeholder="Product size per unit">
+                <input type="text" name="s_perU" placeholder="Product size per unit">
                 <p>Product Price</p>
-                <input type="text" name="" placeholder="Price per unit">
-                <input type="text" name="" placeholder=" Price per smallest unit">
+                <input type="text" name="price_each" placeholder="Price per unit">
+                <input type="text" name="price_perQ" placeholder=" Price per smallest unit">
                 <p>Product Description</p>
-                <textarea  style="width:60vw; height:20vw; align-self: center;" placeholder="Enter Description">
+                <textarea  name="More_Description" style="width:60vw; height:20vw; align-self: center;" placeholder="Enter Description">
                 </textarea><br>
                 <p>Product Category</p>
-                <select>
+                <select name="Category">
                   <option >Fruits and Vegetables</option>
                   <option>Beverages</option>
                   <option >MeatAndFish</option>
@@ -74,17 +74,17 @@
                   <option >Frozen and Canned</option>
                 </select>
                 <p>Quantity in Stock</p>
-                <input type="text" name="" placeholder="Enter Quantity">
+                <input type="text" name="Quantity" placeholder="Enter Quantity">
                 <p>Product Image</p>
-                <input type="text" name="" placeholder="Image url">
+                <input type="text" name="images" placeholder="Image url">
                 <p>OR</p>
                 <input type="file" accept="image/*" />
-                <input type="submit" name="" value="Save">
+             
                 <p>Description Color</p>
-                <input type="color" name="" placeholder="Enter rgb values" style="align-self: center;">
+                <input type="color" name="color" placeholder="Enter rgb values" style="align-self: center;">
 
                 <div class="Productquantity buttons_added" >
-                    <input type="submit" value="save"  class="Backs" style="border-radius: 10px;">
+                    <input type="submit" value="save"  class="Backs" style="border-radius: 10px;" onclick="on_submit()">
                   </div>
               </form>
           </div>          
