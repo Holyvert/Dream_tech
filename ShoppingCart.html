@@ -1,6 +1,13 @@
+<?php
+if(!isset($_COOKIE['session_id'])){
+    setcookie(“session_id”, “random()”, time()+3600);
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
+      
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Box Grocery Store</title>
@@ -9,6 +16,7 @@
   </head>
 
   <body>
+      <!-- <form action="backstoreorderlist.php" method="get"> -->
     <!-- outer division-->
     <div class="BorderDiv">
       <!-- header division-->
@@ -239,6 +247,7 @@
     </div>
   </div>
   
+    <!--</form> -->
   
   </body>
 </html>
