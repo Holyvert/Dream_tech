@@ -3,7 +3,7 @@
 
         $datae = array();
         $datae[] = array(
-         'Name'=>$_POST['porduct_name'] 
+        'Name'=>$_POST['porduct_name'],
         'Ailse' => $_POST['Category'],
         'company'=> $_POST['company'],
         'Quantity'=> $_POST['s_perU'],
