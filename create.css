@@ -53,12 +53,13 @@ h1 {
 }
 
 .ProductDescription{
+  word-wrap: break-word;
   top: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #fff;
-font-size: 1.5vw;
+  font-size: 1.5vw;
    width: 50%; 
    font-family: Verdana, Geneva, Tahoma, sans-serif; 
    text-align: middle;
@@ -82,9 +83,10 @@ font-size: 1.5vw;
   font-size:2vw; font-weight: 100 ;
 }
 .porduct_name{
+ 
   align-self: center;
   text-align: center;
-  width: 20vw;
+  width: 30vw;
   font-weight: 1000;
   font-size: 3vw;
 }
@@ -301,14 +303,19 @@ text-align: left;
 
 .dropdown {
   position: relative;
-  display: inline-block;
+  align-self: center;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .dropdown-content {
   display: none;
   position: relative;
   border-radius: 2vw;
- 
+  align-self: center;
+  width: 40vw;
+  word-wrap: break-word;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -459,15 +466,16 @@ border-spacing: 0;
   
   font-size: 1.5vw;
   width: fit-content;
- 
+  max-width: 10vw;
+  word-wrap: break-word;
   margin-top:0%;
   background-color: rgb(255,255, 255);
   color: black;
-  
+
   padding-left: 1vw;
   padding-right: 1vw;
   border-radius: 1vw;
-  height: 50%;
+  height: fit-content;
 }
 
 .images {
@@ -745,12 +753,15 @@ visibility: hidden;
 }
 
 .porduct_name{
-  
-  background-color:aqua;
-  width: 40vw;
+ 
+  width: 60vw;
   font-size: 8vw;
 }
 .price_each{
+  font-size: 5vw;
+}
+.price_perQ{
+
   font-size: 5vw;
 }
 
@@ -760,7 +771,14 @@ visibility: hidden;
 .dropbutton{
   font-size: 5vw;
 }
-
+.dropdown {
+  width: 60vw;
+}
+.dropdown-content {
+ 
+  width: 60vw;
+  
+}
 .Productquantity  .input-text.qty {
   height: 10vw;
   width: 11vw;
