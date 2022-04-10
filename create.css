@@ -82,6 +82,9 @@ font-size: 1.5vw;
   font-size:2vw; font-weight: 100 ;
 }
 .porduct_name{
+  align-self: center;
+  text-align: center;
+  width: 20vw;
   font-weight: 1000;
   font-size: 3vw;
 }
@@ -742,6 +745,9 @@ visibility: hidden;
 }
 
 .porduct_name{
+  
+  background-color:aqua;
+  width: 40vw;
   font-size: 8vw;
 }
 .price_each{
