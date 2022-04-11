@@ -1,15 +1,12 @@
  <?php
+       
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
         $data = array();
         $data[] = array(
-        var name = document.getElementsByClassName('porduct_name');
-       'Name'=>name,
-        'Quantity'=> $_POST['quantity'],
-        var price = document.getElementsByClassName('price_each');
-        'price'=> price,
-        var image = document.getElementsByClassName('imgDescription');
-        'image'=> image,
+        $names = $dochtml-> getElementsByClassName('porduct_name'),
+        $Quantity= $_POST['quantity'],
+        $prices = $dochtml-> getElementsByClassName('price_each'),
+        $images = getElementsByClassName('imgDescription'),
         );
 
        $filename='addtocart.json';
@@ -49,4 +46,5 @@ if ($handle)
         // close the handle on the file
         fclose($handle);
 }
-?> 
+}
+    ?> 
