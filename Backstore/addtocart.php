@@ -3,10 +3,7 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $data = array();
         $data[] = array(
-        $names = $dochtml-> getElementsByClassName('porduct_name'),
-        $Quantity= $_POST['quantity'],
-        $prices = $dochtml-> getElementsByClassName('price_each'),
-        $images = getElementsByClassName('imgDescription'),
+        'Quantity' => $_POST['quantity'],
         );
 
        $filename='addtocart.json';
