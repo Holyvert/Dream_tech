@@ -243,6 +243,7 @@ function renderCartItems(){
     });
 }*/ //for adding product to page, tryout
 
-var form = document.getElementsByClassName('.ProductDescription');
-form.onsubmit = function(event){
+var form = document.getElementsByName("Edit");
+form.onclick = function(event){
+   
 }
