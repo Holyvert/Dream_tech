@@ -63,7 +63,7 @@ function addToCartClicked(event){
  function addItemToCart(title, price, src, qty){
      var cartRow = document.createElement('div')
      cartRow.innerHTML = ""
-     var cartItems = document.getElementsByClassName("cart-items")[0]
+     var cartItems = document.getElementsByClassName("test")[0]
      var cartRowContents = ` 
         <tr>
             <td>
@@ -85,30 +85,9 @@ function addToCartClicked(event){
                 <td>
                 <div name ="cartPrice" id="price">${price}</div></td>
         </tr>
-            `               
-     cartRow.innerHTML += ` 
-        <tr>
-            <td>
-                <img class="images" src="${src}"></a>
-                </td>
-                <td class="CartProd">${title}</td>
-                <td >Quantity
-                     <div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);" >
-                     <input id="down" type="button"  value="-" class="minus" onclick="setCartQuantity(this,'down');"><input 
-                        id="amount" type="number" step="1" min="1" max="" name="quantity" value="${qty}" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
-                        type="button" onclick="setCartQuantity(this,'up');" id="up" value="+" class="plus" >
-                    </div>
-                </td>
-                <td>
-                        <div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
-                        <input name="delete" type="button" value="delete" class="minus" style="border-radius: 10px;" >
-                        </div>
-                        </td>
-                <td>
-                <div name ="cartPrice" id="price">${price}</div></td>
-        </tr>
             `
-     //cartItems.append(cartRow)
+    cartRow.innerHTML = cartRowContents
+     cartItems.append(cartRow)
  }
 
 function updateQuantitiy()
