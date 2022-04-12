@@ -61,9 +61,11 @@ function addToCartClicked(event){
     addItemToCart(title, price, src, qty)
 }
  function addItemToCart(title, price, src, qty){
+     var w = window.open('https://users.encs.concordia.ca/~a_czubok/GitHub/ShoppingCart.html')
+     w.onload = function(){
      var cartRow = document.createElement('div')
      cartRow.innerHTML = ""
-     var cartItems = document.getElementsByClassName("test")[0]
+     var cartItems = document.getElementsByClassName("imgDescription")[0]
      var cartRowContents = ` 
         <tr>
             <td>
@@ -87,7 +89,8 @@ function addToCartClicked(event){
         </tr>
             `
     cartRow.innerHTML = cartRowContents
-     cartItems.append(cartRow)
+    //cartItems.append(cartRow)
+ }
  }
 
 function updateQuantitiy()
