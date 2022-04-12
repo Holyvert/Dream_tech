@@ -61,11 +61,11 @@ function addToCartClicked(event){
     addItemToCart(title, price, src, qty)
 }
  function addItemToCart(title, price, src, qty){
-     var w = window.open('https://users.encs.concordia.ca/~a_czubok/GitHub/ShoppingCart.html')
-     w.onload = function(){
-     var cartRow = document.createElement('div')
-     cartRow.innerHTML = ""
-     var cartItems = document.getElementsByClassName("imgDescription")[0]
+    //var w = window.open('https://users.encs.concordia.ca/~a_czubok/GitHub/ShoppingCart.html')
+   // w.onload = function(){
+     //var cartRow = document.createElement('div')
+     //cartRow.innerHTML = ""
+     //var cartItems = document.getElementsByClassName("RowDescrpitionS")[0]
      var cartRowContents = ` 
         <tr>
             <td>
@@ -87,11 +87,37 @@ function addToCartClicked(event){
                 <td>
                 <div name ="cartPrice" id="price">${price}</div></td>
         </tr>
-            `
-    cartRow.innerHTML = cartRowContents
+      `
+    var item = localStorage.setItem("savedAddToCartItem",cartRowContents)
+    console.log(localStorage.getItem("savedAddToCartItem",cartRowContents))
+    //cartRow.innerHTML = cartRowContents
     //cartItems.append(cartRow)
+     printToCart()
+ //}
  }
- }
+function printToCart(){
+    //var w = window.open('https://users.encs.concordia.ca/~a_czubok/GitHub/ShoppingCart.html')
+   // w.onload = function(){
+     var cartRow = document.createElement('div')
+     //cartRow.innerHTML = ""
+     var cartItems = document.getElementById("add")
+    cartRow.innerHTML = localStorage.getItem("savedAddToCartItem")
+              alert(localStorage.getItem("savedAddToCartItem"))
+    cartItems.append(cartRow)
+ //} 
+}
+
+//function printToCart(item){
+    //var w = window.open('https://users.encs.concordia.ca/~a_czubok/GitHub/ShoppingCart.html')
+   // w.onload = function(){
+     //var cartRow = document.createElement('div')
+     //cartRow.innerHTML = ""
+     //var cartItems = document.getElementsByClassName("RowDescrpitionS")[0]
+    //cartRow.innerHTML = item
+    //cartItems.append(cartRow)
+ //} 
+//}
+
 
 function updateQuantitiy()
 {

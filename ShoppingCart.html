@@ -12,7 +12,9 @@ if(!isset($_COOKIE['session_id'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Box Grocery Store</title>
     <link rel="stylesheet" href="create.css" />
-    <script src="Functions.js"></script>
+    
+    
+      
   </head>
 
   <body>
@@ -126,7 +128,7 @@ if(!isset($_COOKIE['session_id'])){
         
             
 
-              <div class="imgDescription" style="max-height: none; align-self: center;"> 
+              <div id= "add" class="imgDescription" style="max-height: none; align-self: center;"> 
                 <table  style="border-bottom: 3px;"cellpadding="0" cellspacing="0">
                   <tbody>
                     <tr class="SC" id="Scs">
@@ -246,8 +248,10 @@ if(!isset($_COOKIE['session_id'])){
       </table>
     </div>
   </div>
-  
-    <!--</form> -->
-  
+  <script src="Functions.js"></script>
+    
+    <script>
+        printToCart()
+    </script>
   </body>
 </html>
