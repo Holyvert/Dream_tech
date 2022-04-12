@@ -87,9 +87,13 @@ function addToCartClicked(event){
                 <td>
                 <div name ="cartPrice" id="price">${price}</div></td>
         
-      `
-    var item = localStorage.setItem("savedAddToCartItem",cartRowContents)
-    console.log(localStorage.getItem("savedAddToCartItem",cartRowContents))
+     `
+    const arrayofitems = [];
+    arrayofitems.push(cartRowContents)
+    var item = localStorage.setItem("savedAddToCartItem",  JSON.stringify(arrayofitems))
+    console.log(item)
+   // arrayofitems.push(cartRowContents)
+    alert("Item has been successfully added to cart")
     //cartRow.innerHTML = cartRowContents
     //cartItems.append(cartRow)
      printToCart()
@@ -98,13 +102,16 @@ function addToCartClicked(event){
 function printToCart(){
     //var w = window.open('https://users.encs.concordia.ca/~a_czubok/GitHub/ShoppingCart.html')
    // w.onload = function(){
+    for(let i=0; i<JSON.parse(localStorage.getItem("savedAddToCartItem")).length; i++){
      var cartRow = document.createElement('tr')
      //cartRow.innerHTML = ""
-     var cartItems = document.getElementById("add")
-    cartRow.innerHTML = localStorage.getItem("savedAddToCartItem")
-    alert(localStorage.getItem("savedAddToCartItem"))
+     var cartItems = document.getElementsByClassName("add")[0]
+     var retrieveditem = JSON.parse((localStorage.getItem("savedAddToCartItem")))[i]
+    cartRow.innerHTML += retrieveditem}
+    //alert(localStorage.getItem("savedAddToCartItem"))
     cartItems.append(cartRow)
- //} 
+    event.preventDefault()
+
 }
 
 //function printToCart(item){
