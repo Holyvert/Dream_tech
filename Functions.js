@@ -67,7 +67,7 @@ function addToCartClicked(event){
      //cartRow.innerHTML = ""
      //var cartItems = document.getElementsByClassName("RowDescrpitionS")[0]
      var cartRowContents = ` 
-        <tr>
+        
             <td>
                 <img class="images" src="${src}"></a>
                 </td>
@@ -86,7 +86,7 @@ function addToCartClicked(event){
                         </td>
                 <td>
                 <div name ="cartPrice" id="price">${price}</div></td>
-        </tr>
+        
       `
     var item = localStorage.setItem("savedAddToCartItem",cartRowContents)
     console.log(localStorage.getItem("savedAddToCartItem",cartRowContents))
@@ -98,11 +98,11 @@ function addToCartClicked(event){
 function printToCart(){
     //var w = window.open('https://users.encs.concordia.ca/~a_czubok/GitHub/ShoppingCart.html')
    // w.onload = function(){
-     var cartRow = document.createElement('div')
+     var cartRow = document.createElement('tr')
      //cartRow.innerHTML = ""
      var cartItems = document.getElementById("add")
     cartRow.innerHTML = localStorage.getItem("savedAddToCartItem")
-              alert(localStorage.getItem("savedAddToCartItem"))
+    alert(localStorage.getItem("savedAddToCartItem"))
     cartItems.append(cartRow)
  //} 
 }
