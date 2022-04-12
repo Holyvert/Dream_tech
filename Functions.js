@@ -47,10 +47,14 @@ function ready()
 }   
 
 function addToCartClicked(event){
-    var button = event.target
-    var shopItem = button.parentElement
+    var button = event.target 
+    var shopItem = button.parentElement.parentElement
+    //var shopImg = button.parentElement.parentElement.children[0]
     var title = shopItem.getElementsByClassName("porduct_name")[0].innerText
-    console.log(title)
+    var price = shopItem.getElementsByClassName("price_each")[0].innerText
+    var picture = document.getElementsByClassName("imgDescription")[0].getElementsByTagName("img")[0];
+    var src = picture.getAttribute('src');
+    console.log(title, price, src)
 }
 
 function updateQuantitiy()
