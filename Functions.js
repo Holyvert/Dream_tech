@@ -47,6 +47,7 @@ function ready()
 }   
 
 function addToCartClicked(event){
+    event.preventDefault()
     var button = event.target 
     var shopItem = button.parentElement.parentElement
     //var shopImg = button.parentElement.parentElement.children[0]
@@ -54,8 +55,9 @@ function addToCartClicked(event){
     var price = shopItem.getElementsByClassName("price_each")[0].innerText
     var picture = document.getElementsByClassName("imgDescription")[0].getElementsByTagName("img")[0];
     var src = picture.getAttribute('src');
-    var quantity = document.getElementsByClassName("Productquantity buttons_added")[0].getElementsByTagName("input")[1];
-    var qty = quantity.getAttribute('value');
+    var quantity = document.getElementsByClassName("Productquantity buttons_added")[0].getElementsByTagName("input")[2];
+    var qty = localStorage.getItem(document.URL+"savedQuantity");
+    //var x = window.localStorage.getItem('savedQuantity');
     console.log(title, price, src, qty)
 }
 
