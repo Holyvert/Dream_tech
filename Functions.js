@@ -53,13 +53,40 @@ function addToCartClicked(event){
     //var shopImg = button.parentElement.parentElement.children[0]
     var title = shopItem.getElementsByClassName("porduct_name")[0].innerText
     var price = shopItem.getElementsByClassName("price_each")[0].innerText
-    var picture = document.getElementsByClassName("imgDescription")[0].getElementsByTagName("img")[0];
-    var src = picture.getAttribute('src');
-    var quantity = document.getElementsByClassName("Productquantity buttons_added")[0].getElementsByTagName("input")[2];
-    var qty = localStorage.getItem(document.URL+"savedQuantity");
-    //var x = window.localStorage.getItem('savedQuantity');
+    var picture = document.getElementsByClassName("imgDescription")[0].getElementsByTagName("img")[0]
+    var src = picture.getAttribute('src')
+    var quantity = document.getElementsByClassName("Productquantity buttons_added")[0].getElementsByTagName("input")[2]
+    var qty = localStorage.getItem(document.URL+"savedQuantity")
     console.log(title, price, src, qty)
+    addItemToCart(title, price, src, qty)
 }
+ function addItemToCart(title, price, src, qty){
+     var cartRow = document.createElement('div')
+     var cartItems = document.getElementsByClassName('cart-items')[0]
+     var cartRowContents = ` 
+        
+            <td>
+                <img class="images" src="https://images.unsplash.com/photo-1617102738820-bee2545405fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"></a>
+                </td>
+                <td class="CartProd">Unsalted Chips</td>
+                <td >Quantity
+                     <div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);" >
+                     <input id="down" type="button"  value="-" class="minus" onclick="setCartQuantity(this,'down');"><input 
+                        id="amount" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
+                        type="button" onclick="setCartQuantity(this,'up');" id="up" value="+" class="plus" >
+                    </div>
+                </td>
+                <td>
+                        <div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
+                        <input name="delete" type="button" value="delete" class="minus" style="border-radius: 10px;" >
+                        </div>
+                        </td>
+                <td>
+                <div name ="cartPrice" id="price">4.99$</div></td>
+            `               
+     cartRow.innerHTML = cartRowContents
+     cartItems.append(cartRow)
+ }
 
 function updateQuantitiy()
 {
