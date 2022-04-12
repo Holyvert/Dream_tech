@@ -48,7 +48,7 @@ function ready()
 
 function addToCartClicked(event){
     var button = event.target
-    var shopItem = button.parentElement.parentElement
+    var shopItem = button.parentElement
     var title = shopItem.getElementsByClassName("porduct_name")[0].innerText
     console.log(title)
 }
