@@ -62,17 +62,18 @@ function addToCartClicked(event){
 }
  function addItemToCart(title, price, src, qty){
      var cartRow = document.createElement('div')
-     var cartItems = document.getElementsByClassName('cart-items')[0]
+     cartRow.innerHTML = ""
+     var cartItems = document.getElementsByClassName("cart-items")[0]
      var cartRowContents = ` 
-        
+        <tr>
             <td>
-                <img class="images" src="https://images.unsplash.com/photo-1617102738820-bee2545405fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"></a>
+                <img class="images" src="${src}"></a>
                 </td>
-                <td class="CartProd">Unsalted Chips</td>
+                <td class="CartProd">${title}</td>
                 <td >Quantity
                      <div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);" >
                      <input id="down" type="button"  value="-" class="minus" onclick="setCartQuantity(this,'down');"><input 
-                        id="amount" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
+                        id="amount" type="number" step="1" min="1" max="" name="quantity" value="${qty}" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
                         type="button" onclick="setCartQuantity(this,'up');" id="up" value="+" class="plus" >
                     </div>
                 </td>
@@ -82,10 +83,32 @@ function addToCartClicked(event){
                         </div>
                         </td>
                 <td>
-                <div name ="cartPrice" id="price">4.99$</div></td>
+                <div name ="cartPrice" id="price">${price}</div></td>
+        </tr>
             `               
-     cartRow.innerHTML = cartRowContents
-     cartItems.append(cartRow)
+     cartRow.innerHTML += ` 
+        <tr>
+            <td>
+                <img class="images" src="${src}"></a>
+                </td>
+                <td class="CartProd">${title}</td>
+                <td >Quantity
+                     <div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);" >
+                     <input id="down" type="button"  value="-" class="minus" onclick="setCartQuantity(this,'down');"><input 
+                        id="amount" type="number" step="1" min="1" max="" name="quantity" value="${qty}" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
+                        type="button" onclick="setCartQuantity(this,'up');" id="up" value="+" class="plus" >
+                    </div>
+                </td>
+                <td>
+                        <div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
+                        <input name="delete" type="button" value="delete" class="minus" style="border-radius: 10px;" >
+                        </div>
+                        </td>
+                <td>
+                <div name ="cartPrice" id="price">${price}</div></td>
+        </tr>
+            `
+     //cartItems.append(cartRow)
  }
 
 function updateQuantitiy()
