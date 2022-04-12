@@ -1,12 +1,12 @@
- <?php
-       
+
+<?php     
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $data = array();
         $data[] = array(
         'Product' => $_POST['product'],
-        'price' => $_POST['priceperunit'],
+        //'price' => $_POST['priceperunit'],
         'Quantity' => $_POST['quantity'],
-        'Image' => $_POST['image'],
+        //'Image' => $_POST['image'],
         );
 
        $filename='addtocart.json';
