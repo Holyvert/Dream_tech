@@ -54,7 +54,9 @@ function addToCartClicked(event){
     var price = shopItem.getElementsByClassName("price_each")[0].innerText
     var picture = document.getElementsByClassName("imgDescription")[0].getElementsByTagName("img")[0];
     var src = picture.getAttribute('src');
-    console.log(title, price, src)
+    var quantity = document.getElementsByClassName("Productquantity buttons_added")[0].getElementsByTagName("input")[1];
+    var qty = quantity.getAttribute('value');
+    console.log(title, price, src, qty)
 }
 
 function updateQuantitiy()
