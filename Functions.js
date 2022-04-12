@@ -39,9 +39,19 @@ function ready()
     document.getElementById('price1').innerText = Math.round(productPageQuantity * productPagePrice * 100)/100 + " $"
     }
     
-    
+    var addToCartbutton = document.getElementsByClassName('AddCartButton');
+    for(var i =0; i<addToCartbutton.length; i++){
+        var button = addToCartbutton[i]
+        button.addEventListener('click', addToCartClicked)
+    }
 }   
 
+function addToCartClicked(event){
+    var button = event.target
+    var shopItem = button.parentElement.parentElement
+    var title = shopItem.getElementsByClassName("porduct_name")[0].innerText
+    console.log(title)
+}
 
 function updateQuantitiy()
 {
