@@ -60,7 +60,7 @@ function addToCartClicked(event){
     console.log(title, price, src, qty)
     addItemToCart(title, price, src, qty)
 }
-const arrayofitems = [];
+
  function addItemToCart(title, price, src, qty){
     //var w = window.open('https://users.encs.concordia.ca/~a_czubok/GitHub/ShoppingCart.html')
    // w.onload = function(){
@@ -88,33 +88,51 @@ const arrayofitems = [];
                 <td>
                 <div name ="cartPrice" id="price">${price}</div></td>
     
-     `
-    if(typeof arrayofitems ==='undefined'){
-    var arrayofitems=[];}
+    
+`
      
+     /*var existingEntries=JSON.parse(localStorage.getItem("all"))
+     if(existingEntries==null) existingEntries =[];
+     localStorage.setItem("new", JSON.stringify(cartRowContents));
+     existingEntries.push(cartRowContents);
+     localStorage.setitem("all",JSON.stringify(existingEntries));
+     alert("Item has been successfully added to cart")*/
+     
+     
+    if(localStorage.getItem("savedAddToCartItem") == null){
+    var arrayofitems=[];
     arrayofitems.push(cartRowContents)
-    var item = localStorage.setItem("savedAddToCartItem",  JSON.stringify(arrayofitems))
-         //var arrayofitems=JSON.parse(localStorage.getItem("savedAddToCartItem"))
-         // arrayofitems.push(cartRowContents)
-    console.log(item)
-   // arrayofitems.push(cartRowContents)
+    }
+    //localStorage.setItem("savedAddToCartItem",  JSON.stringify(arrayofitems))}
+     else{
+        var arrayofitems = JSON.parse(localStorage.getItem("savedAddToCartItem"))
+        arrayofitems.push(cartRowContents)
+        //localStorage.setItem("savedAddToCartItem", JSON.stringify(getArray))
+     }
+   // var arrayofitems=JSON.parse(localStorage.getItem("savedAddToCartItem"))
+    localStorage.setItem("savedAddToCartItem", JSON.stringify(arrayofitems))
+    console.log(JSON.parse(localStorage.getItem("savedAddToCartItem")))
     alert("Item has been successfully added to cart")
     //cartRow.innerHTML = cartRowContents
-    //cartItems.append(cartRow)
+    //cartItems.append(cartRow) 
      printToCart()
- //}
  }
 function printToCart(){
     //var w = window.open('https://users.encs.concordia.ca/~a_czubok/GitHub/ShoppingCart.html')
    // w.onload = function(){
-    for(let i=0; i<JSON.parse(localStorage.getItem("savedAddToCartItem")).length; i++){
+    var cartarray =JSON.parse(localStorage.getItem("savedAddToCartItem"))
+    for(let i=0; i<cartarray.length; i++){
      var cartRow = document.createElement('tr')
      //cartRow.innerHTML = ""
      var cartItems = document.getElementsByClassName("add")[0]
      var retrieveditem = JSON.parse((localStorage.getItem("savedAddToCartItem")))[i]
-    cartRow.innerHTML += retrieveditem}
+    
+        cartRow.innerHTML= retrieveditem
+        cartItems.append(cartRow)
+    }
+     
     //alert(localStorage.getItem("savedAddToCartItem"))
-    cartItems.append(cartRow)
+    
     event.preventDefault()
 
 }
