@@ -11,8 +11,10 @@ else{
    
 }
 function ready()
-{
-    
+{   
+   
+ 
+    //updateCartTotal()
     myCounter = localStorage.getItem(document.URL);
 
     
@@ -99,13 +101,20 @@ function addToCartClicked(event){
      alert("Item has been successfully added to cart")*/
      
      
-    if(localStorage.getItem("savedAddToCartItem") == null){
+    if(localStorage.getItem("savedAddToCartItem").length == 0 ||localStorage.getItem("savedAddToCartItem") == null ){
     var arrayofitems=[];
     arrayofitems.push(cartRowContents)
     }
     //localStorage.setItem("savedAddToCartItem",  JSON.stringify(arrayofitems))}
      else{
         var arrayofitems = JSON.parse(localStorage.getItem("savedAddToCartItem"))
+        let same=true;
+        for(let i=0; i<arrayofitems.length;i++)
+            {
+               if (arrayofitems[i].substring(0,250)==cartRowContents.substring(0,250))
+                   same=false;
+            }
+         if(same)
         arrayofitems.push(cartRowContents)
         //localStorage.setItem("savedAddToCartItem", JSON.stringify(getArray))
      }
@@ -120,6 +129,7 @@ function addToCartClicked(event){
 function printToCart(){
     //var w = window.open('https://users.encs.concordia.ca/~a_czubok/GitHub/ShoppingCart.html')
    // w.onload = function(){
+    
     var cartarray =JSON.parse(localStorage.getItem("savedAddToCartItem"))
     for(let i=0; i<cartarray.length; i++){
      var cartRow = document.createElement('tr')
@@ -130,11 +140,11 @@ function printToCart(){
         cartRow.innerHTML= retrieveditem
         cartItems.append(cartRow)
     }
-    updateCartQuantitiy()
-    updateCartTotal()
+   // updateCartQuantitiy()
+   // updateCartTotal()
     
     //alert(localStorage.getItem("savedAddToCartItem"))
-    
+    updateCartTotal()
     event.preventDefault()
 
 }
@@ -200,31 +210,38 @@ function setQuantity(upordown){
         updateQuantitiy();
         }
 }
+
 function deleteButton()
 {
     var removeCartItemButtons = document.getElementsByName("delete")
-    
     console.log(removeCartItemButtons)
     for(var i = 0;i<removeCartItemButtons.length;i++)
     {
         var button = removeCartItemButtons[i]
-        button.addEventListener('click',function(event){
+        button.addEventListener('click',function(event,i){
             var buttonClicked = event.target
-            var array = JSON.parse(LocalStorage.getItem("savedAddToCartItem"))
-            var newarray=array.slice(0,i).concat(array.slice(i+1,array.length))
-            LocalStorage.setItem("savedAddToCartItem", JSON.stringify(newarray))
-            printToCart()
-            updateCartQuantitiy()
+            buttonClicked.parentElement.parentElement.parentElement.remove()
             updateCartTotal()
-            
-           // event.preventDefault()
-        }
+            var array= JSON.parse(localStorage.getItem("savedAddToCartItem"))
+            array.splice(i,1)
+            localStorage.setItem("savedAddToCartItem",JSON.stringify(array))
+        })
         
     }
 
 }
 
-/*function deleteButton()
+/*function removefromArray(i){
+    var array = JSON.parse(localStorage.getItem("savedAddToCartItem"))
+    array.forEach(function(item)){
+        if(array.indexOf(item)==i){
+        delete array[i]
+        localStorage.setItem("savedAddToCartItem", JSON.stringify(array))
+    }
+    }
+}*/
+/*
+function deleteButton()
 {
     var removeCartItemButtons = document.getElementsByName("delete")
     
@@ -241,6 +258,7 @@ function deleteButton()
     }
 
 }*/
+
 function setCartQuantity(element,upordown)
 {
     var amount = element.parentElement.children[1].value
