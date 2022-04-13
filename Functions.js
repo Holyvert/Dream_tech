@@ -130,7 +130,9 @@ function printToCart(){
         cartRow.innerHTML= retrieveditem
         cartItems.append(cartRow)
     }
-     
+    updateCartQuantitiy()
+    updateCartTotal()
+    
     //alert(localStorage.getItem("savedAddToCartItem"))
     
     event.preventDefault()
@@ -198,8 +200,31 @@ function setQuantity(upordown){
         updateQuantitiy();
         }
 }
-
 function deleteButton()
+{
+    var removeCartItemButtons = document.getElementsByName("delete")
+    
+    console.log(removeCartItemButtons)
+    for(var i = 0;i<removeCartItemButtons.length;i++)
+    {
+        var button = removeCartItemButtons[i]
+        button.addEventListener('click',function(event){
+            var buttonClicked = event.target
+            var array = JSON.parse(LocalStorage.getItem("savedAddToCartItem"))
+            var newarray=array.slice(0,i).concat(array.slice(i+1,array.length))
+            LocalStorage.setItem("savedAddToCartItem", JSON.stringify(newarray))
+            printToCart()
+            updateCartQuantitiy()
+            updateCartTotal()
+            
+           // event.preventDefault()
+        }
+        
+    }
+
+}
+
+/*function deleteButton()
 {
     var removeCartItemButtons = document.getElementsByName("delete")
     
@@ -215,7 +240,7 @@ function deleteButton()
         
     }
 
-}
+}*/
 function setCartQuantity(element,upordown)
 {
     var amount = element.parentElement.children[1].value
