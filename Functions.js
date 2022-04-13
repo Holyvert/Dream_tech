@@ -60,6 +60,7 @@ function addToCartClicked(event){
     console.log(title, price, src, qty)
     addItemToCart(title, price, src, qty)
 }
+const arrayofitems = [];
  function addItemToCart(title, price, src, qty){
     //var w = window.open('https://users.encs.concordia.ca/~a_czubok/GitHub/ShoppingCart.html')
    // w.onload = function(){
@@ -67,7 +68,7 @@ function addToCartClicked(event){
      //cartRow.innerHTML = ""
      //var cartItems = document.getElementsByClassName("RowDescrpitionS")[0]
      var cartRowContents = ` 
-        
+      
             <td>
                 <img class="images" src="${src}"></a>
                 </td>
@@ -86,11 +87,15 @@ function addToCartClicked(event){
                         </td>
                 <td>
                 <div name ="cartPrice" id="price">${price}</div></td>
-        
+    
      `
-    const arrayofitems = [];
+    if(typeof arrayofitems ==='undefined'){
+    var arrayofitems=[];}
+     
     arrayofitems.push(cartRowContents)
     var item = localStorage.setItem("savedAddToCartItem",  JSON.stringify(arrayofitems))
+         //var arrayofitems=JSON.parse(localStorage.getItem("savedAddToCartItem"))
+         // arrayofitems.push(cartRowContents)
     console.log(item)
    // arrayofitems.push(cartRowContents)
     alert("Item has been successfully added to cart")
