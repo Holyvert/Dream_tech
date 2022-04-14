@@ -231,7 +231,7 @@ function setQuantity(upordown){
         {
             ++document.getElementById("amount").value;
             updateQuantitiy();
-            //replaceItemQuantity();
+            replaceItemQuantity(titlename,amount);
             //add replaceItemQuantity here
            // updateCartQuantities();
             
@@ -239,7 +239,7 @@ function setQuantity(upordown){
         else if (upordown == 'down')
         {--document.getElementById("amount").value;
         updateQuantitiy();
-         //replaceItemQuantity();
+         replaceItemQuantity(titlename,amount);
          //updateCartQuantities();
         }
     }
@@ -248,14 +248,14 @@ function setQuantity(upordown){
         if (upordown == 'up')
         {++document.getElementById("amount").value;
         updateQuantitiy();
-         //replaceItemQuantity();
+         replaceItemQuantity(titlename,amount);
         // updateCartQuantities();
         }
     }
     else
         {document.getElementById("amount").value=1;;
         updateQuantitiy();
-         //replaceItemQuantity();
+         replaceItemQuantity(titlename,amount);
         // updateCartQuantities()
         }
 }
@@ -357,7 +357,7 @@ function setCartQuantity(element,upordown)
             --amount
             updateCartTotal()
             console.log(titlename,amount);
-            replaceItemQuantity(titlename);
+            replaceItemQuantity(titlename,amount);
             //updateCartQuantities()
             
         }
