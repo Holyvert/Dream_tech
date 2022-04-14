@@ -65,6 +65,70 @@ function addToCartClicked(event){
     addItemToCart(title, price, src, qty)
 }
 
+function replaceItemQuantity(titlename,amount){
+    
+    
+    var findingelement = document.getElementsByClassName("CartProd")
+    for (var i = 0; i < findingelement.length; i++)
+    {
+        if(findingelement[i].innerHTML==titlename){
+        var shopItem = findingelement[i].parentElement
+        var title = shopItem.getElementsByClassName("CartProd")[0].innerHTML
+        var price = shopItem.getElementsByTagName("div")[2].innerHTML
+        var picture= shopItem.getElementsByTagName("img")[0]
+        var src= picture.getAttribute('src')
+        //var qty = shopItem.getElementsByClassName("input-text qty text").value
+        var qty = amount
+        console.log(title, price, src, qty)
+        replaceItemArray(title, price, src, qty)
+        } 
+    }
+    
+    /*
+    var amount = document.getElementById("amount");
+   var shopItem = amount.parentElement.parentElement.parentElement
+   var title = shopItem.getElementsByClassName("CartProd")[0].innerText
+   var price = shopItem.getElementsByTagName("div")[2].innerHTML
+   var picture= shopItem.getElementsByTagName("img")[0]
+   var src= picture.getAttribute('src')
+   var qty = shopItem.getElementsByClassName("input-text qty text").value
+   console.log(title, price, src, qty)
+   replaceItemArray()*/
+}
+ function replaceItemArray(title, price, src, qty){
+
+     var cartRowContents = ` 
+      
+            <td>
+                <img class="images" src="${src}"></a>
+                </td>
+                <td class="CartProd">${title}</td>
+                <td >Quantity
+                     <div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);" >
+                     <input id="down" type="button"  value="-" class="minus" onclick="setCartQuantity(this,'down');"><input 
+                        id="amount" type="number" step="1" min="1" max="" name="quantity" value="${qty}" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
+                        type="button" onclick="setCartQuantity(this,'up');" id="up" value="+" class="plus" >
+                    </div>
+                </td>
+                <td>
+                        <div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
+                        <input name="delete" type="button" value="delete" class="minus" style="border-radius: 10px;" >
+                        </div>
+                        </td>
+                <td>
+                <div name ="cartPrice" id="price">${price}</div></td>
+    
+    
+`
+     var array = JSON.parse(localStorage.getItem("savedAddToCartItem"))
+    for(var i=0; i<array.length; i++){
+       if(array[i].substring(0,array[i].length-1).includes(title)){
+           array.splice(i,1,cartRowContents)
+           localStorage.setItem("savedAddToCartItem",JSON.stringify(array))
+       }
+    }
+ }
+
  function addItemToCart(title, price, src, qty){
 
      var cartRowContents = ` 
@@ -160,18 +224,22 @@ function updateCartQuantitiy()
 
 function setQuantity(upordown){
     var amount = document.getElementById("amount");
+    
     if (amount.value > 1) 
         {
         if (upordown == 'up')
         {
             ++document.getElementById("amount").value;
             updateQuantitiy();
+            //replaceItemQuantity();
+            //add replaceItemQuantity here
            // updateCartQuantities();
             
         }
         else if (upordown == 'down')
         {--document.getElementById("amount").value;
         updateQuantitiy();
+         //replaceItemQuantity();
          //updateCartQuantities();
         }
     }
@@ -180,12 +248,14 @@ function setQuantity(upordown){
         if (upordown == 'up')
         {++document.getElementById("amount").value;
         updateQuantitiy();
+         //replaceItemQuantity();
         // updateCartQuantities();
         }
     }
     else
         {document.getElementById("amount").value=1;;
         updateQuantitiy();
+         //replaceItemQuantity();
         // updateCartQuantities()
         }
 }
@@ -266,7 +336,7 @@ function deleteButton()
 function setCartQuantity(element,upordown)
 {
     var amount = element.parentElement.children[1].value
-    
+    var titlename = element.parentElement.parentElement.parentElement.children[1].innerHTML
     
     if (amount > 1) 
         {
@@ -275,6 +345,8 @@ function setCartQuantity(element,upordown)
             ++element.parentElement.children[1].value
             ++amount
             updateCartTotal()
+            console.log(titlename);
+            replaceItemQuantity(titlename,amount);
             //updateCartQuantities()
             
             
@@ -284,6 +356,8 @@ function setCartQuantity(element,upordown)
             --element.parentElement.children[1].value
             --amount
             updateCartTotal()
+            console.log(titlename,amount);
+            replaceItemQuantity(titlename);
             //updateCartQuantities()
             
         }
@@ -295,6 +369,8 @@ function setCartQuantity(element,upordown)
             ++element.parentElement.children[1].value
             ++amount
             updateCartTotal()
+            console.log(titlename);
+            replaceItemQuantity(titlename,amount);
             //updateCartQuantities()
         }
     }
@@ -303,6 +379,8 @@ function setCartQuantity(element,upordown)
             amount = 1
             element.parentElement.children[1].value=1
             updateCartTotal()
+            console.log(titlename);
+            replaceItemQuantity(titlename,amount);
             //updateCartQuantities()
         }
 
