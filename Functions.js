@@ -161,7 +161,7 @@ function replaceItemQuantity(titlename,amount){
     }
      else{
         var arrayofitems = JSON.parse(localStorage.getItem("savedAddToCartItem"))
-        let same=true;
+        var same=true;
         for(let i=0; i<arrayofitems.length;i++)
             {
                if (arrayofitems[i].substring(0,250)==cartRowContents.substring(0,250))
@@ -173,7 +173,8 @@ function replaceItemQuantity(titlename,amount){
      }
     localStorage.setItem("savedAddToCartItem", JSON.stringify(arrayofitems))
     console.log(JSON.parse(localStorage.getItem("savedAddToCartItem")))
-    alert("Item has been successfully added to cart") 
+     if(same){
+    alert("Item has been successfully added to cart")}
      printToCart()
  }
 function printToCart(){
