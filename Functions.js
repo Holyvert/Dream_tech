@@ -26,7 +26,10 @@ function ready()
     if (parseInt(myCounter) > 1)  
     {
         if(localStorage.getItem(document.URL+"savedQuantity")!=null)
-        document.getElementById("amount").value = localStorage.getItem(document.URL+"savedQuantity")  ;
+        document.getElementById("amount").value = localStorage.getItem(document.URL+"savedQuantity");
+        
+        if(localStorage.getItem(document.URL+"savedCartQuantities")!=null)
+            document.getElementsByName("quantity").value= localStorage.getItem(document.URL+"savedCartQuantities");
         
     }
     deleteButton()
@@ -97,7 +100,8 @@ function addToCartClicked(event){
         for(let i=0; i<arrayofitems.length;i++)
             {
                if (arrayofitems[i].substring(0,250)==cartRowContents.substring(0,250))
-                   same=false;
+                  { same=false;
+                    alert("Item is already in cart")}
             }
          if(same)
         arrayofitems.push(cartRowContents)
@@ -134,6 +138,12 @@ function updateQuantitiy()
     document.getElementById('price1').innerText = Math.round(productPageQuantity * productPagePrice * 100)/100 + " $"
     
 }
+
+function updateCartQuantities(){
+    var shoppingCartQuantities = document.getElementsByName("quantity").value
+    localStorage.setItem(document.URL+"savedCartQuantities", shoppingCartQuantities)
+    console.log(localStorage.getItem(document.URL+"savedCartQuantities"))   
+}
 function updateCartQuantitiy()
 {
     
@@ -153,11 +163,13 @@ function setQuantity(upordown){
         {
             ++document.getElementById("amount").value;
             updateQuantitiy();
+            updateCartQuantities();
             
         }
         else if (upordown == 'down')
         {--document.getElementById("amount").value;
         updateQuantitiy();
+         updateCartQuantities();
         }
     }
     else if (amount.value == 1) 
@@ -165,11 +177,13 @@ function setQuantity(upordown){
         if (upordown == 'up')
         {++document.getElementById("amount").value;
         updateQuantitiy();
+         updateCartQuantities();
         }
     }
     else
         {document.getElementById("amount").value=1;;
         updateQuantitiy();
+         updateCartQuantities()
         }
 }
 
