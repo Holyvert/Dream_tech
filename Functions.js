@@ -43,7 +43,7 @@ function ready()
     document.getElementById('price1').innerText = Math.round(productPageQuantity * productPagePrice * 100)/100 + " $"
     }
     
-    var addToCartbutton = document.getElementsByClassName('AddCartButton');
+  var addToCartbutton = document.getElementsByClassName('AddCartButton');
     for(var i =0; i<addToCartbutton.length; i++){
         var button = addToCartbutton[i]
         button.addEventListener('click', addToCartClicked)
@@ -90,7 +90,7 @@ function addToCartClicked(event){
     
 `
     
-    if(localStorage.getItem("savedAddToCartItem").length == 0 ||localStorage.getItem("savedAddToCartItem") == null ){
+    if(/*localStorage.getItem("savedAddToCartItem").length == 0 ||*/localStorage.getItem("savedAddToCartItem") === null ){
     var arrayofitems=[];
     arrayofitems.push(cartRowContents)
     }
