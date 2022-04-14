@@ -48,6 +48,7 @@ function ready()
         var button = addToCartbutton[i]
         button.addEventListener('click', addToCartClicked)
     }
+    updateQuantitiy()
 }   
 
 function addToCartClicked(event){
