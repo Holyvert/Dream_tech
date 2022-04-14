@@ -13,8 +13,6 @@ else{
 function ready()
 {   
    
- 
-    //updateCartTotal()
     myCounter = localStorage.getItem(document.URL);
 
     
@@ -29,6 +27,7 @@ function ready()
     {
         if(localStorage.getItem(document.URL+"savedQuantity")!=null)
         document.getElementById("amount").value = localStorage.getItem(document.URL+"savedQuantity")  ;
+        
     }
     deleteButton()
  
@@ -52,7 +51,6 @@ function addToCartClicked(event){
     event.preventDefault()
     var button = event.target 
     var shopItem = button.parentElement.parentElement
-    //var shopImg = button.parentElement.parentElement.children[0]
     var title = shopItem.getElementsByClassName("porduct_name")[0].innerText
     var price = shopItem.getElementsByClassName("price_each")[0].innerText
     var picture = document.getElementsByClassName("imgDescription")[0].getElementsByTagName("img")[0]
@@ -64,11 +62,7 @@ function addToCartClicked(event){
 }
 
  function addItemToCart(title, price, src, qty){
-    //var w = window.open('https://users.encs.concordia.ca/~a_czubok/GitHub/ShoppingCart.html')
-   // w.onload = function(){
-     //var cartRow = document.createElement('div')
-     //cartRow.innerHTML = ""
-     //var cartItems = document.getElementsByClassName("RowDescrpitionS")[0]
+
      var cartRowContents = ` 
       
             <td>
@@ -92,20 +86,11 @@ function addToCartClicked(event){
     
     
 `
-     
-     /*var existingEntries=JSON.parse(localStorage.getItem("all"))
-     if(existingEntries==null) existingEntries =[];
-     localStorage.setItem("new", JSON.stringify(cartRowContents));
-     existingEntries.push(cartRowContents);
-     localStorage.setitem("all",JSON.stringify(existingEntries));
-     alert("Item has been successfully added to cart")*/
-     
-     
+    
     if(localStorage.getItem("savedAddToCartItem").length == 0 ||localStorage.getItem("savedAddToCartItem") == null ){
     var arrayofitems=[];
     arrayofitems.push(cartRowContents)
     }
-    //localStorage.setItem("savedAddToCartItem",  JSON.stringify(arrayofitems))}
      else{
         var arrayofitems = JSON.parse(localStorage.getItem("savedAddToCartItem"))
         let same=true;
@@ -116,50 +101,27 @@ function addToCartClicked(event){
             }
          if(same)
         arrayofitems.push(cartRowContents)
-        //localStorage.setItem("savedAddToCartItem", JSON.stringify(getArray))
      }
-   // var arrayofitems=JSON.parse(localStorage.getItem("savedAddToCartItem"))
     localStorage.setItem("savedAddToCartItem", JSON.stringify(arrayofitems))
     console.log(JSON.parse(localStorage.getItem("savedAddToCartItem")))
-    alert("Item has been successfully added to cart")
-    //cartRow.innerHTML = cartRowContents
-    //cartItems.append(cartRow) 
+    alert("Item has been successfully added to cart") 
      printToCart()
  }
 function printToCart(){
-    //var w = window.open('https://users.encs.concordia.ca/~a_czubok/GitHub/ShoppingCart.html')
-   // w.onload = function(){
-    
     var cartarray =JSON.parse(localStorage.getItem("savedAddToCartItem"))
     for(let i=0; i<cartarray.length; i++){
      var cartRow = document.createElement('tr')
-     //cartRow.innerHTML = ""
      var cartItems = document.getElementsByClassName("add")[0]
      var retrieveditem = JSON.parse((localStorage.getItem("savedAddToCartItem")))[i]
     
         cartRow.innerHTML= retrieveditem
         cartItems.append(cartRow)
     }
-   // updateCartQuantitiy()
-   // updateCartTotal()
-    
-    //alert(localStorage.getItem("savedAddToCartItem"))
+
     updateCartTotal()
     event.preventDefault()
 
 }
-
-//function printToCart(item){
-    //var w = window.open('https://users.encs.concordia.ca/~a_czubok/GitHub/ShoppingCart.html')
-   // w.onload = function(){
-     //var cartRow = document.createElement('div')
-     //cartRow.innerHTML = ""
-     //var cartItems = document.getElementsByClassName("RowDescrpitionS")[0]
-    //cartRow.innerHTML = item
-    //cartItems.append(cartRow)
- //} 
-//}
-
 
 function updateQuantitiy()
 {
@@ -231,15 +193,6 @@ function deleteButton()
 
 }
 
-/*function removefromArray(i){
-    var array = JSON.parse(localStorage.getItem("savedAddToCartItem"))
-    array.forEach(function(item)){
-        if(array.indexOf(item)==i){
-        delete array[i]
-        localStorage.setItem("savedAddToCartItem", JSON.stringify(array))
-    }
-    }
-}*/
 /*
 function deleteButton()
 {
@@ -356,41 +309,6 @@ function updateItemPrice(){
 }*/
 
 
-/*
-let cart=[];
-function addToCart(id){
-     if (cart.some((found) => found.id === id)) 
-         alert("Already in cart");
-    else{
-const found = products.find((obj) => obj.id === id);
-cart.push(found);
-console.log(cart);}
-updateCart();
-}
-
-
-function updateCart(){
-    renderCartItems();
-}
-function renderCartItems(){
-    cart.forEach((found) => {
-        cartItems.innerHTML += `
-        <div class="shop-item">
-                    <span class="shop-item-title">${found.name}</span>
-                    <img class="shop-item-image" src="${found.imgSrc}" alt="${found.name}" width=50px; height=50px;>
-                    <div class="Productquantity buttons_added"  >
-                  <input id="down" type="button"  value="-" class="minus" onclick="setQuantity('down');"><input id="amount" type="number" step="1"
-                   min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
-                   type="button" onclick="setQuantity('up');" id="up" value="+" class="plus" >
-                </div>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">${found.price}</span>
-                       <input type="button" value="delete" class="minus" style="border-radius: 10px;" >
-                    </div>
-                </div>
-        `;
-    });
-}*/ //for adding product to page, tryout
 
 var form = document.getElementsByName("Edit");
 form.onclick = function(event){
