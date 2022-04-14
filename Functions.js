@@ -141,10 +141,12 @@ function updateQuantitiy()
 }
 
 function updateCartQuantities(){
-    var shoppingCartQuantities = document.getElementsByName("quantity").value
-    localStorage.setItem(document.URL+"savedCartQuantities", shoppingCartQuantities)
-    console.log(localStorage.getItem(document.URL+"savedCartQuantities"))   
+    var shoppingCartQuantities = []
+    shoppingCartQuantities = document.getElementsByName("quantity").value
+    localStorage.setItem("savedCartQuantities", JSON.stringify(shoppingCartQuantities))
+    console.log(JSON.parse(localStorage.getItem("savedCartQuantities")))
 }
+
 function updateCartQuantitiy()
 {
     
@@ -164,13 +166,13 @@ function setQuantity(upordown){
         {
             ++document.getElementById("amount").value;
             updateQuantitiy();
-            updateCartQuantities();
+           // updateCartQuantities();
             
         }
         else if (upordown == 'down')
         {--document.getElementById("amount").value;
         updateQuantitiy();
-         updateCartQuantities();
+         //updateCartQuantities();
         }
     }
     else if (amount.value == 1) 
@@ -178,13 +180,13 @@ function setQuantity(upordown){
         if (upordown == 'up')
         {++document.getElementById("amount").value;
         updateQuantitiy();
-         updateCartQuantities();
+        // updateCartQuantities();
         }
     }
     else
         {document.getElementById("amount").value=1;;
         updateQuantitiy();
-         updateCartQuantities()
+        // updateCartQuantities()
         }
 }
 
@@ -239,6 +241,7 @@ function setCartQuantity(element,upordown)
             ++element.parentElement.children[1].value
             ++amount
             updateCartTotal()
+            //updateCartQuantities()
             
             
         }
@@ -247,6 +250,7 @@ function setCartQuantity(element,upordown)
             --element.parentElement.children[1].value
             --amount
             updateCartTotal()
+            //updateCartQuantities()
             
         }
     }
@@ -257,7 +261,7 @@ function setCartQuantity(element,upordown)
             ++element.parentElement.children[1].value
             ++amount
             updateCartTotal()
-            
+            //updateCartQuantities()
         }
     }
     else
@@ -265,7 +269,7 @@ function setCartQuantity(element,upordown)
             amount = 1
             element.parentElement.children[1].value=1
             updateCartTotal()
-            
+            //updateCartQuantities()
         }
 
     var cartHolderArray = element.parentElement.parentElement.parentElement.parentElement.children;
