@@ -1,4 +1,5 @@
 
+
 .BorderDiv {
   position: relative;
 display: flex;
@@ -241,7 +242,7 @@ h2 {
 
 .sign {
  width: 30vw;
- display: flex;
+ display: flex; flex-direction: column;
 }
 
 .SignUp {
@@ -265,12 +266,25 @@ h2 {
 
 .SearchBar {
   font-size: 1.5vw;
-  width: 80%;
+  width: 100%;
   border-bottom-left-radius:1vw ;
   border-top-left-radius:1vw ;
   z-index: inherit;
 text-align: left;
 }
+.SearchBar li{
+
+}
+#result {
+  position: absolute;
+  width: inherit;
+  max-width:870px;
+  cursor: pointer;
+  overflow-y: auto;
+  max-height: 400px;
+  box-sizing: border-box;
+  z-index: 1001;
+ }
 
 .Table {
   border: 1px solid green;
