@@ -190,25 +190,59 @@ function setQuantity(upordown){
         }
 }
 
+/*function deleteButton()
+{
+    var removeCartItemButtons = document.getElementsByName("delete")
+    console.log(removeCartItemButtons)
+    
+    for(var i = 0; i<removeCartItemButtons.length; i++)
+    {
+       // var index = indexOf(removeCartItemButtons[i])
+        var button = removeCartItemButtons[i]
+        
+        button.addEventListener('click',function(event, i){
+            var buttonClicked = event.target
+            var array= JSON.parse(localStorage.getItem("savedAddToCartItem"))
+            array.splice(i,1)
+            localStorage.setItem("savedAddToCartItem",JSON.stringify(array))
+            buttonClicked.parentElement.parentElement.parentElement.remove()
+            updateCartTotal()
+        })
+        
+    }
+}*/
+
 function deleteButton()
 {
     var removeCartItemButtons = document.getElementsByName("delete")
     console.log(removeCartItemButtons)
-    for(var i = 0;i<removeCartItemButtons.length;i++)
+    
+    for(var i = 0; i<removeCartItemButtons.length; i++)
     {
+       // var index = indexOf(removeCartItemButtons[i])
         var button = removeCartItemButtons[i]
-        button.addEventListener('click',function(event,i){
+        
+        button.addEventListener('click',function(event, i){
             var buttonClicked = event.target
+            //var array= JSON.parse(localStorage.getItem("savedAddToCartItem"))
+           // array.splice(i,1)
+           // localStorage.setItem("savedAddToCartItem",JSON.stringify(array))
+            var title = buttonClicked.parentElement.parentElement.parentElement.children[1].innerHTML
+            console.log(title)
+            
+            var array = JSON.parse(localStorage.getItem("savedAddToCartItem"))
+            for(var x=0; x<array.length; x++){
+                if(array[x].substring(0,(array[x].length)-1).includes(title)){
+                    array.splice(x,1)
+                    localStorage.setItem("savedAddToCartItem", JSON.stringify(array))}
+            }
             buttonClicked.parentElement.parentElement.parentElement.remove()
             updateCartTotal()
-            var array= JSON.parse(localStorage.getItem("savedAddToCartItem"))
-            array.splice(i,1)
-            localStorage.setItem("savedAddToCartItem",JSON.stringify(array))
         })
         
     }
-
 }
+
 
 /*
 function deleteButton()
