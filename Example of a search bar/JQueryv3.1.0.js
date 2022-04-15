@@ -5374,29 +5374,3 @@
     r
   );
 });
-$(document).ready(function () {
-  $("#search").keyup(function (event) {
-    // $.ajaxSetup({ cache: false });
-    $("#result").html("");
-    var searchField = $("#search").val();
-    var expression = new RegExp(searchField, "i");
-    $.getJSON("../Backstore/Products.json", function (data) {
-      $.each(data, function (key, value) {
-        if (
-          value.Name.search(expression) != -1 ||
-          value.company.search(expression) != -1 ||
-          value.More_Description.search(expression) != -1
-        ) {
-          $("#result").append(
-            '<li><img src="' +
-              value.image +
-              '" height="40" width="40" class="img-thumbnail" /> <span class="small">' +value.Ailse +"</span> \t" +value.Name +' | <span class="small">' +value.company +'</span> <span class="small">' +value.More_Description +"</span></li>");
-        }
-      });
-    });
-  });
-  $("#result").on("click", "li", function () {
-    var click_text = $(this).text().split("|");
-    document.location ="../" + click_text[0].replace("\t", "/").replace(/\s/g, "").replace("and","And") + ".html";
-  });
-});

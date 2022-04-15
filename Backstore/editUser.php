@@ -1,4 +1,16 @@
-<!DOCTYPE html>
+<?php 
+require "usersFunctions.php";
+
+$userId = $_GET['Id'];
+
+$user = getProductById($userId);
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  editProduct($_POST,$userId);
+  header("Location: ProductsList.php");
+}
+
+?><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -52,8 +64,9 @@
               
       
               <form class="ProductDescription">
+              <input  type="hidden" name="Id" value="<?php echo $user['Id']?>">
                 <p>Name</p>
-                <input type="text" name="Name" placeholder="Enter Name">
+                <input type="text" name="Name" placeholder="Enter Name"value="<?php echo $user['Name']?>">
                 <p>Email</p>
                 <input type="email" name="Email" placeholder="Enter Email">
                 <p>Password</p>

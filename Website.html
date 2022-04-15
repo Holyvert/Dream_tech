@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Box Grocery Store</title>
     <link rel="stylesheet" href="create.css" />
-    <script src="JQueryv3.1.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   </head>
 
   <body>
@@ -18,13 +18,13 @@
           <p class="TShop"><a href="Website.html"><img class="Logo" src="Images\Food_box_logo_white.png" alt="SIUU" height="50" /> </a></p>
       </div>
       <form class="sign">
-      <input
-        class="SearchBar"
-        type="text"
-        placeholder="Search for Products"
-        id="search"
-      /><ul class="SearchBar" id="result"></ul>
-        </form>
+        <input
+          class="SearchBar"
+          type="text"
+          placeholder="Search for Products"
+          id="search"
+        /><ul class="SearchBar" id="result"></ul>
+          </form>
       
         <form class="SignUp">
           <table class="Table">
@@ -252,7 +252,34 @@
       </table>
     </div>
     </div>
-  
+    <script>
+      $(document).ready(function () {
+$("#search").keyup(function (event) {
+// $.ajaxSetup({ cache: false });
+$("#result").html("");
+var searchField = $("#search").val();
+var expression = new RegExp(searchField, "i");
+$.getJSON("../Backstore/Products.json", function (data) {
+  $.each(data, function (key, value) {
+    if (
+      value.Name.search(expression) != -1 ||
+      value.company.search(expression) != -1 ||
+      value.More_Description.search(expression) != -1
+    ) {
+      $("#result").append(
+        '<li><img src="' +
+          value.image +
+          '" height="40" width="40" class="img-thumbnail" /> <span class="small">' +value.Ailse +"</span> \t" +value.Name +' | <span class="small">' +value.company +'</span> <span class="small">' +value.More_Description +"</span></li>");
+    }
+  });
+});
+});
+$("#result").on("click", "li", function () {
+var click_text = $(this).text().split("|");
+document.location ="../" + click_text[0].replace("\t", "/").replace(/\s/g, "").replace("and","And") + ".html";
+});
+});
+    </script>
   
   </body>
 </html>
