@@ -74,7 +74,7 @@ $products = getProducts();
                         <td>Price</td>
                         <td></td>
                         <td style="visibility: visible;">
-                          <a >
+                          <a href="addProduct.php">
                             <div class="Productquantity buttons_added" style=" background-color: rgb(0, 217, 255);">
                               <input name="Add" type="button" value="Add" class="Backs" style="border-radius: 10px;" onclick="addButton()" >
                             </div>
@@ -84,7 +84,7 @@ $products = getProducts();
                     <?php foreach( $products as $product): ?>
                       <tr >
                         <td>
-                        <img class="imagesp" src=<?php echo $product['image']?>}></a>
+                        <img class="imagesp" src=<?php echo $product['image']?>></a>
                     </td>
                     <td class="CartProd Backs" >
                         <div class="PhonePB">Product Name: </div> <?php echo $product['Name']?>

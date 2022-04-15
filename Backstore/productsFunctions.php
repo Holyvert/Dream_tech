@@ -5,6 +5,13 @@ function getProducts()
  return  json_decode(file_get_contents('ProductsDB.json' ), true) ;
 
 }
+function getNewId()
+{
+  $products = getProducts();
+
+  return  intval($products[count($products)-1]["Id"] + 1);
+ 
+}
 function getProductById($Id)
 {
   $products = getProducts();
@@ -20,7 +27,26 @@ function getProductById($Id)
 
 function createProduct($data)
 {
+  $products = getProducts();
 
+  $array = array(
+    "Id" => $data['Id'],
+    "Name" => $data['porduct_name'],
+    "Ailse" => $data['Category'],
+    "company" => $data['company'],
+    "Quantity" => $data['s_perU'],
+    "price_each" => $data['price_each'],
+    "price_perQ" => $data['price_perQ'],
+    "More_Description" => $data['More_Description'],
+    "image" => $data['images'],
+    "color" => $data['color'],
+    "Quantity_inStock" => $data['Quantity'],
+);
+
+  array_push($products,$array);
+
+  file_put_contents('ProductsDB.json',json_encode($products));
+  
 }
 
 function editProduct($data,$Id)
