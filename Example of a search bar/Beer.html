@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Box Grocery Store</title>
     <link rel="stylesheet" href="..\create.css" />
+    <script src="JQueryv3.1.0.js"></script>
       <script src="../items.js"></script>
        <script src="../Functions.js"></script>
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
   
   </head>
-
+  <!-- source of the search funtion
+  https://github.com/robiparvez/Live-Search-JSON-Data-Using-jQuery/blob/master/LICENSE -->
   <body>
     <!-- outer division-->
     <div class="BorderDiv">
@@ -28,29 +30,7 @@
             id="search"
           /><ul class="SearchBar" id="result"></ul>
             </form>
-            <script type="text/javascript">
-              $(document).ready(function() {
-                  $('#search').keyup(function(event) {
-                      // $.ajaxSetup({ cache: false });
-                      $('#result').html('');
-                      var searchField = $('#search').val();
-                      var expression = new RegExp(searchField, "i");
-                      $.getJSON('../Backstore/Products.json',function(data) {
-                          $.each(data, function(key, value) {
-                            if (value.Name.search(expression) != -1 || value.company.search(expression) != -1 || value.More_Description.search(expression) != -1)
-                              {
-                                $('#result').append('<li><img src="'+value.image+'" height="40" width="40" class="img-thumbnail" /> <span class="small">'+value.Ailse+'</span> \t'+value.Name+' | <span class="small">'+value.company+'</span> <span class="small">'+value.More_Description+'</span></li>');
-                              }
-                      });
-                  });
-              });
-              $('#result').on('click', 'li', function() {
-              var click_text = $(this).text().split('|');
-                 document.location ='../'+click_text[0].replace('\t',"/").replace(/\s/g, '')+'.html';
-                });
-              });
-              </script>
-          
+           
        <form class="SignUp">
           <table class="Table">
             <tr>
@@ -215,6 +195,34 @@
               <td style="width: 50%; text-align: right; color: #fff; padding-right: 1%;"><b>&copy; 2022 FoodBox, All rights reserved</b></td>
             </table>
           </div>
+          <script>
+            $(document).ready(function () {
+    $("#search").keyup(function (event) {
+      // $.ajaxSetup({ cache: false });
+      $("#result").html("");
+      var searchField = $("#search").val();
+      var expression = new RegExp(searchField, "i");
+      $.getJSON("../Backstore/Products.json", function (data) {
+        $.each(data, function (key, value) {
+          if (
+            value.Name.search(expression) != -1 ||
+            value.company.search(expression) != -1 ||
+            value.More_Description.search(expression) != -1
+          ) {
+            $("#result").append(
+              '<li><img src="' +
+                value.image +
+                '" height="40" width="40" class="img-thumbnail" /> <span class="small">' +value.Ailse +"</span> \t" +value.Name +' | <span class="small">' +value.company +'</span> <span class="small">' +value.More_Description +"</span></li>");
+          }
+        });
+      });
+    });
+    $("#result").on("click", "li", function () {
+      var click_text = $(this).text().split("|");
+      document.location ="../" + click_text[0].replace("\t", "/").replace(/\s/g, "").replace("and","And") + ".html";
+    });
+  });
+          </script>
         </div>
 </body>
 </html>
