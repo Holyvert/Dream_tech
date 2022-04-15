@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Box Grocery Store</title>
     <link rel="stylesheet" href="..\create.css" />
-     <script src="../items.js"></script>
-    <script src="../Functions.js"></script>
+    <script src="JQueryv3.1.0.js"></script>
+      <script src="../items.js"></script>
+       <script src="../Functions.js"></script>
+    
+  
   </head>
-
+  <!-- source of the search funtion
+  https://github.com/robiparvez/Live-Search-JSON-Data-Using-jQuery/blob/master/LICENSE -->
   <body>
     <!-- outer division-->
     <div class="BorderDiv">
@@ -23,9 +27,11 @@
             class="SearchBar"
             type="text"
             placeholder="Search for Products"
-          /><input class="Search" type="button" value="Search" />
-        </form>
-        <form class="SignUp">
+            id="search"
+          /><ul class="SearchBar" id="result"></ul>
+            </form>
+           
+       <form class="SignUp">
           <table class="Table">
             <tr>
               <!-- rows of the tables -->
@@ -102,7 +108,7 @@
             <table class="Cart">
           <tr>
             <!-- column -->
-            <th><a href="..\ShoppingCart.html">&#128722</a></th>
+            <th><a href="..\ShoppingCart.html">&#128722$0.00</a></th>
           </tr>
         </table>
             </div>
@@ -117,19 +123,19 @@
       
           <div class="imgDescription"  > 
               
-            <img src="https://images.unsplash.com/photo-1597066371673-2088a5c19802?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80" alt="" class="images">
+            <img src="https://images.unsplash.com/photo-1613904985222-0d534430bdbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" alt="" class="images">
           </div>
 
           <div class="ProductDescription">
 
-            <p class="compagny">Minze</p>
+            <p class="compagny">Corona</p>
          
-            <p class="porduct_name">Tea</p>
-            50 UN
+            <p class="porduct_name">Beer</p>
+            12X355 ML - CANS
             </br>
             </br>
-            <p class="price_each" id=price>9.99$</p>
-            <p class="price_perQ">0.20$ / un.</p> 
+            <p class="price_each" id=price>21.99$</p>
+            <p class="price_perQ">0.52$ / 100ml</p> 
 
             
                 <form style="text-align: center;">
@@ -140,7 +146,7 @@
                   
                   src="../Images/Food_box_button_white.png"
                   name="Add"
-                style="color: rgb(186,178,140);"
+                style="color: rgb(223, 157, 16);"
                    width="100px"
 
                 />
@@ -148,9 +154,9 @@
 
               <div class="dropdown">
                 <button class="dropbutton" >More description</button>
-                <div class="dropdown-content" style="background-color: rgb(186,178,140);">
-                <a href="#"> Can help calming the day. Hot or cold service can be both enjoyed. Perfect for meditation or
-                  to start the day focused and ready.
+                <div class="dropdown-content" style="background-color: rgb(223, 157, 16);">
+                <a href="#"> Authentic Mexican beer for all occasions. You can add lime to enhance 
+                  the flavor.
                 </a>
                 </div>
               </div>
@@ -189,6 +195,34 @@
               <td style="width: 50%; text-align: right; color: #fff; padding-right: 1%;"><b>&copy; 2022 FoodBox, All rights reserved</b></td>
             </table>
           </div>
+          <script>
+            $(document).ready(function () {
+    $("#search").keyup(function (event) {
+      // $.ajaxSetup({ cache: false });
+      $("#result").html("");
+      var searchField = $("#search").val();
+      var expression = new RegExp(searchField, "i");
+      $.getJSON("../Backstore/Products.json", function (data) {
+        $.each(data, function (key, value) {
+          if (
+            value.Name.search(expression) != -1 ||
+            value.company.search(expression) != -1 ||
+            value.More_Description.search(expression) != -1
+          ) {
+            $("#result").append(
+              '<li><img src="' +
+                value.image +
+                '" height="40" width="40" class="img-thumbnail" /> <span class="small">' +value.Ailse +"</span> \t" +value.Name +' | <span class="small">' +value.company +'</span> <span class="small">' +value.More_Description +"</span></li>");
+          }
+        });
+      });
+    });
+    $("#result").on("click", "li", function () {
+      var click_text = $(this).text().split("|");
+      document.location ="../" + click_text[0].replace("\t", "/").replace(/\s/g, "").replace("and","And") + ".html";
+    });
+  });
+          </script>
         </div>
 </body>
 </html>
