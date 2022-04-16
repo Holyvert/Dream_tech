@@ -47,7 +47,7 @@ $products = getProducts();
                </tr>
                <tr>
                    <th>
-                  <a href="UsersList.html">>  User List</a>
+                  <a href="UsersList.php">>  User List</a>
                     </th>
                </tr>
                

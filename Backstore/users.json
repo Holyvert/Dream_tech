@@ -1,0 +1,29 @@
+[
+    {
+        "Id": "64",
+        "Name": "Yukiko",
+        "Email": "Japan_number_1@gmail.com",
+        "Password": "Bakamiatr45",
+        "Adress": "123 Fiddle Street Monreal,Qc",
+        "Age": "19",
+        "Admin_Status": "User"
+        },
+        {
+        "Id": "65",
+        "Name": "Aly",
+        "Email": "alymohmaeduc@hotmail.co.uk",
+        "Password": "erwwwer435",
+        "Adress": "123 Montaan Quebec,Qc",
+        "Age": "22",
+        "Admin_Status": "Admin"
+        },
+        {
+        "Id": "66",
+        "Name": "Oliver",
+        "Email": "Oli@hotmail.co.uk",
+        "Password": "YEEEEEEEERp",
+        "Adress": "123 Pine blvd Montreal,Qc",
+        "Age": "32",
+        "Admin_Status": "Admin"
+        }
+] 

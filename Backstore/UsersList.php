@@ -1,3 +1,10 @@
+<?php
+include "usersFunctions.php";
+
+$users = getUsers();
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,7 +35,7 @@
            <table class="NavBar">
             <tr>
                 <th>
-              <a href="ProductsList.html">> Product List </a>
+              <a href="ProductsList.php">> Product List </a>
                 </th>
             </tr>
                <tr>
@@ -38,7 +45,7 @@
                </tr>
                <tr>
                    <th>
-                  <a href="UsersList.html"><span style="background-color: blue; color: white; border-radius: 2vw;">> </span>    User List</a>
+                  <a href="UsersList.php"><span style="background-color: blue; color: white; border-radius: 2vw;">> </span>    User List</a>
                     </th>
                </tr>
                
@@ -63,71 +70,42 @@
                         <td>Admin Status</td>
                         <td></td>
                         <td style="visibility: visible;">
+                        <a href="addUser.php">
                             <div class="Productquantity buttons_added" style=" background-color: rgb(0, 217, 255);">
-                            <input name="Add" type="button" value="Add" class="Backs" style="border-radius: 10px;" >
-                        </div></td>
+                              <input name="Add" type="button" value="Add" class="Backs" style="border-radius: 10px;" onclick="addButton()" >
+                            </div>
+                          </a>
+                        </td>
                     </tr>
-                    <tr >
+                    <?php foreach( $users as $user): ?>
+                      <tr >
                       
-                      <td class="CartProd Backs" ><div class="PhonePB">Name:</div>Yukiko</td>
+                      <td class="CartProd Backs" ><div class="PhonePB">Name:</div><?php echo $user['Name']?></td>
                       <td class="CartProd Backs " ><div class="PhonePB">email:</div> 
-                        Japan_number_1@gmail.com
-                        
+                      <?php echo $user['Email']?>
                       </td>
                       <td class="CartProd Backs" ><div class="PhonePB">Admin Status:</div> 
-                        user
+                      <?php echo $user['Admin_Status']?>
                          </td>
                      
                 
-                      <td>  <div class="Productquantity buttons_added" style=" background-color: rgb(157, 255, 0);">
-                        <input name="Edit" type="button" value="Edit" class="Backs" style="border-radius: 10px;" >
-                    </div></td>
-                    <td>   <div class="Productquantity buttons_added" style=" background-color: rgb(255, 0, 0);">
-                        <input name="delete" type="button" value="delete" class="Backs" style="border-radius: 10px;" >
-                      </div>
-                    </td> 
+                         <td> 
+                       <a href="editUser.php?Id=<?php echo $user['Id'] ?>">
+                         <div class="Productquantity buttons_added" style=" background-color: rgb(157, 255, 0);">
+                           <input name="Edit" type="button" id="btn" value="Edit" class="Backs" style="border-radius: 10px;" >
+                         </div>
+                       </a>
+                     </td>
+                     <td>   
+                     <a href="deleteUser.php?Id=<?php echo $user['Id'] ?>">
+                        <div class="Productquantity buttons_added" style=" background-color: rgb(255, 0, 0);">
+                          <input name="delete" type="button" value="delete" class="Backs" style="border-radius: 10px;"  >
+                        </div>
+                     </a>
+                   </td> 
                     </tr>
-                    <tr>
-                      
-                        <td class="CartProd Backs" ><div class="PhonePB"> Name:</div> Aly </td>
-                        <td class="CartProd Backs" ><div class="PhonePB">email:</div> 
-                            alymohmaeduc@hotmail.co.uk
-                          
-                        </td>
-                          <td class="CartProd Backs" ><div class="PhonePB">Admin Status:</div> 
-                         admin
-                          </td>
-                      
-                     
+                      <?php endforeach ;; ?>
                    
-                      <td>  <div class="Productquantity buttons_added" style=" background-color: rgb(157, 255, 0);">
-                        <input name="Edit" type="button" value="Edit" class="Backs" style="border-radius: 10px;" >
-                    </div></td>
-                    <td>   <div class="Productquantity buttons_added" style=" background-color: rgb(255, 0, 0);">
-                        <input name="delete" type="button" value="delete" class="Backs" style="border-radius: 10px;" >
-                      </div>
-                    </td>
-                    </tr>
-                    <tr>
-                      
-                        <td class="CartProd Backs" ><div class="PhonePB"> Name:</div> Oliver </td>
-                        <td class="CartProd Backs" ><div class="PhonePB">email:</div> 
-                            Oli@hotmail.co.uk
-                          
-                        </td>
-                          <td class="CartProd Backs" ><div class="PhonePB">Admin Status:</div> 
-                         admin
-                          </td>
-                       
-                        <td>  <div class="Productquantity buttons_added" style=" background-color: rgb(157, 255, 0);">
-                            <input name="Edit" type="button" value="Edit" class="Backs" style="border-radius: 10px;" >
-                            </div>
-                        </td>
-                        <td>   <div class="Productquantity buttons_added" style=" background-color: rgb(255, 0, 0);">
-                            <input name="delete" type="button" value="delete" class="Backs" style="border-radius: 10px;" >
-                          </div>
-                        </td>
-                    </tr>
                   </tbody>
                 </table>
                </div>

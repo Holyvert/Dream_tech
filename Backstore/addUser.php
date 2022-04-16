@@ -1,16 +1,15 @@
 <?php 
 require "usersFunctions.php";
 
-$userId = $_GET['Id'];
 
-$user = getUserById($userId);
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  editUser($_POST,$userId);
+  createUser($_POST);
   header("Location: UsersList.php");
 }
-
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -60,24 +59,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <!-- division for main page-->
       <div class="MainPage" style=" background-color: #9b9b9b;">
 
-            <div class="RowDescrpition">
+            <div class="RowDescrpition" >
               
       
-              <form class="ProductDescription"  method="post" action="">
-              <input  type="hidden" name="Id" value="<?php echo $user['Id']?>">
+              <form class="ProductDescription" method="post" action="">
+              <input  type="hidden" name="Id" value="<?php echo getNewId() ?>">
                 <p>Name</p>
-                <input type="text" name="Name" placeholder="Enter Name"value="<?php echo $user['Name']?>">
+                <input type="text" name="Name" placeholder="Enter Name">
                 <p>Email</p>
-                <input type="email" name="Email" placeholder="Enter Email"value="<?php echo $user['Email']?>">
+                <input type="email" name="Email" placeholder="Enter Email">
                 <p>Password</p>
-                <input type="password" name="Password" placeholder="Password"value="<?php echo $user['Password']?>">
+                <input type="password" name="Password" placeholder="Password">
                 <p>Address</p>
-                <input type="text" name="Adress" placeholder="Enter Adress"value="<?php echo $user['Adress']?>">
+                <input type="text" name="Adress" placeholder="Enter Adress">
                 <p>Age</p>
-                <input type="number" name="Age" placeholder="Enter Age"value="<?php echo $user['Age']?>">
+                <input type="number" name="Age" placeholder="Enter Age">
                 <p>Admin Status</p>
-                <label for="Admin"><input type="radio" id="Admin" name="Admin_Status" value="Admin"<?php Admin_Status($user['Admin_Status']) ?>>Admin</label>
-                <label for="User"><input type="radio" id="User" name="Admin_Status" value="User"<?php User_Status($user['Admin_Status']) ?>>User</label>
+                <label for="Admin"><input type="radio" id="Admin" name="Admin_Status" value="Admin">Admin</label>
+                <label for="User"><input type="radio" id="User" name="Admin_Status" value="User">User</label>
 
                 <div class="Productquantity buttons_added" >
                     <input type="submit" value="save"  class="Backs" style="border-radius: 10px;">
