@@ -40,17 +40,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
            <table class="NavBar">
             <tr>
                 <th>
-              <a href="ProductsList.html">> Product List </a>
+              <a href="ProductsList.php">> Product List </a>
                 </th>
             </tr>
                <tr>
                    <th>
-                   <a href="OrderList.html" >>  Order List </a>
+                   <a href="OrderList.php" >>  Order List </a>
                     </th>
                </tr>
                <tr>
                    <th>
-                  <a href="UsersList.html">>  User List</a>
+                  <a href="UsersList.php">>  User List</a>
                     </th>
                </tr>
                

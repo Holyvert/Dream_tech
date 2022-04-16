@@ -42,7 +42,7 @@ $products = getProducts();
             </tr>
                <tr>
                    <th>
-                   <a href="OrderList.html" >>  Order List </a>
+                   <a href="OrderList.php" >>  Order List </a>
                     </th>
                </tr>
                <tr>
