@@ -7,7 +7,7 @@
 <body>
   <?php
 
-  error_reporting(E_ALL ^ E_WARNING); 
+  error_reporting(E_ALL ^ E_WARNING);
 
 
   if (isset($_POST["submit"])) { // the POST form has been submitted.
@@ -17,7 +17,7 @@
     $userEmail = $_POST["email"];
     $fileSize = filesize("user.txt");
 
-    if ($fileSize != 0 && strpos(fread($fileReader, $fileSize), $userEmail)!==false) {
+    if ($fileSize != 0 && strpos(fread($fileReader, $fileSize), $userEmail) !== false) {
       echo "Email already exists.";
       echo ("<script>setTimeout(function () {location.href = 'loginUser.php';}, 2500);</script>");
     } else {
