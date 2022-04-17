@@ -5,6 +5,11 @@ function getUsers()
  return  json_decode(file_get_contents('users.json' ), true) ;
 
 }
+function getUsers2()
+{
+ return  json_decode(file_get_contents('../Backstore/users.json' ), true) ;
+
+}
 function getNewId()
 {
   $users = getUsers();
