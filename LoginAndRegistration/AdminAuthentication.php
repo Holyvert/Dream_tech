@@ -1,10 +1,7 @@
 <?php
-
 // If the admin-cookie is set, redirect the admin to backstore.
 
-if (!isset($_COOKIE["isAdmin"]) && !isset($_COOKIE["user_email"])) {
+if (!isset($_COOKIE["is_admin"]) || !isset($_COOKIE["user_email"])) {
     echo "Access Denied, redirecting to login page. . .";
-    header('Refresh: 5; URL=/php_practice/login.html');
+    echo ("<script>setTimeout(function () {location.href = '../LoginAndRegistration/loginUser.php';}, 2500);</script>");
 }
-
-?>

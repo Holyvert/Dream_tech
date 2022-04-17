@@ -30,12 +30,13 @@
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" name="email" value="" autocomplete="off" required placeholder="Enter your email" />
+                <input type="text" name="email" value="" autocomplete="on" required placeholder="Enter your email" />
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="password" value="" autocomplete="off" required placeholder="Enter your password" />
+                <input type="password" name="password" value="" autocomplete="off" placeholder="Enter your password" pattern="{4,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 4 or more characters" required />
               </div>
+              <p>enter at least 4 characters.</p>
               <div class="button input-box">
                 <input type="submit" value="submit" name="submit" />
               </div>

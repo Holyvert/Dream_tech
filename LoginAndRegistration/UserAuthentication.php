@@ -5,7 +5,7 @@
 
 if (!isset($_COOKIE["user_email"])) {
     echo "A sign-in is needed. Redirecting to login page . . .";
-    header('Refresh: 5; URL=/php_practice/loginUser.php');
+    echo ("<script>setTimeout(function () {location.href = 'LoginAndRegistration/loginUser.php';}, 2500);</script>");
 }
 
 ?>

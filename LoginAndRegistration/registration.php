@@ -13,7 +13,7 @@
   if (isset($_POST["submit"])) { // the POST form has been submitted.
 
     // Read from file
-    $fileReader = fopen("user.txt", "r");
+    $fileReader = fopen("user.txt", "a+");
     $userEmail = $_POST["email"];
     $fileSize = filesize("user.txt");
 
@@ -25,8 +25,8 @@
       // Write to the file new account
       $userEmail = $_POST["email"];
       $password = $_POST["password"];
-      $fileUpdater = fopen('user.txt', 'a+');
-      fwrite($fileUpdater, $userEmail . " " . $password . "\n");
+      $fileUpdater = fopen('user.txt', 'r');
+      fwrite($fileUpdater, $userEmail . " " . $password . " \n");
       fclose($fileUpdater);
       echo "Account Created Successfully!";
       echo ("<script>setTimeout(function () {location.href = '../Website.php';}, 2500);</script>");

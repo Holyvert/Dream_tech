@@ -1,3 +1,10 @@
+<?php 
+
+include '../LoginAndRegistration/AdminAuthentication.php';
+
+?>
+
+
 <?php
 include "productsFunctions.php";
 
