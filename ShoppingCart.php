@@ -1,6 +1,6 @@
 <?php 
 
-include('./LoginAndRegistration/UserAuthentication.php');
+include('LoginAndRegistration/UserAuthentication.php');
 
 ?>
 
