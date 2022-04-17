@@ -20,6 +20,13 @@
               <th>Services</th>
               <th>Shop</th>
             <th>
+            <?php
+
+          if (!isset($_COOKIE["user_email"])) {
+            echo " <a href=\"LoginAndRegistration/loginUser.php\">SignIn</a>"
+            }
+
+            ?>
             <a href="LoginAndRegistration/loginUser.php">SignIn</a>
             </th>
             </tr>
