@@ -25,22 +25,21 @@
         <div class="form-content">
           <div class="login-form">
             <div class="title">Create Account</div>
-          <form action="#">
+          <form action="registration.php" method="POST">
             <div class="input-boxes">
               <div class="input-box">
-                <i class="fas fa-user"></i>
-                <input type="text" placeholder="Enter your name" required>
-              </div>
-              <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="name@mail.com" required>
+                <input type="text" placeholder="name@mail.com" name="userEmail" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="6+ Characters, 1 Capital letter" required>
+                <input type="password" placeholder="6+ Characters, 1 Capital letter" name="password" required>
               </div>
               <div class="button input-box">
-                <input type="submit" value="Submit">
+                <input type="submit" value="submit">      
+                </div>
+                <label>Already have an account?</label>
+                <a href="loginUser.php">LOG IN</a>
               </div>
             </div>
         </form>
