@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+<?php
+
+
+require "Backstore/productsFunctions.php";
+
+
+$products = getProducts2();
+
+
+
+?><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -80,32 +90,26 @@
           setTimeout(showSlides, 2000); // Change image every 2 seconds
         }
         </script>
-          <!--<div class="slideshowDiv middle">
-        <div class="slides">
-            <input type="radio" name="r" id="r1" checked> 
-            <input type="radio" name="r" id="r2"> 
-            <input type="radio" name="r" id="r3"> 
-            <div class="slide s1">
-                <img src="/Users/ann-marieczuboka/Documents/SOEN 287/Attempt/Images/istockphoto-1149135424-170667a.jpg" alt="">
-        </div>
-            <div class="slide">
-                <img src="/Users/ann-marieczuboka/Documents/SOEN 287/Attempt/Images/istockphoto-1149135424-170667a.jpg" alt="">
-        </div>
-            <div class="slide">
-                <img src="/Users/ann-marieczuboka/Documents/SOEN 287/Attempt/Images/istockphoto-1149135424-170667a.jpg" alt="">
-        </div>
-        </div>
-          <div class="scrolling">
-              <label for="r1" class="bar"></label>
-              <label for="r2" class="bar"></label>
-              <label for="r3" class="bar"></label>
-        </div>
-          </div>-->
+          
+
         <p class="popular"> Popular Items</p>
 
            <div class="one">
 
-            <a href="FruitsAndVegetables/Pomegranates.html">
+           <?php foreach($products as $product): ?>
+            <?php if( $product['Quantity_inStock']<="75"): ?>  
+          <a href="<?php echo str_replace(' ', '', $product['Ailse']) ?>\<?php echo str_replace(' ', '', $product['Name']) ?>.php">
+              <div class="img" style="background-image: url(<?php echo $product['image']?>);">
+               
+                   <div class="title1"> 
+                    <h4><?php echo $product['Name']?></h4>
+            <p><?php echo $product['price_each']?></p></div>
+              </div>
+            </a>
+            <?php endif ;; ?>
+            <?php endforeach ;; ?>
+
+            <!-- <a href="FruitsandVegetables/Pomegranate.php">
               <div class="img" style="background-image: url(https://images.unsplash.com/photo-1615411640087-873c938dd259?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80);">
                
                    <div class="title1"> 
@@ -114,7 +118,7 @@
               </div>
             </a>
 
-            <a href="Beverages\CoconutWater.html">
+            <a href="Beverages\CoconutWater.php">
               <div class="img" style="background-image: url(https://images.unsplash.com/photo-1536677169608-4f3e10af7058?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80);">
                
                    <div class="title1"> 
@@ -123,7 +127,7 @@
               </div>
             </a>
 
-            <a href="MeatAndFish\Oysters.html">
+            <a href="MeatAndFish\Oysters.php">
               <div class="img" style="background-image: url(https://images.unsplash.com/photo-1573697861622-6ad5f265e5f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80);">
                
                    <div class="title1"> 
@@ -134,7 +138,7 @@
             </a>
 
             
-            <a href="Snacks\Jello.html">
+            <a href="Snacks\Jell-O.php">
               <div class="img" style="background-image: url(https://images.unsplash.com/photo-1597384462874-56b0bdeca197?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);">
                        
                    <div class="title1"> 
@@ -144,7 +148,7 @@
               </div>
             </a>
 
-            <a href="Dairy\ParmesanCheese.html">
+            <a href="Dairy\ParmesanCheese.php">
               <div class="img" style="background-image: url(https://images.unsplash.com/photo-1599932677968-877d85f64a12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=969&q=80);">
                               
                    <div class="title1"> 
@@ -154,7 +158,7 @@
               </div>
             </a>
 
-            <a href="FrozenAndCanned\Dumplings.html">
+            <a href="FrozenandCanned\FrozenChickenDumplings.php">
               <div class="img" style="background-image: url(https://images.unsplash.com/photo-1589047133481-02b4a5327d89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80);">
                
                    <div class="title1"> 
@@ -163,7 +167,7 @@
                   </div>
               </div>
             </a>
-              </div>
+              </div> -->
           
           
           <!-- Slideshow container -->
