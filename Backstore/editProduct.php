@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      
       <div class="Header">
         <div class="ShopSign" style="  background-color: #9b9b9b;">
-          <p class="TShop"><a href="..\Website.html"><img class="Logo" src="../Images\Food_box_logo_white.png" alt="SIUU" height="50" /> </a></p>
+          <p class="TShop"><a href="..\Website.php"><img class="Logo" src="../Images\Food_box_logo_white.png" alt="SIUU" height="50" /> </a></p>
       </div>
       </div>
       <!-- Navigation division to left-->
