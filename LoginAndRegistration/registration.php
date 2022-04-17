@@ -14,7 +14,7 @@
     $userEmail = $_POST["email"];
     $fileSize = filesize("user.txt");
 
-    if ($fileSize != 0 && str_contains(fread($fileReader, $fileSize), $userEmail)) {
+    if ($fileSize != 0 && strpos(fread($fileReader, $fileSize), $userEmail)!==false) {
       echo "Email already exists.";
       header('Refresh: 2.5; URL=/php_practice/registration.html');
     } else {
