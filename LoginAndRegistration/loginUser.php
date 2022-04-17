@@ -34,7 +34,7 @@
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="password" value="" autocomplete="off" placeholder="Enter your password" pattern="{4,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 4 or more characters" required />
+                <input type="password" name="password" value="" autocomplete="off" title="Must Contain at least 4+ Characters" minlength="4" placeholder="Enter your password" required />
               </div>
               <p>enter at least 4 characters.</p>
               <div class="button input-box">
