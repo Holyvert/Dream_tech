@@ -1,29 +1,32 @@
 <?php
 
+include('../LoginAndRegistration/AdminAuthentication.php');
+
+?>
+
+
+<?php
+
 function getProducts()
 {
- return  json_decode(file_get_contents('ProductsDB.json' ), true) ;
-
+  return  json_decode(file_get_contents('ProductsDB.json'), true);
 }
 function getProducts2()
 {
- return  json_decode(file_get_contents('Backstore/ProductsDB.json' ), true) ;
-
+  return  json_decode(file_get_contents('Backstore/ProductsDB.json'), true);
 }
 function getNewId()
 {
   $products = getProducts();
 
-  return  intval($products[count($products)-1]["Id"] + 1);
- 
+  return  intval($products[count($products) - 1]["Id"] + 1);
 }
 function getProductById($Id)
 {
   $products = getProducts();
 
-  foreach( $products as $product)
-  {
-    if($product['Id'] == $Id)
+  foreach ($products as $product) {
+    if ($product['Id'] == $Id)
       return $product;
   }
 
@@ -46,11 +49,11 @@ function createProduct($data)
     "image" => $data['images'],
     "color" => $data['color'],
     "Quantity_inStock" => $data['Quantity'],
-);
+  );
 
-  array_push($products,$array);
+  array_push($products, $array);
 
-  file_put_contents('ProductsDB.json',json_encode($products));
+  file_put_contents('ProductsDB.json', json_encode($products));
 
   $path = str_replace(' ', '', $data['porduct_name']);
   $pathf = str_replace(' ', '', $data['Category']);
@@ -183,38 +186,35 @@ function createProduct($data)
   </body>
   </html>
 EOD;
-  $myfile = fopen("../{$pathf}/{$path}.php","w+");
-  fwrite($myfile,$template);
+  $myfile = fopen("../{$pathf}/{$path}.php", "w+");
+  fwrite($myfile, $template);
   fclose($myfile);
-  
 }
 
-function editProduct($data,$Id)
+function editProduct($data, $Id)
 {
   $products = getProducts();
 
- 
 
-  foreach( $products as $i => $product)
-  {
-    if($product['Id'] == $Id)
-      {
-    
-       // $products[$i] = array_merge($product,$data);
-       $products[$i]['Name']=$data['porduct_name'];
-       $products[$i]['Ailse']=$data['Category'];
-       $products[$i]['company']=$data['company'];
-       $products[$i]['Quantity']=$data['s_perU'];
-       $products[$i]['price_each']=$data['price_each'];
-       $products[$i]['price_perQ']=$data['price_perQ'];
-       $products[$i]['More_Description']=$data['More_Description'];
-       $products[$i]['image']=$data['images'];
-       $products[$i]['color']=$data['color'];
-       $products[$i]['Quantity_inStock']=$data['Quantity'];
 
-       $path = str_replace(' ', '', $product['Name']);
-        $pathf = str_replace(' ', '', $product['Ailse']);
-        $template = <<<EOD
+  foreach ($products as $i => $product) {
+    if ($product['Id'] == $Id) {
+
+      // $products[$i] = array_merge($product,$data);
+      $products[$i]['Name'] = $data['porduct_name'];
+      $products[$i]['Ailse'] = $data['Category'];
+      $products[$i]['company'] = $data['company'];
+      $products[$i]['Quantity'] = $data['s_perU'];
+      $products[$i]['price_each'] = $data['price_each'];
+      $products[$i]['price_perQ'] = $data['price_perQ'];
+      $products[$i]['More_Description'] = $data['More_Description'];
+      $products[$i]['image'] = $data['images'];
+      $products[$i]['color'] = $data['color'];
+      $products[$i]['Quantity_inStock'] = $data['Quantity'];
+
+      $path = str_replace(' ', '', $product['Name']);
+      $pathf = str_replace(' ', '', $product['Ailse']);
+      $template = <<<EOD
 <!DOCTYPE html>
         <html lang="en">
           <head>
@@ -343,15 +343,14 @@ function editProduct($data,$Id)
         </body>
         </html>
 EOD;
-        $myfile = fopen("../{$pathf}/{$path}.php","w+");
-        fwrite($myfile,$template);
-        fclose($myfile);
-        
-      }
+      $myfile = fopen("../{$pathf}/{$path}.php", "w+");
+      fwrite($myfile, $template);
+      fclose($myfile);
+    }
   }
 
-  
-  file_put_contents('ProductsDB.json',json_encode($products));
+
+  file_put_contents('ProductsDB.json', json_encode($products));
 }
 
 
@@ -359,51 +358,48 @@ function deleteProduct($Id)
 {
   $products = getProducts();
 
-  foreach( $products as $i => $product)
-  {
-    if($product['Id'] == $Id)
-      {
-          array_splice($products,$i,1);
-       
-          $path = str_replace(' ', '', $product['Name']);
-          $pathf = str_replace(' ', '', $product['Ailse']);
-          unlink("../{$pathf}/{$path}.php");
+  foreach ($products as $i => $product) {
+    if ($product['Id'] == $Id) {
+      array_splice($products, $i, 1);
 
-      }
+      $path = str_replace(' ', '', $product['Name']);
+      $pathf = str_replace(' ', '', $product['Ailse']);
+      unlink("../{$pathf}/{$path}.php");
+    }
   }
 
-  file_put_contents('ProductsDB.json',json_encode($products));
+  file_put_contents('ProductsDB.json', json_encode($products));
 }
 
 function categoryBeverages($category)
 {
-  if($category == "Beverages")
+  if ($category == "Beverages")
     echo "selected";
 }
 
 function categoryFv($category)
 {
-  if($category == "Fruits and Vegetables")
+  if ($category == "Fruits and Vegetables")
     echo "selected";
 }
 function categoryFc($category)
 {
-  if($category == "Frozen and Canned")
+  if ($category == "Frozen and Canned")
     echo "selected";
 }
 function categoryDairy($category)
 {
-  if($category == "Dairy")
+  if ($category == "Dairy")
     echo "selected";
 }
 function categoryMeatAndFish($category)
 {
-  if($category == "MeatAndFish")
+  if ($category == "MeatAndFish")
     echo "selected";
 }
 function categorySnacks($category)
 {
-  if($category == "Snacks")
+  if ($category == "Snacks")
     echo "selected";
 }
 
