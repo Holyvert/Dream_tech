@@ -341,6 +341,17 @@ ul.SearchBar li img{
   border-radius: 2vw;
 }
 
+form.sign button.dropbutton{
+
+  background-color: #326e16;
+  color: white;
+  padding: 2vw;
+  font-family: inherit;
+  font-size: 2vw;
+  border: none;
+  border-radius: 2vw;
+
+}
 .dropdown {
   position: relative;
   align-self: center;
