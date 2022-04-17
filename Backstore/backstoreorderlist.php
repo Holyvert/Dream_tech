@@ -1,6 +1,12 @@
 <?php
-if(!isset($_COOKIE['User'])){
-    setcookie('User', 'id', time()+3600);
+
+include('../LoginAndRegistration/AdminAuthentication.php');
+
+?>
+
+<?php
+if (!isset($_COOKIE['User'])) {
+    setcookie('User', 'id', time() + 3600);
     session_start();
 }
 ?>
@@ -11,8 +17,8 @@ $get_cart_items_quantity = (array)$_GET["quantity"];
 ?>
     
     <?php
-     foreach ($get_cart_items_quantity as $key => $value) {
+    foreach ($get_cart_items_quantity as $key => $value) {
         echo "$key: $value\n";
-}
+    }
     ?>
 
