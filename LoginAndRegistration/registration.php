@@ -7,6 +7,9 @@
 <body>
   <?php
 
+  error_reporting(E_ALL ^ E_WARNING); 
+
+
   if (isset($_POST["submit"])) { // the POST form has been submitted.
 
     // Read from file
@@ -16,17 +19,17 @@
 
     if ($fileSize != 0 && strpos(fread($fileReader, $fileSize), $userEmail)!==false) {
       echo "Email already exists.";
-      header('Refresh: 2.5; URL=/php_practice/registration.html');
+      echo ("<script>setTimeout(function () {location.href = 'loginUser.php';}, 2500);</script>");
     } else {
 
       // Write to the file new account
-      $userEmail = $_POST["userEmail"];
+      $userEmail = $_POST["email"];
       $password = $_POST["password"];
       $fileUpdater = fopen('user.txt', 'a+');
       fwrite($fileUpdater, $userEmail . " " . $password . "\n");
       fclose($fileUpdater);
       echo "Account Created Successfully!";
-      header('Refresh: 2.5; URL=/php_practice/loginUser.php');
+      echo ("<script>setTimeout(function () {location.href = '../Website.php';}, 2500);</script>");
     }
     fclose($fileReader);
   }

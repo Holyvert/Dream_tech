@@ -42,7 +42,7 @@
               <div class="text sign-up-text">
                 Don't have an account? <a href="registration.html">Signup now</a>
               </div>
-              <div>Return to <a href="Website.html">homepage</a></div>
+              <div>Return to <a href="../Website.php">homepage</a></div>
             </div>
           </form>
         </div>
