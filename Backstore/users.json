@@ -35,6 +35,7 @@
         "Age": "32",
         "Admin_Status": "Admin"
         },
+    
         {
             "Id": "67",
             "Name": "Guillaume",
@@ -43,5 +44,23 @@
             "Adress":"123 Wall Street Monreal,Qc",
             "Age": "19",
             "Admin_Status": "Admin"
+        },
+        {
+        "Id": "68",
+        "Name": "Ann-Marie Czuboka",
+        "Email": "am.czuboka@gmail.com",
+        "Password": "hellothere",
+        "Adress": "123 Cool blvd Montreal,Qc",
+        "Age": "30",
+        "Admin_Status": "Admin"
+        },
+        {
+        "Id": "69",
+        "Name": "Isabelle Czuboka",
+        "Email": "i.czuboka@gmail.com",
+        "Password": "hellothere",
+        "Adress": "123 Cool blvd Montreal,Qc",
+        "Age": "30",
+        "Admin_Status": "Admin"
         }
 ] 
