@@ -342,10 +342,11 @@ ul.SearchBar li img{
 }
 
 form.sign button.dropbutton{
+  padding: 0%;
 
   background-color: #326e16;
   color: white;
-  padding: 2vw;
+
   font-family: inherit;
   font-size: 2vw;
   border: none;
@@ -1005,12 +1006,21 @@ border-bottom-right-radius: 4vw;
     color: white;
   }
   .sign {
-
+    height:fit-content;
+    min-height: 10vw;
     flex-flow: column;
     display: flex;
    width: 100%;
     
    
+  }
+  form.sign button.dropbutton{
+    word-wrap: break-word;
+    font-size: 5vw;
+    border-radius: 5vw;
+    height:fit-content;
+    min-height: 10vw;
+  
   }
   .SignUp {
     align-self: center;
