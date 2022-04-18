@@ -2,6 +2,9 @@
 
 include('../LoginAndRegistration/AdminAuthentication.php');
 
+include "ordersFunctions.php";
+
+$orders = getOrders();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,17 +36,17 @@ include('../LoginAndRegistration/AdminAuthentication.php');
            <table class="NavBar">
             <tr>
                 <th>
-              <a href="ProductsList.html">> Product List </a>
+              <a href="ProductsList.php">> Product List </a>
                 </th>
             </tr>
                <tr>
                    <th>
-                   <a href="OrderList.html" ><span style="background-color: blue; color: white; border-radius: 2vw;">> </span>   Order List </a>
+                   <a href="OrderList.php" ><span style="background-color: blue; color: white; border-radius: 2vw;">> </span>   Order List </a>
                     </th>
                </tr>
                <tr>
                    <th>
-                  <a href="UsersList.html">>  User List</a>
+                  <a href="UsersList.php">>  User List</a>
                     </th>
                </tr>
                
@@ -63,77 +66,50 @@ include('../LoginAndRegistration/AdminAuthentication.php');
                  
                   <tbody>
                     <tr class="SCs">
-                        <td>Name</td>
-                        <td>Order number</td>
-                        <td>Address</td>
-                        <td>Total Price</td>
+                        <td>Name &nbsp; </td>
+                        <td>Order number &nbsp; </td>
+                        <td>Address &nbsp; </td>
+                        <td>Total Price &nbsp; </td>
+                        <td>Status&nbsp;  </td>
                         <td></td>
                         <td style="visibility: visible;">
                             <div class="Productquantity buttons_added" style=" background-color: rgb(0, 217, 255);">
                             <input name="Add" type="button" value="Add" class="Backs" style="border-radius: 10px;" >
                         </div></td>
                     </tr>
-                    <tr >
-                      
-                      <td class="CartProd Backs" ><div class="PhonePB"> Name:</div> Yukiko</td>
-                      <td class="CartProd Backs" ><div class="PhonePB">Order Number:</div> 
-                        1231435
-                      </td>
-                        <td class="CartProd Backs" ><div class="PhonePB">Adress:</div> 
-                          3000 pines Street, Montreal
-                        </td>
-                      <td class="CartProd Backs" ><div class="PhonePB">Total Price:</div> 
-                          <div name ="cartPrice" id="price">345.99$</div></td>
-                
-                      <td>  <div class="Productquantity buttons_added" style=" background-color: rgb(157, 255, 0);">
-                        <input name="Edit" type="button" value="Edit" class="Backs" style="border-radius: 10px;" >
-                    </div></td>
-                    <td>   <div class="Productquantity buttons_added" style=" background-color: rgb(255, 0, 0);">
-                        <input name="delete" type="button" value="delete" class="Backs" style="border-radius: 10px;" >
-                      </div>
-                    </td> 
-                    </tr>
-                    <tr>
-                     
-                        <td class="CartProd Backs" ><div class="PhonePB"> Name:</div> Yukiko</td>
-                        <td class="CartProd Backs" ><div class="PhonePB">Order Number:</div> 
-                          1231435
-                        </td>
-                          <td class="CartProd Backs" ><div class="PhonePB">Adress:</div> 
-                            3000 pines Street, Montreal
-                          </td>
-                        <td class="CartProd Backs" ><div class="PhonePB">Total Price:</div> 
-                            <div name ="cartPrice" id="price">345.99$</div></td>
                    
-                      <td>  <div class="Productquantity buttons_added" style=" background-color: rgb(157, 255, 0);">
-                        <input name="Edit" type="button" value="Edit" class="Backs" style="border-radius: 10px;" >
-                    </div></td>
-                    <td>   <div class="Productquantity buttons_added" style=" background-color: rgb(255, 0, 0);">
-                        <input name="delete" type="button" value="delete" class="Backs" style="border-radius: 10px;" >
-                      </div>
-                    </td>
-                    </tr>
                     <tr>
-                      
-                        <td class="CartProd Backs" ><div class="PhonePB"> Name:</div> Yukiko</td>
+                    <?php foreach ($orders as $order) : ?>
+                        <td class="CartProd Backs" ><div class="PhonePB"> Name:</div> <?php echo $order['Name'] ?></td>
                         <td class="CartProd Backs" ><div class="PhonePB">Order Number:</div> 
-                          1231435
+                        <?php echo $order['Id'] ?>
                         </td>
                           <td class="CartProd Backs" ><div class="PhonePB">Adress:</div> 
-                            3000 pines Street, Montreal
+                          <?php echo $order['Adress'] ?>
                           </td>
                         <td class="CartProd Backs" ><div class="PhonePB">Total Price:</div> 
-                            <div name ="cartPrice" id="price">345.99$</div></td>
+                            <div name ="cartPrice" id="price"><?php echo $order['Cost'] ?></div></td>
+                            
+                            <td class="CartProd Backs" ><div class="PhonePB">Status:</div> 
+                            <div name ="cartPrice" id="price"><?php echo $order['Status'] ?></div></td>
                        
-                        <td>  <div class="Productquantity buttons_added" style=" background-color: rgb(157, 255, 0);">
+                        <td>  
+                        <a href="editOrder.php?Id=<?php echo $order['Id'] ?>">
+                          <div class="Productquantity buttons_added" style=" background-color: rgb(157, 255, 0);">
                             <input name="Edit" type="button" value="Edit" class="Backs" style="border-radius: 10px;" >
                             </div>
+                            </a>
                         </td>
-                        <td>   <div class="Productquantity buttons_added" style=" background-color: rgb(255, 0, 0);">
+                        
+                        <td>  
+                          <a href="deleteOrder.php?Id=<?php echo $order['Id'] ?>">
+                           <div class="Productquantity buttons_added" style=" background-color: rgb(255, 0, 0);">
                             <input name="delete" type="button" value="delete" class="Backs" style="border-radius: 10px;" >
                           </div>
+                          </a>
                         </td>
                     </tr>
+                    <?php endforeach;; ?>
                   </tbody>
                 </table>
                </div>

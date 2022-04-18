@@ -2,10 +2,7 @@
 
 include('../LoginAndRegistration/AdminAuthentication.php');
 
-?>
 
-
-<?php
 require "productsFunctions.php";
 
 $productId = $_GET['Id'];

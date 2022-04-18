@@ -2,17 +2,7 @@
 
 include('../LoginAndRegistration/AdminAuthentication.php');
 
-?>
 
-
-<?php
-
-include '../LoginAndRegistration/AdminAuthentication.php';
-
-?>
-
-
-<?php
 include "productsFunctions.php";
 
 $products = getProducts();

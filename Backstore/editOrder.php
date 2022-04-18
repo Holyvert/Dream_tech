@@ -2,6 +2,14 @@
 
 include('../LoginAndRegistration/AdminAuthentication.php');
 
+include "ordersFunctions.php";
+
+
+
+$orderId = $_GET['Id'];
+
+$order = getOrderById($orderId);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,17 +41,17 @@ include('../LoginAndRegistration/AdminAuthentication.php');
            <table class="NavBar">
             <tr>
                 <th>
-              <a href="ProductsList.html">> Product List </a>
+              <a href="ProductsList.php">> Product List </a>
                 </th>
             </tr>
                <tr>
                    <th>
-                   <a href="OrderList.html" >>  Order List </a>
+                   <a href="OrderList.php" >>  Order List </a>
                     </th>
                </tr>
                <tr>
                    <th>
-                  <a href="UsersList.html">>  User List</a>
+                  <a href="UsersList.php">>  User List</a>
                     </th>
                </tr>
                
@@ -58,13 +66,15 @@ include('../LoginAndRegistration/AdminAuthentication.php');
              <form class="ProductDescription" style="align-self: center;">
             
                 <p>Name</p>
-                <input type="text" name="" placeholder="Enter Name">
+                <input type="text" name="Name" placeholder="Enter Name" value="<?php echo $order['Name'] ?>">
                 <p>Email</p>
-                <input type="email" name="" placeholder="Enter Email">
+                <input type="email" name="Email" placeholder="Enter Email" value="<?php echo $order['Email'] ?>">
                 <p>Order Number</p>
-                <input type="number" name="" placeholder="Order Number">
+                <input type="number" name="Id" placeholder="Order Number"value="<?php echo $order['Id'] ?>">
                 <p>Delivery Address</p>
-                <input type="text" name="" placeholder="Enter Adress">
+                <input type="text" name="Adress" placeholder="Enter Adress"value="<?php echo $order['Adress'] ?>">
+                <p>Status</p>
+                <input type="text" name="Status" placeholder="Enter Status"value="<?php echo $order['Status'] ?>">
             
               
               <div class="RowDescrpitionS"  >
@@ -78,72 +88,35 @@ include('../LoginAndRegistration/AdminAuthentication.php');
                         <td >Order detail</td>
                         
                       </tr>
-                      <tr>
-                        <td>
-                          <img class="images" src="https://images.unsplash.com/photo-1617102738820-bee2545405fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"></a>
-                        </td>
-                        <td class="CartProd">Unsalted Chips</td>
-                        <td >Quantity
-                            <div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);" >
-                              <input id="down" type="button"  value="-" class="minus" onclick="setCartQuantity(this,'down');"><input 
-                              id="amount" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input 
-                               type="button" onclick="setCartQuantity(this,'up');" id="up" value="+" class="plus" >
-                                
-                            </div>
-                        </td>
-                          <td>
-                            <div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
-                              <input name="delete" type="button" value="delete" class="minus" style="border-radius: 10px;" >
-                            </div>
-                          </td>
-                        <td><div name ="cartPrice" id="price">4.99$</div></td>
-                  
-                        
-                      </tr>
-                      <tr>
-                        <td>
-                          <img class="images" src="https://images.unsplash.com/photo-1573555657105-47a0bb37c3ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80" ></a>
-                        </td>
-                        <td class="CartProd">Cashews</td>
-                        <td >Quantity
-                          <div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);" >
-                            <input id="down" type="button"  value="-" class="minus" onclick="setCartQuantity(this,'down');"  ><input
-                             id="amount" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input
-                              type="button" onclick="setCartQuantity(this,'up');"  id="up" value="+" class="plus" >
-                              
-                          </div>
-                        </td>
-                        <td>
-                            <div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
-                              <input type="button" name="delete" value="delete" class="minus" style="border-radius: 10px;" >
-                            </div>
-                        </td>
-                        <td><div name ="cartPrice" id="price">12.99$</div></td>
-                     
                       
-                      </tr>
+                      <?php foreach ($order['Products'] as $i =>  $product) : ?>
                       <tr>
                         <td>
-                          <img class="images" src="https://images.unsplash.com/photo-1628791392322-de3fc6348d1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" ></a>
+                          <img class="images" src=<?php echo $product['image'] ?> ></a>
                         </td>
-                        <td class="CartProd">Salsa Chips</td>
+                        <td class="CartProd"><?php echo $product['Name'] ?></td>
                         <td>Quantity
                           <div class="Productquantity buttons_added" style="background-color: rgb(148, 202, 137);" >
-                            <input id="down" type="button"  value="-" class="minus" onclick="setCartQuantity(this,'down');" onclick=""><input 
-                            id="amount" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input
-                             type="button" onclick="setCartQuantity(this,'up');" id="up" value="+" class="plus" >
+                            <input id="down" type="button"  value="-" class="minus" onclick="setCartQuantity(this,'down');" onclick="">
+                            <input id="amount" type="number" step="1" min="1" max="" name="quantity" value="<?php echo $product['Quantitiy'] ?>" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+                            <input type="button" onclick="setCartQuantity(this,'up');" id="up" value="+" class="plus" >
                               
                           </div>
                         </td>
                           <td>
+                          <a href="deleteOrderProduct.php?Id=<?php echo $order['Id'] ?>">
                             <div class="Productquantity buttons_added" style="background-color: rgb(255, 0, 0);">
                               <input type="button" name="delete" value="delete" class="minus" style="border-radius: 10px;" >
                             </div>
+                            <a>
                           </td>
-                          <td><div name ="cartPrice"  id="price">5.99$</div></td>
+                          <td><div name ="cartPrice"  id="price">
+                            <?php echo $product['price_each'] ?>
+                          </div></td>
                          
                       
                       </tr>
+                      <?php endforeach;; ?>
                     </tbody>
                   </table>
                  </div>
@@ -152,9 +125,9 @@ include('../LoginAndRegistration/AdminAuthentication.php');
               <div class="ProductDescription" style="text-align: right; align-self: center; top: 0%; " > 
                
               <div class="listing_P">
-                <p><span style="float: left;">Before taxes</span><span name="priceB4Taxes"> 23.97$</span></p>
-                <p><span style="float: left;">TPS</span><span id="tps"> 1.20$</span></p>
-                <p><span style="float: left;">TVQ</span><span id="tvq">2.39$</span></p>
+                <p><span style="float: left;">Before taxes</span><span name="priceB4Taxes"> <?php echo $order['Cost'] ?></span></p>
+                <p><span style="float: left;">TPS</span><span id="tps"> <?php echo $tax1 = intval( $order['Cost'])  ?></span></p>
+                <p><span style="float: left;">TVQ</span><span id="tvq"><?php echo $tax2 = intval( $order['Cost']) * 0.09975 ?></span></p>
                   <p><span style="float: left;">Total Items: </span><span id="itemstotal2"> </span></p>
                 
             </div>
@@ -162,7 +135,7 @@ include('../LoginAndRegistration/AdminAuthentication.php');
               <hr style="height: 3px; width: 90%; background-color: #fff;" class="listing_P">
          
             <div class="listing_P">
-              <p style="display: flex inline-block; color: red; background-color: white; border-radius: 1vw; padding: 1vw;"><span style="float: left;">Sub-total: </span> <span id="subTotal">27.56$</span></p> 
+              <p style="display: flex inline-block; color: red; background-color: white; border-radius: 1vw; padding: 1vw;"><span style="float: left;">Sub-total: </span> <span id="subTotal"><?php echo $order['Cost'] + $tax1 + $tax2 ?></span></p> 
             </div>
                 
                 

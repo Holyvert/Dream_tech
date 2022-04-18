@@ -2,10 +2,7 @@
 error_reporting(E_ALL ^ E_WARNING);
 include('../LoginAndRegistration/AdminAuthentication.php');
 
-?>
 
-
-<?php
 
 function getProducts()
 {

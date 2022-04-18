@@ -2,10 +2,7 @@
 
 include('../LoginAndRegistration/AdminAuthentication.php');
 
-?>
 
-
-<?php
 require "usersFunctions.php";
 
 $userId = $_GET['Id'];

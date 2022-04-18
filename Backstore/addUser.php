@@ -2,9 +2,7 @@
 
 include('../LoginAndRegistration/AdminAuthentication.php');
 
-?>
 
-<?php
 require "usersFunctions.php";
 
 

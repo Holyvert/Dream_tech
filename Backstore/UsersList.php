@@ -2,10 +2,7 @@
 
 include('../LoginAndRegistration/AdminAuthentication.php');
 
-?>
 
-
-<?php
 include "usersFunctions.php";
 
 $users = getUsers();
