@@ -1,9 +1,3 @@
-<?php
-
-include('../LoginAndRegistration/AdminAuthentication.php');
-
-?>
-
 
 <?php
 
