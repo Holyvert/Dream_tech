@@ -1,3 +1,8 @@
+<?php
+
+include('../LoginAndRegistration/AdminAuthentication.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
