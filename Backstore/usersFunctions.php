@@ -27,6 +27,18 @@ function getUserById($Id)
   return null;
 }
 
+function getUserNameByEmail($Email)
+{
+  $users = getUsers();
+
+  foreach ($users as $user) {
+    if ($user['Email'] == $Email)
+      return $user['Name'];
+  }
+
+  return null;
+}
+
 function createUser($data)
 {
   $users = getUsers();
