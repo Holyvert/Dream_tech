@@ -100,8 +100,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           <input type="text" name="Quantity" placeholder="Enter Quantity" value="<?php echo $product['Quantity_inStock'] ?>">
           <p>Product Image</p>
           <input type="text" name="images" placeholder="Image url" value="<?php echo $product['image'] ?>">
-          <!-- <p>OR</p>
-          <input type="file" accept="image/*" /> -->
+          <p>OR</p>
+          <input type="file" accept="image/*" />
 
           <p>Description Color</p>
           <input type="color" name="color" placeholder="Enter rgb values" style="align-self: center;" value="<?php echo $product['color'] ?>">
