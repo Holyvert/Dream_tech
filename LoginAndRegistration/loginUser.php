@@ -46,7 +46,7 @@ if (isset($_COOKIE['user_email'])) {
                 <input type="submit" value="submit" name="submit" />
               </div>
               <div class="text sign-up-text">
-                Don't have an account? <a href="registration.html">Signup now</a>
+                No account? <a href="registration.html">Create one!</a>
               </div>
               <div>Return to <a href="../Website.php">homepage</a></div>
             </div>
