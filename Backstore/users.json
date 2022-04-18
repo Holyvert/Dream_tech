@@ -35,4 +35,13 @@
         "Age": "32",
         "Admin_Status": "Admin"
         }
+        {
+            "ID": "67",
+            "Name": "Guillaume",
+            "Email": "Guillaume@hotmail.co.uk",
+            "Password": "SIUU",
+            "Adress":"123 Wall Street Monreal,Qc",
+            "Age": "19",
+            "Admin_Status": "Admin"
+        }
 ] 
