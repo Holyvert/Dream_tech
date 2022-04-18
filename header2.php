@@ -27,7 +27,7 @@ if (isset($_COOKIE["user_email"])) {
   echo"<form class=\"sign\">";
   echo"<button class=\"dropbutton\">";
   echo"Welcome ";
-  getUserNameByEmail("Japan_number_1@gmail.com");
+  getUserNameByEmail($_COOKIE["user_email"]);
 
   echo "  </button>";
   echo "  </form>";
