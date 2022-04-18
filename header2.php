@@ -4,18 +4,36 @@
       </div>
      
       
-      
       <?php
-          if (isset($_COOKIE["user_email"])) {
-            echo"<form class=\"sign\">";
-            echo"<button class=\"dropbutton\">";
-            echo"Welcome ".$_COOKIE["user_email"];
 
-            echo "  </button>";
-            echo "  </form>";
-          }
-          ?>
-    
+if (isset($_COOKIE["user_email"])) {
+  function getUsers()
+  {
+    return  json_decode(file_get_contents('../Backstore/users.json'), true);
+  }
+       function getUserNameByEmail($Email)
+       {
+         $users = getUsers();
+       
+         foreach ($users as $user) {
+           if ($user['Email'] == $Email)
+           echo ($user['Name']);
+         }
+       
+        
+       }
+  
+
+  echo"<form class=\"sign\">";
+  echo"<button class=\"dropbutton\">";
+  echo"Welcome ";
+  getUserNameByEmail($_COOKIE["user_email"]);
+
+  echo "  </button>";
+  echo "  </form>";
+}
+?>
+
       
       
       

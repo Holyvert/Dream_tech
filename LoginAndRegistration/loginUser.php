@@ -1,5 +1,10 @@
+<?php
+if (isset($_COOKIE['user_email'])) {
+    unset($_COOKIE['user_email']);
+    setcookie('user_email', '', time() - 3600, '/'); // empty value and old timestamp
+}
+?>
 <html lang="en" dir="ltr">
-
 <head>
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="Style.css" />
@@ -41,7 +46,7 @@
                 <input type="submit" value="submit" name="submit" />
               </div>
               <div class="text sign-up-text">
-                Don't have an account? <a href="registration.html">Signup now</a>
+                No account? <a href="registration.html">Create one!</a>
               </div>
               <div>Return to <a href="../Website.php">homepage</a></div>
             </div>

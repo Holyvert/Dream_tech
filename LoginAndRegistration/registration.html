@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="Style.css">
     <!-- Fontawesome CDN Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
    </head>
 <body>
   <div class="container">
@@ -28,7 +29,8 @@
           <form action="./registration.php" method="POST">
             <div class="input-boxes">
               <div class="input-box">
-                <i class="fa-solid fa-file-signature"></i>
+                <input type="hidden" name="Id" value="<?php echo getNewId() ?>">
+                  <i class="fas fa-file-signature"></i>
                 <input type="text" placeholder="Enter your name" name="name">
               </div>
               <div class="input-box">
@@ -36,13 +38,15 @@
                 <input type="text" placeholder="name@mail.com" name="email" required>
               </div>
               <div class="input-box">
+                <i class="fa-solid fa-location-dot"></i>
                 <input type="text" placeholder="Enter your address" name="address">
                 </div>
                 <div class="input-box">
-                <input type="number" placeholder="Enter your age" name="Age" minlength="10">
+                <i class="fa-solid fa-calendar-days"></i>
+                <input type="number" placeholder="Minimum of 13 and maximum of 100" name="Age" min="13" max="100">
                 </div>
                 <div>
-                  <input type="hidden" name="Id">
+                <input type="hidden" name="Id">
                 </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>

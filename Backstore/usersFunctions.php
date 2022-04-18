@@ -26,12 +26,24 @@ function getUserById($Id)
   return null;
 }
 
+function getUserNameByEmail($Email)
+{
+  $users = getUsers();
+
+  foreach ($users as $user) {
+    if ($user['Email'] == $Email)
+      return $user['Name'];
+  }
+
+  return null;
+}
+
 function createUser($data)
 {
   $users = getUsers();
 
   $array = array(
-    "Id" => $data['Id'],
+    "Id" => getNewId(),
     "Name" => $data['Name'],
     "Email" => $data['Email'],
     "Password" => $data['Password'],
@@ -49,7 +61,7 @@ function createUser2($data)
   $users = getUsers2();
 
   $array = array(
-    "Id" => $data['Id'],
+    "Id" => getNewId(),
     "Name" => $data['name'],
     "Email" => $data['email'],
     "Password" => $data['password'],
