@@ -1,4 +1,3 @@
-
 <div class="Header">
         <div class="ShopSign">
           <p class="TShop"><a href="Website.php"><img class="Logo" src="Images/Food_box_logo_white.png" alt="SIUU" height="50" /> </a></p>
@@ -7,28 +6,29 @@
       
       
       <?php
-      function getUsers()
-{
-  return  json_decode(file_get_contents('Backstore\users.json'), true);
-}
-     function getUserNameByEmail($Email)
-     {
-       $users = getUsers();
-     
-       foreach ($users as $user) {
-         if ($user['Email'] == srtval($Email))
-           return strval($user['Name']);
-       }
-     
-       return null;
-     }
 
           if (isset($_COOKIE["user_email"])) {
-           
+            function getUsers()
+            {
+              return  json_decode(file_get_contents('Backstore/users.json'), true);
+            }
+                 function getUserNameByEmail($Email)
+                 {
+                   $users = getUsers();
+                 
+                   foreach ($users as $user) {
+                     if ($user['Email'] == $Email)
+                     echo ($user['Name']);
+                   }
+                 
+                  
+                 }
+            
          
             echo"<form class=\"sign\">";
             echo"<button class=\"dropbutton\">";
-            echo"Welcome ". getUserNameByEmail($_COOKIE["user_email"]);
+            echo"Welcome ";
+            getUserNameByEmail("Japan_number_1@gmail.com");
 
             echo "  </button>";
             echo "  </form>";
